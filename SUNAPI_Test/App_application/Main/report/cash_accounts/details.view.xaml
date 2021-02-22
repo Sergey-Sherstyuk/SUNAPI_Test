@@ -1,0 +1,58 @@
+﻿<Page xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<Page.Resources>
+		<sys:String x:Key="OpenUrl">/report/cash_accounts/details</sys:String>
+	</Page.Resources>
+
+	<Page.Toolbar>
+		<Toolbar>
+			<Header>
+				<Text>
+					<Span Content="{Bind CashAccount.$Title}"></Span> . На початок:
+					<Span Content="{Bind CashAccount.SumBegin, DataType=Currency}" /> грн, на кінець:
+					<Span Content="{Bind CashAccount.SumEnd, DataType=Currency}" /> грн.
+				</Text>
+			</Header>
+
+			<Separator />
+			<PeriodPicker Label="Period" Value="{Bind Parent.Filter.Period}"></PeriodPicker>
+			<Separator />
+			<Button Content="@[Reload]" Icon="Reload" Command="{BindCmd Reload}"/>
+		</Toolbar>
+	</Page.Toolbar>
+
+	<Page.CollectionView>
+		<CollectionView ItemsSource="{Bind Operations}" RunAt="ServerUrl">
+			<CollectionView.Filter>
+				<FilterDescription>
+					<FilterItem Property="Period" DataType="Period" />
+				</FilterDescription>
+			</CollectionView.Filter>
+		</CollectionView>
+	</Page.CollectionView>
+	
+	<!--
+	<Page.Pager>
+		<Pager Source="{Bind Parent.Pager}" />
+	</Page.Pager>
+	-->
+
+	<DataGrid ItemsSource="{Bind Parent.ItemsSource}" Hover="True" Striped="true" GridLines="Both" Sort="True">
+		<DataGridColumn Header="@[FieldId]" Align="Right">
+			<Hyperlink Content="{Bind Id}" Command="{BindCmd Open, Url={Bind TypeEditUrl}, Argument={Bind}}"></Hyperlink>
+		</DataGridColumn>
+		<DataGridColumn Header="@[FieldNumber]" Fit="true" Wrap="NoWrap" Align="Right" >
+			<Hyperlink Content="{Bind DocNumber}" Command="{BindCmd Open, Url={Bind TypeEditUrl}, Argument={Bind}}"></Hyperlink>
+		</DataGridColumn>
+		<DataGridColumn Header="@[FieldDate]" Content="{Bind DocDate, DataType=DateTime}" Fit="true" Wrap="NoWrap" />
+		<DataGridColumn Header="@[FieldPartner]" Content="{Bind PartnerName}" />
+		<DataGridColumn Header="@[FieldContract]" Content="{Bind ContractName}" />
+		<DataGridColumn Header="@[FieldOperation]" Content="{Bind OperationName}" />
+		<DataGridColumn Header="@[FieldExpenditure]" Content="{Bind ExpenditureName}" />
+		<DataGridColumn Header="На начало" Content="{Bind SumBefore, DataType=Currency}" Align="Right" />
+		<DataGridColumn Header="Приход" Content="{Bind SumIn, DataType=Currency}" Align="Right"/>
+		<DataGridColumn Header="Расход" Content="{Bind SumOut, DataType=Currency}" Align="Right"/>
+		<DataGridColumn Header="На конец" Content="{Bind SumAfter, DataType=Currency}" Align="Right"/>
+	</DataGrid>
+</Page>

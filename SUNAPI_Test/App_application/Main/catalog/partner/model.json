@@ -1,0 +1,27 @@
+{
+	"$schema": "../../../@schemas/model-json-schema.json#",
+	"schema": "sunapi",
+	"model": "Partner",
+	"actions": {
+		"index": {
+			"index": true,
+			"view": "partner.index.view"
+		}
+	},
+	"dialogs": {
+		"edit": {
+			"view": "partner.edit.dialog",
+			"template": "partner.edit.template"
+		},
+		"browse": {
+			"index": true,
+			"view": "partner.browse.dialog"
+		}
+	},
+	"commands": {
+		"fetchPartner": {
+			"type": "sql",
+			"procedure": "Partner.Fetch"
+		}
+	}
+}

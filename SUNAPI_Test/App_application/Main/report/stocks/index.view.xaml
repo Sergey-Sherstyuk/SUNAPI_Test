@@ -1,0 +1,66 @@
+﻿<Page xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml">
+	<Page.Toolbar>
+		<Toolbar>
+			<DatePicker Value="{Bind Query.Date}" Label="Дата:" />
+
+
+			<Selector Value="{Bind Query.Store}" Grid.Row="3" Grid.ColSpan="2" Label="@[FieldStore]" DisplayProperty="Name" 
+				Delegate="fetchStore" ListSize="40rem,20rem" PanelPlacement="BottomLeft">
+				<Selector.AddOns>
+					<Hyperlink Icon="Clear" Command="{BindCmd Clear, Argument={Bind Query.Store}}"/>
+					<Hyperlink Icon="Search" Command="{BindCmd Browse, Url='/catalog/store/browse', Argument={Bind Query.Store}}"/>
+				</Selector.AddOns>
+			</Selector>
+
+			<Selector Value="{Bind Query.Company}" Grid.Row="3" Grid.ColSpan="2" Label="@[FieldCompany]" DisplayProperty="Name" 
+				Delegate="fetchCompany" ListSize="40rem,20rem" PanelPlacement="BottomLeft">
+				<Selector.AddOns>
+					<Hyperlink Icon="Clear" Command="{BindCmd Clear, Argument={Bind Query.Company}}"/>
+					<Hyperlink Icon="Search" Command="{BindCmd Browse, Url='/catalog/company/browse', Argument={Bind Query.Company}}"/>
+				</Selector.AddOns>
+			</Selector>
+
+			<Button Content="Обновить" Icon="Reload" Command="{BindCmd Reload}"/>
+			<Button Content="Excel" Icon="ExportExcel" Command="{BindCmd Command=ExportTo, Format=Excel}"></Button>
+		</Toolbar>
+	</Page.Toolbar>
+
+	<SheetPage Orientation="Portrait">
+		<Sheet GridLines="Both" Striped="True">
+			<Sheet.Columns>
+				<SheetColumn Fit="True"></SheetColumn>
+				<SheetColumn></SheetColumn>
+				<SheetColumn></SheetColumn>
+				<SheetColumn></SheetColumn>
+				<SheetColumn></SheetColumn>
+			</Sheet.Columns>
+			<SheetSection>
+				<SheetRow Style="Title">
+					<SheetCell ColSpan="6">@[ReportName.Stocks]</SheetCell>
+				</SheetRow>
+				<SheetRow Style="Parameter">
+					<SheetCell ColSpan="6" Content="{Bind Root.$ReportDescr}" />
+				</SheetRow>
+				<SheetRow Style="Header">
+					<SheetCell Content="@[FieldId]" Align="Right"/>
+					<SheetCell Content="@[FieldStore]"/>
+					<SheetCell Content="@[FieldArticle]"/>
+					<SheetCell Content="@[FieldName]"/>
+					<SheetCell Content="@[FieldQty]" Align="Right"/>
+					<SheetCell Content="@[FieldUnit]" Align="Right"/>
+				</SheetRow>
+			</SheetSection>
+			<SheetSection ItemsSource="{Bind Products}">
+				<SheetRow>
+					<SheetCell Content="{Bind Id}" Align="Right"/>
+					<SheetCell Content="{Bind StoreName}"/>
+					<SheetCell Content="{Bind Article}"/>
+					<SheetCell Content="{Bind ProductName}"/>
+					<SheetCell Content="{Bind QtyAvl}" Align="Right"/>
+					<SheetCell Content="{Bind UnitName}" Align="Right"/>
+				</SheetRow>
+			</SheetSection>
+		</Sheet>
+	</SheetPage>
+
+</Page>

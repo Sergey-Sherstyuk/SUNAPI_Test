@@ -1,0 +1,132 @@
+﻿<Page xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<Page.Resources>
+		<sys:String x:Key="OpenUrl">/report/cash_accounts/details</sys:String>
+	</Page.Resources>
+
+	<Page.Toolbar>
+		<Toolbar>
+			<Header>
+				<!-- <Html Content="{Bind CashAccount.$Title}"></Html> -->
+			</Header>
+
+			<Separator />
+			<PeriodPicker Label="Period" Value="{Bind Parent.Filter.Period}"></PeriodPicker>
+
+			<Selector Label="@[FieldCompany]" Value="{Bind Parent.Filter.Company}" Grid.Row="3"  DisplayProperty="Name"
+				Delegate="fetchCompany" ListSize="40rem,20rem" PanelPlacement="BottomLeft" >
+				<Selector.AddOns>
+					<Hyperlink Icon="Search" Command="{BindCmd Browse, Url='/catalog/company/browse', Argument={Bind Parent.Filter.Company}}"/>
+					<Hyperlink Icon="Clear" Command="{BindCmd Execute, CommandName='clearFilter', Argument={Bind Parent.Filter.Company}}" If="{Bind Parent.Filter.Company.Id}" />
+				</Selector.AddOns>
+				<Selector.ItemsPanel>
+					<DataGrid Striped="True" GridLines="Vertical" Hover="True">
+						<DataGridColumn Header="@[FieldId]" Content="{Bind Id}"/>
+						<DataGridColumn Header="@[FieldName]" Content="{Bind Name}"/>
+					</DataGrid>
+				</Selector.ItemsPanel>
+			</Selector>
+
+			<Selector Label="@[FieldCashAccount]" Value="{Bind Parent.Filter.CashAccount}" Grid.Row="3"  DisplayProperty="Name"
+				Delegate="fetchCashAccount" ListSize="40rem,20rem" PanelPlacement="BottomLeft" >
+				<Selector.AddOns>
+					<Hyperlink Icon="Search" Command="{BindCmd Browse, Url='/catalog/cash_account/browse', Argument={Bind Parent.Filter.CashAccount}}"/>
+					<Hyperlink Icon="Clear" Command="{BindCmd Execute, CommandName='clearFilter', Argument={Bind Parent.Filter.CashAccount}}" If="{Bind Parent.Filter.CashAccount.Id}" />
+				</Selector.AddOns>
+				<Selector.ItemsPanel>
+					<DataGrid Striped="True" GridLines="Vertical" Hover="True">
+						<DataGridColumn Header="@[FieldId]" Content="{Bind Id}"/>
+						<DataGridColumn Header="@[FieldName]" Content="{Bind Name}"/>
+					</DataGrid>
+				</Selector.ItemsPanel>
+			</Selector>
+
+			<Selector Label="@[FieldPartner]" Value="{Bind Parent.Filter.Partner}" Grid.Row="3"  DisplayProperty="Name"
+				Delegate="fetchPartner" ListSize="40rem,20rem" PanelPlacement="BottomLeft" >
+				<Selector.AddOns>
+					<Hyperlink Icon="Search" Command="{BindCmd Browse, Url='/catalog/partner/browse', Argument={Bind Parent.Filter.Partner}}"/>
+					<Hyperlink Icon="Clear" Command="{BindCmd Execute, CommandName='clearFilter', Argument={Bind Parent.Filter.Partner}}" If="{Bind Parent.Filter.Partner.Id}" />
+				</Selector.AddOns>
+				<Selector.ItemsPanel>
+					<DataGrid Striped="True" GridLines="Vertical" Hover="True">
+						<DataGridColumn Header="@[FieldId]" Content="{Bind Id}"/>
+						<DataGridColumn Header="@[FieldName]" Content="{Bind Name}"/>
+					</DataGrid>
+				</Selector.ItemsPanel>
+			</Selector>
+
+			<Selector Label="@[FieldOperation]" Value="{Bind Parent.Filter.Operation}" Grid.Row="3"  DisplayProperty="Name"
+				Delegate="fetchOperation" ListSize="40rem,20rem" PanelPlacement="BottomLeft" >
+				<Selector.AddOns>
+					<Hyperlink Icon="Search" Command="{BindCmd Browse, Url='/catalog/operation/browse', Argument={Bind Parent.Filter.Operation}}"/>
+					<Hyperlink Icon="Clear" Command="{BindCmd Execute, CommandName='clearFilter', Argument={Bind Parent.Filter.Operation}}" If="{Bind Parent.Filter.Operation.Id}" />
+				</Selector.AddOns>
+				<Selector.ItemsPanel>
+					<DataGrid Striped="True" GridLines="Vertical" Hover="True">
+						<DataGridColumn Header="@[FieldId]" Content="{Bind Id}"/>
+						<DataGridColumn Header="@[FieldName]" Content="{Bind Name}"/>
+					</DataGrid>
+				</Selector.ItemsPanel>
+			</Selector>
+
+			<Selector Label="@[FieldExpenditure]" Value="{Bind Parent.Filter.Expenditure}" Grid.Row="3"  DisplayProperty="Name"
+				Delegate="fetchExpenditure" ListSize="40rem,20rem" PanelPlacement="BottomLeft" >
+				<Selector.AddOns>
+					<Hyperlink Icon="Search" Command="{BindCmd Browse, Url='/catalog/expenditure/browse', Argument={Bind Parent.Filter.Expenditure}}"/>
+					<Hyperlink Icon="Clear" Command="{BindCmd Execute, CommandName='clearFilter', Argument={Bind Parent.Filter.Expenditure}}" If="{Bind Parent.Filter.Expenditure.Id}" />
+				</Selector.AddOns>
+				<Selector.ItemsPanel>
+					<DataGrid Striped="True" GridLines="Vertical" Hover="True">
+						<DataGridColumn Header="@[FieldId]" Content="{Bind Id}"/>
+						<DataGridColumn Header="@[FieldName]" Content="{Bind Name}"/>
+					</DataGrid>
+				</Selector.ItemsPanel>
+			</Selector>
+
+			<Separator />
+			<Button Content="@[Reload]" Icon="Reload" Command="{BindCmd Reload}"/>
+		</Toolbar>
+	</Page.Toolbar>
+
+	<Page.CollectionView>
+		<CollectionView ItemsSource="{Bind CashFlows}" RunAt="ServerUrl">
+			<CollectionView.Filter>
+				<FilterDescription>
+					<FilterItem Property="Period" DataType="Period" />
+					<FilterItem Property="Company" />
+					<FilterItem Property="CashAccount" />
+					<FilterItem Property="Partner" />
+					<FilterItem Property="Operation" />
+					<FilterItem Property="Expenditure" />
+				</FilterDescription>
+			</CollectionView.Filter>
+		</CollectionView>
+	</Page.CollectionView>
+	
+	<!--
+	<Page.Pager>
+		<Pager Source="{Bind Parent.Pager}" />
+	</Page.Pager>
+	-->
+
+	<DataGrid ItemsSource="{Bind Parent.ItemsSource}" Hover="True" Striped="true" GridLines="Both" Sort="True">
+		<DataGridColumn Header="@[FieldId]" Align="Right">
+			<!-- <Hyperlink Content="{Bind DocId}" Command="{BindCmd Open, Url={Bind TypeEditUrl}, Argument={Bind}}" ></Hyperlink> -->
+		</DataGridColumn>
+		<DataGridColumn Header="@[FieldNumber]" Fit="true" Wrap="NoWrap" Align="Right" >
+			<Html Content="{Bind DocNumber}" />
+			<!-- <Hyperlink Content="{Bind DocNumber}" Command="{BindCmd Open, Url={Bind TypeEditUrl}, Argument={Bind}}"></Hyperlink> -->
+		</DataGridColumn>
+		<DataGridColumn Header="@[FieldDate]" Content="{Bind Date, DataType=DateTime}" Fit="true" Wrap="NoWrap" />
+
+		<DataGridColumn Header="@[FieldCompany]" Content="{Bind CompanyName}" />
+		<DataGridColumn Header="@[FieldCashAccount]" Content="{Bind CashAccountName}" />
+		<DataGridColumn Header="@[FieldOperation]" Content="{Bind OperationName}" />
+		<DataGridColumn Header="@[FieldExpenditure]" Content="{Bind ExpenditureName}" />
+		<DataGridColumn Header="@[FieldPartner]" Content="{Bind PartnerName}" />
+		<DataGridColumn Header="Приход" Content="{Bind SumIn, DataType=Currency}" Align="Right"/>
+		<DataGridColumn Header="Расход" Content="{Bind SumOut, DataType=Currency}" Align="Right"/>
+
+	</DataGrid>
+</Page>

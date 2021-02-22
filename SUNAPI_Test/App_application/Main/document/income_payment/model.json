@@ -1,0 +1,37 @@
+{
+    "$schema": "../../../@schemas/model-json-schema.json#",
+    "schema": "sunapi",
+    "model": "Document",
+    "actions": {
+        "index": {
+            "index": true,
+            "view": "income_payment.index.view",
+            "template": "income_payment.index.template",
+            "parameters": {
+                "Type": "INCOME_PAYMENT"
+            }
+        },
+        "edit": {
+            "view": "income_payment.detail.view",
+            "template": "income_payment.detail.template",
+            "parameters": {
+                "Type": "INCOME_PAYMENT"
+            }
+        }
+    },
+    "commands": {
+        "DocumentAddChildCopy": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopy"
+        },
+        "DocumentAddChildCopyWithoutDetails": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopyWithoutDetails"
+        }
+    },
+    "reports": {
+        "income_payment": {
+            "report": "income_payment"
+        }
+    }
+}

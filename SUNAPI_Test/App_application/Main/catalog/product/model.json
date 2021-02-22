@@ -1,0 +1,47 @@
+{
+	"$schema": "../../../@schemas/model-json-schema.json#",
+	"schema": "sunapi",
+	"model": "Product",
+	"actions": {
+		"index": {
+			"index": true,
+			"view": "product.index.view",
+			"template": "product.index.template"
+		}
+	},
+	"dialogs": {
+		"edit": {
+			"view": "product.edit.dialog",
+			"template": "product.edit.template"
+		},
+		"browse": {
+			"index": true,
+			"view": "product.browse.dialog"
+		},
+		"browseGoods": {
+			"index": true,
+			"view": "goods.browse.dialog",
+			"model": "Goods"
+		},
+		"browseServices": {
+			"index": true,
+			"view": "services.browse.dialog",
+			"model": "Services"
+		},
+		"browseStocks": {
+			"index": true,
+			"view": "stocks.browse.dialog",
+			"model": "Stocks"
+		}
+	},
+	"commands": {
+		"fetchProduct": {
+			"type": "sql",
+			"procedure": "Product.Fetch"
+		},
+		"findArticle": {
+			"type": "sql",
+			"procedure": "Product.FindArticle"
+		}
+	}
+}

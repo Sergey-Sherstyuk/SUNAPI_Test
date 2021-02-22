@@ -1,0 +1,37 @@
+{
+    "$schema": "../../../@schemas/model-json-schema.json#",
+    "schema": "sunapi",
+    "model": "Document",
+    "actions": {
+        "index": {
+            "index": true,
+            "view": "income_invoice.index.view",
+            "template": "income_invoice.index.template",
+            "parameters": {
+                "Type": "INCOME_INVOICE"
+            }
+        },
+        "edit": {
+            "view": "income_invoice.detail.view",
+            "template": "income_invoice.detail.template",
+            "parameters": {
+                "Type": "INCOME_INVOICE"
+            }
+        }
+    },
+    "commands": {
+        "DocumentAddChildCopy": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopy"
+        },
+        "DocumentAddChildCopyWithoutDetails": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopyWithoutDetails"
+        }
+    },
+    "reports": {
+        "income_invoice": {
+            "report": "income_invoice"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+	"$schema": "../../../@schemas/model-json-schema.json#",
+	"schema": "sunapi",
+	"model": "Unit",
+	"actions": {
+		"index": {
+			"index": true,
+			"view": "unit.index.view"
+		}
+	},
+	"dialogs": {
+		"edit": {
+			"view": "unit.edit.dialog",
+			"template": "unit.edit.template"
+		},
+		"browse": {
+			"index": true,
+			"view": "unit.browse.dialog"
+		}
+	}
+}

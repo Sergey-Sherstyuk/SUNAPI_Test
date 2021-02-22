@@ -1,0 +1,180 @@
+﻿<Page xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<Page.Resources>
+		<sys:String x:Key="BrowseStoresUrl">/catalog/store/browse</sys:String>
+		<sys:String x:Key="BrowsePartnersUrl">/catalog/partner/browse</sys:String>
+		<sys:String x:Key="BrowseContractsUrl">/catalog/contract/browseByCompanyPartner</sys:String>
+		<sys:String x:Key="BrowseCompaniesUrl">/catalog/company/browse</sys:String>
+		<sys:String x:Key="BrowseCashAccountsUrl">/catalog/cash_account/browseByCompany</sys:String>
+		<sys:String x:Key="EditStoreUrl">/catalog/store/edit</sys:String>
+		<sys:String x:Key="EditPartnerUrl">/catalog/partner/edit</sys:String>
+		<sys:String x:Key="EditContractUrl">/catalog/contract/edit</sys:String>
+		<sys:String x:Key="EditCompanyUrl">/catalog/company/edit</sys:String>
+		<sys:String x:Key="EditCashAccountUrl">/catalog/cash_account/edit</sys:String>
+	</Page.Resources>
+	<Page.Toolbar>
+		<Toolbar>
+			<Button Content="@[Save]" Icon="Save" Tip="@[TipSaveBtn]" Command="{BindCmd Save}"/>
+			<Button Content="@[SaveAndClose]" Icon="SaveClose" Tip="@[TipDocSaveCloseBtn]" Command="{BindCmd SaveAndClose}"/>
+			<Button Content="@[Reload]" Icon="Reload" Command="{BindCmd Reload}" Tip="@[TipReloadBtn]"/>
+			<Separator/>
+			<Button Content="@[BtnApply]" Icon="LockOutline" Command="{BindCmd Execute, CommandName='apply', Argument={Bind Document}}" If="{Bind !Document.Done}" />
+			<Button Content="@[BtnUnApply]" Icon="UnlockOutline" Command="{BindCmd Execute, CommandName='unApply', Argument={Bind Document}}" If="{Bind Document.Done}" />
+			<Separator/>
+			<Button Content="@[BtnPrint]" Icon="Print" Command="{BindCmd Command=Report, Report='stocks_move', Argument={Bind Document}, Print=false}"></Button>
+			<Button Content="@[Close]" Icon="Close" Command="{BindCmd Close}" Toolbar.Align="Right"></Button>
+		</Toolbar>
+	</Page.Toolbar>
+
+	<Page.Taskpad>
+		<Taskpad Title="Info" Width="330">
+			<ContentControl Content="{Source Path='../panel_info'}"/>
+			<ContentControl Content="{Source Path='../panel_documents_tree'}"/>
+			<ContentControl Content="{Source Path='../panel_create_linked_doc'}"/>
+			<!--
+			<Code Multiline="True" Content="{Bind Document}" Height="790"> 	</Code>
+			-->
+		</Taskpad>
+	</Page.Taskpad>
+
+	<Alert Style="Warning" Icon="WarningOutline" If="{Bind Document.Done}">
+		@[WarningDocDone]
+	</Alert>
+	<Alert Style="Warning" Icon="WarningOutline" If="{Bind Document.Deleted}">
+		@[WarningDocDeleted]
+	</Alert>
+
+	<Grid Columns="1*,1*,1*,1*">
+		<Header Grid.Row="1" Grid.Col="1" Grid.ColSpan="4">@[DocNameStocksMove]</Header>
+
+		<!-- <DatePicker Label="@[FieldDate]" Value="{Bind Document.Date}" Grid.Row="2" Grid.Col="1" Grid.ColSpan="1" /> -->
+		<Grid Columns="1*,1*">
+			<DatePicker Label="@[FieldDate]" Value="{Bind Document.Date}" />
+			<TimePicker Label="@[FieldTime]" Value="{Bind Document.Date}" />
+		</Grid>
+
+		<TextBox Label="@[FieldNumber]" Value="{Bind Document.Number}" Grid.Row="2" Grid.Col="2" Align="Right"/>
+
+		<Selector Label="@[FieldStoreFrom]" Value="{Bind Document.StoreFrom}" Grid.Row="2" Grid.Col="3" DisplayProperty="Name"
+				Delegate="fetchStore" ListSize="40rem,20rem" PanelPlacement="BottomLeft" 
+				CreateNewCommand="{BindCmd Execute, CommandName=newStore}">
+			<Selector.AddOns>
+				<Hyperlink Icon="Search" Command="{BindCmd Browse, Url={StaticResource BrowseStoresUrl}, Argument={Bind Document.StoreFrom}}"/>
+				<Hyperlink Icon="EllipsisVertical" If="{Bind !Document.StoreFrom.$isEmpty}">
+					<Hyperlink.DropDown>
+						<DropDownMenu>
+							<MenuItem Content="Edit" Icon="Edit" Command="{BindCmd Dialog, Action=Edit, Argument={Bind Document.StoreFrom}, Url={StaticResource EditStoreUrl}}"/>
+							<MenuItem Content="Clear" Icon="Clear" Command="{BindCmd Command=Clear, Argument={Bind Document.StoreFrom}}"/>
+						</DropDownMenu>
+					</Hyperlink.DropDown>
+				</Hyperlink>
+			</Selector.AddOns>
+			<Selector.ItemsPanel>
+				<DataGrid Striped="True" GridLines="Vertical" Hover="True">
+					<DataGridColumn Header="@[FieldId]" Content="{Bind Id}"/>
+					<DataGridColumn Header="@[FieldName]" Content="{Bind Name}"/>
+				</DataGrid>
+			</Selector.ItemsPanel>
+		</Selector>
+
+		<Selector Label="@[FieldStoreTo]" Value="{Bind Document.StoreTo}" Grid.Row="2" Grid.Col="4" DisplayProperty="Name"
+				Delegate="fetchStore" ListSize="40rem,20rem" PanelPlacement="BottomLeft" 
+				CreateNewCommand="{BindCmd Execute, CommandName=newStore}">
+			<Selector.AddOns>
+				<Hyperlink Icon="Search" Command="{BindCmd Browse, Url={StaticResource BrowseStoresUrl}, Argument={Bind Document.StoreTo}}"/>
+				<Hyperlink Icon="EllipsisVertical" If="{Bind !Document.StoreTo.$isEmpty}">
+					<Hyperlink.DropDown>
+						<DropDownMenu>
+							<MenuItem Content="Edit" Icon="Edit" Command="{BindCmd Dialog, Action=Edit, Argument={Bind Document.StoreTo}, Url={StaticResource EditStoreUrl}}"/>
+							<MenuItem Content="Clear" Icon="Clear" Command="{BindCmd Command=Clear, Argument={Bind Document.StoreTo}}"/>
+						</DropDownMenu>
+					</Hyperlink.DropDown>
+				</Hyperlink>
+			</Selector.AddOns>
+			<Selector.ItemsPanel>
+				<DataGrid Striped="True" GridLines="Vertical" Hover="True">
+					<DataGridColumn Header="@[FieldId]" Content="{Bind Id}"/>
+					<DataGridColumn Header="@[FieldName]" Content="{Bind Name}"/>
+				</DataGrid>
+			</Selector.ItemsPanel>
+		</Selector>
+
+		<Selector Label="@[FieldCompany]" Value="{Bind Document.Company}" Grid.Row="3" DisplayProperty="Name"
+				Delegate="fetchCompany" ListSize="40rem,20rem" PanelPlacement="BottomLeft" 
+				CreateNewCommand="{BindCmd Execute, CommandName=newCompany}">
+			<Selector.AddOns>
+				<Hyperlink Icon="Search" Command="{BindCmd Browse, Url={StaticResource BrowseCompaniesUrl}, Argument={Bind Document.Company}}"/>
+				<Hyperlink Icon="EllipsisVertical" If="{Bind !Document.Company.$isEmpty}">
+					<Hyperlink.DropDown>
+						<DropDownMenu>
+							<MenuItem Content="Edit" Icon="Edit" Command="{BindCmd Dialog, Action=Edit, Argument={Bind Document.Company}, Url={StaticResource EditCompanyUrl}}"/>
+							<MenuItem Content="Clear" Icon="Clear" Command="{BindCmd Command=Clear, Argument={Bind Document.Company}}"/>
+						</DropDownMenu>
+					</Hyperlink.DropDown>
+				</Hyperlink>
+			</Selector.AddOns>
+			<Selector.ItemsPanel>
+				<DataGrid Striped="True" GridLines="Vertical" Hover="True">
+					<DataGridColumn Header="@[FieldId]" Content="{Bind Id}"/>
+					<DataGridColumn Header="@[FieldName]" Content="{Bind Name}"/>
+				</DataGrid>
+			</Selector.ItemsPanel>
+		</Selector>
+
+		<Block Grid.Row="4" Grid.ColSpan="4">
+
+			<TabPanel>
+				<Tab Header="{Bind Document.$RowsCntGoods, Format='@[FieldGoods] [{0}]'}" Padding="0, 0, 5, 0">
+
+					<Toolbar>
+						<Button Content="@[BtnAppendGoods]" Icon="Plus" Command="{BindCmd Execute, CommandName=appendRowGoods, Argument={Bind Document.Rows}}" If="{Bind !Document.Done}"></Button>
+					</Toolbar>
+					<Table ItemsSource="{Bind Document.Rows}" Width="100%" GridLines="Both" Columns="100,100,Auto,100,100,27">
+						<Table.Header>
+							<TableRow>
+								<TableCell Content="@[FieldId]"/>
+								<TableCell Content="@[FieldArticle]"/>
+								<TableCell Content="@[FieldName]"/>
+								<TableCell Content="@[FieldQuantity]"/>
+								<TableCell Content="@[FieldUnit]"/>
+								<TableCell/>
+							</TableRow>
+						</Table.Header>
+						<TableRow If="{Bind !Product.IsService}">
+							<TableCell Content="{Bind Id}" Align="Right"/>
+							<TextBox Value="{Bind Product.Article}"/>
+							<TableCell>
+								<Selector Value="{Bind Product}" Grid.Row="3" Grid.ColSpan="2" DisplayProperty="Name"
+										Delegate="fetchProduct" ListSize="40rem,20rem" PanelPlacement="BottomLeft" 
+										CreateNewCommand="{BindCmd Execute, CommandName=newProduct}">
+									<Selector.AddOns>
+										<Hyperlink Icon="Search" Command="{BindCmd Browse, Url='/catalog/product/browseGoods', Argument={Bind Product}}"/>
+									</Selector.AddOns>
+									<Selector.ItemsPanel>
+										<DataGrid Striped="True" GridLines="Vertical" Hover="True">
+											<DataGridColumn Header="@[FieldId]" Content="{Bind Id}"/>
+											<DataGridColumn Header="@[FieldName]" Content="{Bind Name}"/>
+										</DataGrid>
+									</Selector.ItemsPanel>
+								</Selector>
+							</TableCell>
+							<TextBox Value="{Bind Qty, DataType=Currency, Format='0.000'}" Align="Right"/>
+							<TableCell Content="{Bind Product.Unit.Name}" Align="Center"></TableCell>
+							<TableCell>
+								<Hyperlink Icon="Delete" Command="{BindCmd Remove, Argument={Bind}, Confirm='@[Sure.DeleteDocRow]'}"></Hyperlink>
+							</TableCell>
+						</TableRow>
+					</Table>
+
+				</Tab>
+
+			</TabPanel>
+
+		</Block>
+
+		<TextBox Grid.Row="5" Grid.ColSpan="4" Label="@[FieldComment]" Multiline="True" Value="{Bind Document.Comment}" Rows="3" />
+
+	</Grid>
+
+</Page>

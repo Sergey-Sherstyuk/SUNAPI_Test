@@ -1,0 +1,33 @@
+{
+	"$schema": "../../../@schemas/model-json-schema.json#",
+	"schema": "sunapi",
+	"model": "PriceType",
+	"actions": {
+		"index": {
+			"index": true,
+			"view": "priceType.index.view"
+		}
+	},
+	"dialogs": {
+		"edit": {
+			"view": "priceType.edit.dialog",
+			"template": "priceType.edit.template"
+		},
+		"browse": {
+			"index": true,
+			"view": "priceType.browse.dialog"
+		},
+		"browseProductPriceHistory": {
+			"index": true,
+			"view": "productPriceHistory.browse.dialog",
+			"template": "productPriceHistory.browse.template",
+			"model": "productPriceHistory"
+		}
+	},
+	"commands": {
+		"fetchPriceType": {
+			"type": "sql",
+			"procedure": "priceType.Fetch"
+		}
+	}
+}

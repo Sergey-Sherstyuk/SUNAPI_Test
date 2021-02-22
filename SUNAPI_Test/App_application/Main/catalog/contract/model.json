@@ -1,0 +1,33 @@
+{
+	"$schema": "../../../@schemas/model-json-schema.json#",
+	"schema": "sunapi",
+	"model": "Contract",
+	"actions": {
+		"index": {
+			"index": true,
+			"view": "contract.index.view"
+		}
+	},
+	"dialogs": {
+		"edit": {
+			"view": "contract.edit.dialog",
+			"template": "contract.edit.template"
+		},
+		"browse": {
+			"index": true,
+			"view": "contract.browse.dialog"
+		},
+		"browseByCompanyPartner": {
+			"index": true,
+			"view": "contractByCompanyPartner.browse.dialog",
+			"template": "contractByCompanyPartner.browse.template",
+			"model": "ContractByCompanyPartner"
+		}
+	},
+	"commands": {
+		"fetchContract": {
+			"type": "sql",
+			"procedure": "Contract.Fetch"
+		}
+	}
+}

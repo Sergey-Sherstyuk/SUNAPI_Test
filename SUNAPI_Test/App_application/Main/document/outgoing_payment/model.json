@@ -1,0 +1,37 @@
+{
+    "$schema": "../../../@schemas/model-json-schema.json#",
+    "schema": "sunapi",
+    "model": "Document",
+    "actions": {
+        "index": {
+            "index": true,
+            "view": "outgoing_payment.index.view",
+            "template": "outgoing_payment.index.template",
+            "parameters": {
+                "Type": "OUTGOING_PAYMENT"
+            }
+        },
+        "edit": {
+            "view": "outgoing_payment.detail.view",
+            "template": "outgoing_payment.detail.template",
+            "parameters": {
+                "Type": "OUTGOING_PAYMENT"
+            }
+        }
+    },
+    "commands": {
+        "DocumentAddChildCopy": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopy"
+        },
+        "DocumentAddChildCopyWithoutDetails": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopyWithoutDetails"
+        }
+    },
+    "reports": {
+        "outgoing_payment": {
+            "report": "outgoing_payment"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+﻿<Dialog xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml" Title="@[ProductBrowseDialogTitle]" Width="50rem">
+	<Dialog.Buttons>
+		<Button Content="@[Select]" Style="Primary" Command="{BindCmd Command=Select, Argument={Bind Products}}"/>
+		<Button Content="@[Cancel]" Command="{BindCmd Command=Close}"/>
+	</Dialog.Buttons>
+
+	<CollectionView ItemsSource="{Bind Products}" RunAt="Server">
+		<CollectionView.Filter>
+			<FilterDescription>
+				<FilterItem Property="Name" DataType="String"/>
+				<FilterItem Property="Memo" DataType="String"/>
+			</FilterDescription>
+		</CollectionView.Filter>
+		<!--
+			<Toolbar Style="Transparent">
+			<TextBox Value="{Bind Parent.Filter.Name}" Label="Name"></TextBox>
+		</Toolbar>
+		-->
+
+		<DataGrid DoubleClick="{BindCmd Select, Argument={Bind Products}}" ItemsSource="{Bind Products}"
+				Hover="True" Striped="True" GridLines="Both" Sort="True" Height="250" FixedHeader="True">
+			<DataGridColumn Header="Id" Content="{Bind Id}" Fit="True" Align="Right" Wrap="NoWrap"/>
+			<DataGridColumn Header="Article" Content="{Bind Article}"/>
+			<DataGridColumn Header="Name" Content="{Bind Name}"/>
+			<DataGridColumn Fit="True">
+				<CommandBar Visibility="Hover">
+					<Button Icon="Edit" 
+						Command="{BindCmd Dialog, Action=Edit, Url='/catalog/product/edit', Argument={Bind}}"/>
+					<Button Icon="Clear" 
+						Command="{BindCmd Command=DbRemove, Argument={Bind}, Confirm='@[Sure.DeleteProduct]'}"/>
+				</CommandBar>
+			</DataGridColumn>
+		</DataGrid>
+		<!--
+		<Pager Source="{Bind Parent.Pager}"/>
+		-->
+
+	</CollectionView>
+
+</Dialog>

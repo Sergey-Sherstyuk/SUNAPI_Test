@@ -1,0 +1,40 @@
+{
+    "$schema": "../../../@schemas/model-json-schema.json#",
+    "schema": "sunapi",
+    "model": "Document",
+    "actions": {
+        "index": {
+            "index": true,
+            "view": "outgoing_invoice.index.view",
+            "template": "outgoing_invoice.index.template",
+            "parameters": {
+                "Type": "OUTGOING_INVOICE"
+            }
+        },
+        "edit": {
+            "view": "outgoing_invoice.detail.view",
+            "template": "outgoing_invoice.detail.template",
+            "parameters": {
+                "Type": "OUTGOING_INVOICE"
+            }
+        }
+    },
+    "commands": {
+        "DocumentAddChildCopy": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopy"
+        },
+        "DocumentAddChildCopyWithoutDetails": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopyWithoutDetails"
+        }
+    },
+    "reports": {
+        "outgoing_invoice_goods": {
+            "report": "outgoing_invoice_goods"
+        },
+        "outgoing_invoice_services": {
+            "report": "outgoing_invoice_services"
+        }
+    }
+}

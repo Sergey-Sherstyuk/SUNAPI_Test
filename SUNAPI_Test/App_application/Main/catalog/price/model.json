@@ -1,0 +1,14 @@
+{
+	"$schema": "../../../@schemas/model-json-schema.json#",
+	"schema": "sunapi",
+	"model": "Price",
+	"actions": {
+	},
+	"dialogs": {
+		"edit": {
+			"view": "price.edit.dialog"
+		}
+	},
+	"commands": {
+	}
+}

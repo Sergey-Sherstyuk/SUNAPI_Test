@@ -1,0 +1,12 @@
+{
+    "$schema": "../../../@schemas/model-json-schema.json#",
+    "schema": "sunapi",
+    "model": "Report.Stocks",
+    "actions": {
+        "index": {
+            "index": true,
+            "view": "index.view",
+            "template": "index.view"
+        }
+    }
+}

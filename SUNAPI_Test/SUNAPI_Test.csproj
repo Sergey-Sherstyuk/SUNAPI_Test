@@ -1,0 +1,1558 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B6E9331A-A409-44DF-9CB1-280E55142DFB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SUNAPI_Test</RootNamespace>
+    <AssemblyName>SUNAPI_Test</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="A2v10.Data.Interfaces, Version=10.0.7251.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\A2v10.Web.Runtime.10.0.7750\lib\net461\A2v10.Data.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="A2v10.Infrastructure, Version=10.0.7750.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\A2v10.Web.Runtime.10.0.7750\lib\net461\A2v10.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="A2v10.Messaging, Version=10.0.7750.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\A2v10.Web.Runtime.10.0.7750\lib\net461\A2v10.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="A2v10.Web.Mvc, Version=10.0.7750.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\A2v10.Web.Runtime.10.0.7750\lib\net461\A2v10.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="A2v10.Workflow, Version=10.0.7750.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\A2v10.Web.Runtime.10.0.7750\lib\net461\A2v10.Workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="A2v10.Xaml, Version=10.0.7750.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\A2v10.Web.Runtime.10.0.7750\lib\net461\A2v10.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="LibExcel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2018.3.2\lib\net40\LibExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Stimulsoft.Base, Version=2018.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2018.3.2\lib\net40\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Data, Version=2018.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2018.3.2\lib\net40\Stimulsoft.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Map, Version=2018.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2018.3.2\lib\net40\Stimulsoft.Map.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2018.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2018.3.2\lib\net40\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check, Version=2018.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2018.3.2\lib\net40\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper, Version=2018.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2018.3.2\lib\net40\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Mvc, Version=2018.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2018.3.2\lib\net40\Stimulsoft.Report.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web, Version=2018.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2018.3.2\lib\net40\Stimulsoft.Report.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.WebDesign, Version=2018.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2018.3.2\lib\net40\Stimulsoft.Report.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Svg, Version=2.2.1.39233, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stimulsoft.Reports.Web.2018.3.2\lib\net40\Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Activities" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_application\%40sql\platform\a2v10admin.sql" />
+    <Content Include="App_application\%40sql\platform\a2v10platform.sql" />
+    <Content Include="App_application\%40sql\platform\source\a2v10admin.sql" />
+    <Content Include="App_application\%40sql\platform\source\a2v10api.sql" />
+    <Content Include="App_application\%40sql\platform\source\a2v10messaging.sql" />
+    <Content Include="App_application\%40sql\platform\source\a2v10security.sql" />
+    <Content Include="App_application\%40sql\platform\source\a2v10system.sql" />
+    <Content Include="App_application\%40sql\platform\source\a2v10ui.sql" />
+    <Content Include="App_application\%40sql\platform\source\a2v10workflow.sql" />
+    <Content Include="App_application\Main\sql\01_main.sql" />
+    <Content Include="App_application\Main\sql\05_audit.sql" />
+    <Content Include="App_application\Main\sql\10_product-section-unit-price.sql" />
+    <Content Include="App_application\Main\sql\11_store.sql" />
+    <Content Include="App_application\Main\sql\12_partner.sql" />
+    <Content Include="App_application\Main\sql\13a_price.sql" />
+    <Content Include="App_application\Main\sql\13_price-type.sql" />
+    <Content Include="App_application\Main\sql\14_company.sql" />
+    <Content Include="App_application\Main\sql\15_cash_account.sql" />
+    <Content Include="App_application\Main\sql\16_contract.sql" />
+    <Content Include="App_application\Main\sql\17_expenditures.sql" />
+    <Content Include="App_application\Main\sql\18_operations.sql" />
+    <Content Include="App_application\Main\sql\20_catalog.sql" />
+    <Content Include="App_application\Main\sql\30_document.sql" />
+    <Content Include="App_application\Main\sql\32_reports.sql" />
+    <Content Include="App_application\Main\sql\35_dev.sql" />
+    <Content Include="App_application\Main\sql\40_demo_data.sql" />
+    <Content Include="App_application\Main\_assets\app.css" />
+    <Content Include="App_application\Main\_layout\_head.html" />
+    <Content Include="App_application\Main\_layout\_scripts.html" />
+    <Content Include="App_application\Main\_localization\application.uk.txt" />
+    <Content Include="css\default.colorscheme.css" />
+    <Content Include="css\default.colorscheme.min.css" />
+    <Content Include="css\fonts\A2v10.svg" />
+    <Content Include="css\mobile.css" />
+    <Content Include="css\mobile.min.css" />
+    <Content Include="css\site.advance.css" />
+    <Content Include="css\site.advance.min.css" />
+    <Content Include="css\site.css" />
+    <Content Include="css\site.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="localization\ar.xml" />
+    <Content Include="localization\be.xml" />
+    <Content Include="localization\bg.xml" />
+    <Content Include="localization\bh.xml" />
+    <Content Include="localization\ca-ES.xml" />
+    <Content Include="localization\cs.xml" />
+    <Content Include="localization\de.ext.xml" />
+    <Content Include="localization\de.xml" />
+    <Content Include="localization\default.de.txt" />
+    <Content Include="localization\default.en.txt" />
+    <Content Include="localization\default.ru.txt" />
+    <Content Include="localization\default.uk.txt" />
+    <Content Include="localization\el-GR.xml" />
+    <Content Include="localization\en-GB.xml" />
+    <Content Include="localization\en.ext.xml" />
+    <Content Include="localization\en.xml" />
+    <Content Include="localization\es.xml" />
+    <Content Include="localization\eu-ES.xml" />
+    <Content Include="localization\fa.xml" />
+    <Content Include="localization\fr.ext.xml" />
+    <Content Include="localization\fr.xml" />
+    <Content Include="localization\gl-ES.xml" />
+    <Content Include="localization\hr.xml" />
+    <Content Include="localization\hu.xml" />
+    <Content Include="localization\id.xml" />
+    <Content Include="localization\it.xml" />
+    <Content Include="localization\ka.xml" />
+    <Content Include="localization\lt.xml" />
+    <Content Include="localization\nb-NO.xml" />
+    <Content Include="localization\nl.xml" />
+    <Content Include="localization\pl.xml" />
+    <Content Include="localization\pt-BR.xml" />
+    <Content Include="localization\pt.xml" />
+    <Content Include="localization\ro.xml" />
+    <Content Include="localization\ru.ext.xml" />
+    <Content Include="localization\ru.xml" />
+    <Content Include="localization\sk.xml" />
+    <Content Include="localization\sr.xml" />
+    <Content Include="localization\sv.ext.xml" />
+    <Content Include="localization\sv.xml" />
+    <Content Include="localization\tr.xml" />
+    <Content Include="localization\uk.xml" />
+    <Content Include="localization\vi.xml" />
+    <Content Include="localization\zh-CHS.xml" />
+    <Content Include="localization\zh-CHT.xml" />
+    <Content Include="scripts\d3.min.js" />
+    <Content Include="scripts\locale-de.min.js" />
+    <Content Include="scripts\locale-en.min.js" />
+    <Content Include="scripts\locale-ru.min.js" />
+    <Content Include="scripts\locale-uk.min.js" />
+    <Content Include="scripts\main.js" />
+    <Content Include="scripts\mobile.js" />
+    <Content Include="scripts\vue.js" />
+    <Content Include="scripts\vue.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_application\Main\catalog\cash_account\model.json" />
+    <Content Include="App_application\Main\catalog\cat\model.json" />
+    <Content Include="App_application\Main\catalog\company\model.json" />
+    <Content Include="App_application\Main\catalog\contract\model.json" />
+    <Content Include="App_application\Main\catalog\expenditure\model.json" />
+    <Content Include="App_application\Main\catalog\operation\model.json" />
+    <Content Include="App_application\Main\catalog\partner\model.json" />
+    <Content Include="App_application\Main\catalog\price\model.json" />
+    <Content Include="App_application\Main\catalog\price_type\model.json" />
+    <Content Include="App_application\Main\catalog\product\model.json" />
+    <Content Include="App_application\Main\catalog\section\model.json" />
+    <Content Include="App_application\Main\catalog\store\model.json" />
+    <Content Include="App_application\Main\catalog\unit\model.json" />
+    <Content Include="App_application\Main\document\income_invoice\income_invoice.mrt" />
+    <Content Include="App_application\Main\document\income_invoice\model.json" />
+    <Content Include="App_application\Main\document\income_order\income_order.mrt" />
+    <Content Include="App_application\Main\document\income_order\model.json" />
+    <Content Include="App_application\Main\document\income_payment\income_payment.mrt" />
+    <Content Include="App_application\Main\document\income_payment\model.json" />
+    <Content Include="App_application\Main\document\invoice\invoice.mrt" />
+    <Content Include="App_application\Main\document\invoice\model.json" />
+    <Content Include="App_application\Main\document\model.json" />
+    <Content Include="App_application\Main\document\money_move\model.json" />
+    <Content Include="App_application\Main\document\money_move\money_move.mrt" />
+    <Content Include="App_application\Main\document\outgoing_invoice\model.json" />
+    <Content Include="App_application\Main\document\outgoing_invoice\outgoing_invoice_goods.mrt" />
+    <Content Include="App_application\Main\document\outgoing_invoice\outgoing_invoice_services.mrt" />
+    <Content Include="App_application\Main\document\outgoing_order\model.json" />
+    <Content Include="App_application\Main\document\outgoing_order\outgoing_order.mrt" />
+    <Content Include="App_application\Main\document\outgoing_payment\model.json" />
+    <Content Include="App_application\Main\document\outgoing_payment\outgoing_payment.mrt" />
+    <Content Include="App_application\Main\document\stocks_move\model.json" />
+    <Content Include="App_application\Main\document\stocks_move\stocks_move.mrt" />
+    <Content Include="App_application\Main\report\balances\model.json" />
+    <Content Include="App_application\Main\report\cash_accounts\model.json" />
+    <Content Include="App_application\Main\report\cash_flows\model.json" />
+    <Content Include="App_application\Main\report\product_moves\model.json" />
+    <Content Include="App_application\Main\report\sales\model.json" />
+    <Content Include="App_application\Main\report\stocks\model.json" />
+    <Content Include="App_application\Main\sql.json" />
+    <Content Include="css\fonts\A2v10.woff2" />
+    <Content Include="css\fonts\A2v10.woff" />
+    <Content Include="css\fonts\A2v10.ttf" />
+    <Content Include="css\fonts\A2v10.eot" />
+    <Content Include="App_application\%40schemas\sql-json-schema.json" />
+    <Content Include="App_application\%40schemas\model-json-schema.json" />
+    <Content Include="App_application\%40schemas\api-model-json-schema.json" />
+    <None Include="packages.config" />
+    <Content Include="Web.config.sample" />
+    <Content Include="tsconfig.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="App_application\%40types\platform.d.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\cash_account\cashAccount.edit.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\cash_account\cashAccountByCompany.browse.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\cat\catalog.index.view.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\company\company.edit.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\contract\contract.edit.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\contract\contractByCompanyPartner.browse.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\expenditure\expenditure.edit.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\operation\operation.edit.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\partner\partner.edit.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\price_type\priceType.edit.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\price_type\productPriceHistory.browse.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\product\product.edit.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\product\product.index.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\section\section.edit.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\section\section.index.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\store\store.edit.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\catalog\unit\unit.edit.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\common.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\income_invoice\income_invoice.detail.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\income_invoice\income_invoice.index.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\income_order\income_order.detail.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\income_order\income_order.index.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\income_payment\income_payment.detail.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\income_payment\income_payment.index.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\invoice\invoice.detail.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\invoice\invoice.index.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\money_move\money_move.detail.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\money_move\money_move.index.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\outgoing_invoice\outgoing_invoice.detail.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\outgoing_invoice\outgoing_invoice.index.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\outgoing_order\outgoing_order.detail.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\outgoing_order\outgoing_order.index.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\outgoing_payment\outgoing_payment.detail.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\outgoing_payment\outgoing_payment.index.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\stocks_move\stocks_move.detail.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\document\stocks_move\stocks_move.index.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\report\balances\details.view.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\report\balances\index.view.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\report\cash_accounts\details.view.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\report\cash_accounts\index.view.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\report\cash_flows\details.view.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\report\cash_flows\index.view.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\report\product_moves\index.view.template.ts" />
+    <TypeScriptCompile Include="App_application\Main\report\sales\index.view.ts" />
+    <TypeScriptCompile Include="App_application\Main\report\stocks\index.view.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_application\Main\sql_all\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccount.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccount.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccount.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccount.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\cash_account\cashAccount.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccount.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccount.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccount.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccount.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\cash_account\cashAccount.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccount.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccount.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccount.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccount.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\cash_account\cashAccount.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccountByCompany.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccountByCompany.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccountByCompany.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cash_account\cashAccountByCompany.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\cash_account\cashAccountByCompany.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\cat\catalog.index.view.v1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cat\catalog.index.view.v2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cat\catalog.index.view.v3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cat\catalog.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cat\catalog.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\cat\catalog.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\cat\catalog.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\company\company.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\company\company.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\company\company.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\company\company.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\company\company.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\company\company.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\company\company.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\company\company.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\company\company.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\company\company.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\company\company.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\company\company.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\contact\contact.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\contact_subtype\contact_subtype.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\contact_subtype\contact_subtype.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\contact_type\contact_type.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\contact_type\contact_type.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\contract\contract.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\contract\contract.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\contract\contract.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\contract\contract.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\contract\contract.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\contract\contract.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\contract\contract.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\contract\contract.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\contract\contract.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\contract\contract.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\contract\contract.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\contract\contract.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\contract\contractByCompanyPartner.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\contract\contractByCompanyPartner.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\contract\contractByCompanyPartner.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\contract\contractByCompanyPartner.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\expenditure\expenditure.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\expenditure\expenditure.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\expenditure\expenditure.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\expenditure\expenditure.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\expenditure\expenditure.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\expenditure\expenditure.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\expenditure\expenditure.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\expenditure\expenditure.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\expenditure\expenditure.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\expenditure\expenditure.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\expenditure\expenditure.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\expenditure\expenditure.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\menu.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\operation\operation.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\operation\operation.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\operation\operation.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\operation\operation.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\operation\operation.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\operation\operation.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\operation\operation.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\operation\operation.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\operation\operation.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\operation\operation.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\operation\operation.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\operation\operation.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\partner\partner.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\partner\partner.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\partner\partner.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\partner\partner.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\partner\partner.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\partner\partner.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\partner\partner.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\partner\partner.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\partner\partner.edit.mobile.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\partner\partner.index.mobile.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\partner\partner.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\partner\partner.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\partner\partner.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\partner\partner.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\person\person.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\price\price.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\price\price.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\price\price.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\price\price.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\price_type\pricetype.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\price_type\pricetype.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\price_type\pricetype.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\price_type\pricetype.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\price_type\priceType.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\price_type\priceType.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\price_type\priceType.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\price_type\priceType.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\price_type\priceType.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\price_type\priceType.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\price_type\priceType.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\price_type\priceType.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\price_type\productPriceHistory.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\price_type\productPriceHistory.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\price_type\productPriceHistory.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\price_type\productPriceHistory.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\product\goods.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\product\goods.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\product\goods.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\product\goods.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\product\product.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\product\product.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\product\product.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\product\product.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\product\product.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\product\product.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\product\product.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\product\product.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\product\product.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\product\product.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\product\product.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\product\product.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\product\services.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\product\services.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\product\services.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\product\services.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\product\stocks.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\product\stocks.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\product\stocks.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\product\stocks.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\section\section.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\section\section.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\section\section.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\section\section.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\section\section.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\section\section.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\section\section.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\section\section.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\section\section.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\section\section.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\section\section.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\section\section.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\store\store.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\store\store.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\store\store.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\store\store.browse.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\store\store.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\store\store.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\store\store.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\store\store.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\store\store.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\store\store.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\store\store.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\store\store.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\unit\unit.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\unit\unit.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\unit\unit.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\unit\unit.edit.dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\catalog\unit\unit.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\unit\unit.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\catalog\unit\unit.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\catalog\unit\unit.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\income_invoice\income_invoice.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\income_invoice\income_invoice.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\income_invoice\income_invoice.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\income_invoice\income_invoice.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\income_invoice\income_invoice.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\income_invoice\income_invoice.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\income_invoice\income_invoice.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\income_invoice\income_invoice.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\income_order\income_order.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\income_order\income_order.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\income_order\income_order.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\income_order\income_order.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\income_order\income_order.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\income_order\income_order.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\income_order\income_order.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\income_order\income_order.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\income_payment\income_payment.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\income_payment\income_payment.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\income_payment\income_payment.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\income_payment\income_payment.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\income_payment\income_payment.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\income_payment\income_payment.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\income_payment\income_payment.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\income_payment\income_payment.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\invoice\invoice.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\invoice\invoice.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\invoice\invoice.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\invoice\invoice.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\invoice\invoice.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\invoice\invoice.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\invoice\invoice.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\invoice\invoice.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\menu.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\money_move\money_move.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\money_move\money_move.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\money_move\money_move.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\money_move\money_move.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\money_move\money_move.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\money_move\money_move.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\money_move\money_move.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\money_move\money_move.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\outgoing_invoice\outgoing_invoice.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\outgoing_invoice\outgoing_invoice.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\outgoing_invoice\outgoing_invoice.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\outgoing_invoice\outgoing_invoice.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\outgoing_invoice\outgoing_invoice.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\outgoing_invoice\outgoing_invoice.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\outgoing_invoice\outgoing_invoice.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\outgoing_invoice\outgoing_invoice.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\outgoing_order\outgoing_order.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\outgoing_order\outgoing_order.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\outgoing_order\outgoing_order.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\outgoing_order\outgoing_order.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\outgoing_order\outgoing_order.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\outgoing_order\outgoing_order.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\outgoing_order\outgoing_order.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\outgoing_order\outgoing_order.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\outgoing_payment\outgoing_payment.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\outgoing_payment\outgoing_payment.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\outgoing_payment\outgoing_payment.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\outgoing_payment\outgoing_payment.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\outgoing_payment\outgoing_payment.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\outgoing_payment\outgoing_payment.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\outgoing_payment\outgoing_payment.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\outgoing_payment\outgoing_payment.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\panel_create_linked_doc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\panel_create_linked_doc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\panel_create_linked_doc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\panel_create_linked_doc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\panel_documents_tree.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\panel_documents_tree.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\panel_documents_tree.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\panel_documents_tree.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\panel_info.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\panel_info.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\panel_info.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\panel_info.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\stocks_move\stocks_move.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\stocks_move\stocks_move.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\stocks_move\stocks_move.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\stocks_move\stocks_move.detail.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\document\stocks_move\stocks_move.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\stocks_move\stocks_move.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\document\stocks_move\stocks_move.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\document\stocks_move\stocks_move.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\report\balances\details.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\balances\details.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\balances\details.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\report\balances\details.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\report\balances\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\balances\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\balances\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\report\balances\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\report\cash_accounts\details.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\cash_accounts\details.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\cash_accounts\details.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\report\cash_accounts\details.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\report\cash_accounts\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\cash_accounts\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\cash_accounts\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\report\cash_accounts\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\report\cash_flows\details.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\cash_flows\details.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\cash_flows\details.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\report\cash_flows\details.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\report\cash_flows\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\cash_flows\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\cash_flows\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\report\cash_flows\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\report\menu.index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\product_moves\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\product_moves\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\product_moves\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\report\product_moves\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\report\sales\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\sales\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\sales\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\report\sales\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Page Include="App_application\Main\report\stocks\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\stocks\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App_application\Main\report\stocks\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Content Include="App_application\Main\report\stocks\index.view.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57525</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57525/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\A2v10.Web.Runtime.10.0.7750\build\A2v10.Web.Runtime.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\A2v10.Web.Runtime.10.0.7750\build\A2v10.Web.Runtime.targets'))" />
+  </Target>
+  <Import Project="..\packages\A2v10.Web.Runtime.10.0.7750\build\A2v10.Web.Runtime.targets" Condition="Exists('..\packages\A2v10.Web.Runtime.10.0.7750\build\A2v10.Web.Runtime.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

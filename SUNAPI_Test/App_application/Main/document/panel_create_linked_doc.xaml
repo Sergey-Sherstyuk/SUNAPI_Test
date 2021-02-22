@@ -1,0 +1,40 @@
+﻿<!-- Document.Info -->
+<Panel xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml"
+	Header="@[Panel.AddLinkedDoc]" Icon="Link" Style="Green" Collapsible="True" 
+	If="{Bind Document.$CanCreate.Available}" >
+	
+	<Alert Style="Warning" Icon="WarningOutline" If="{Bind !Document.Done}">
+		@[WarningDocNeedDone]
+	</Alert>
+	<Block If="{Bind Document.Done}">
+
+		<Hyperlink Icon="FileContent" Content="@[BtnCreateDocInvoice]" 
+						Command="{BindCmd Execute, CommandName='createDocInvoice', Argument={Bind Document}, Confirm='@[Sure.CreateDocInvoice]'}" 
+						Padding="6" Block="True" If="{Bind Document.$CanCreate.Invoice}"/>
+
+		<Hyperlink Icon="FileContent" Content="@[BtnCreateDocOutgoingOrder]"
+						Command="{BindCmd Execute, CommandName='createDocOutgoingOrder', Argument={Bind Document}, Confirm='@[Sure.CreateDocOutgoingOrder]'}" 
+						Padding="6" Block="True" If="{Bind Document.$CanCreate.OutgoingOrder}"/>
+
+		<Hyperlink Icon="FileContent" Content="@[BtnCreateDocOutgoingInvoice]"
+						Command="{BindCmd Execute, CommandName='createDocOutgoingInvoice', Argument={Bind Document}, Confirm='@[Sure.CreateDocOutgoingInvoice]'}" 
+						Padding="6" Block="True" If="{Bind Document.$CanCreate.OutgoingInvoice}"/>
+
+		<Hyperlink Icon="FileContent" Content="@[BtnCreateDocIncomeOrder]"
+						Command="{BindCmd Execute, CommandName='createDocIncomeOrder', Argument={Bind Document}, Confirm='@[Sure.CreateDocIncomeOrder]'}" 
+						Padding="6" Block="True" If="{Bind Document.$CanCreate.IncomeOrder}"/>
+
+		<Hyperlink Icon="FileContent" Content="@[BtnCreateDocIncomeInvoice]"
+						Command="{BindCmd Execute, CommandName='createDocIncomeInvoice', Argument={Bind Document}, Confirm='@[Sure.CreateDocIncomeInvoice]'}" 
+						Padding="6" Block="True" If="{Bind Document.$CanCreate.IncomeInvoice}"/>
+
+		<Hyperlink Icon="FileContent" Content="@[BtnCreateDocIncomePayment]" 
+						Command="{BindCmd Execute, CommandName='createDocIncomePayment', Argument={Bind Document}, Confirm='@[Sure.CreateDocIncomePayment]'}" 
+						Padding="6" Block="True" If="{Bind Document.$CanCreate.IncomePayment}"/>
+
+		<Hyperlink Icon="FileContent" Content="@[BtnCreateDocOutgoingPayment]" 
+						Command="{BindCmd Execute, CommandName='createDocOutgoingPayment', Argument={Bind Document}, Confirm='@[Sure.CreateDocOutgoingPayment]'}" 
+						Padding="6" Block="True" If="{Bind Document.$CanCreate.OutgoingPayment}"/>
+
+	</Block>
+</Panel>

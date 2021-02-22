@@ -1,0 +1,37 @@
+{
+    "$schema": "../../../@schemas/model-json-schema.json#",
+    "schema": "sunapi",
+    "model": "Document",
+    "actions": {
+        "index": {
+            "index": true,
+            "view": "stocks_move.index.view",
+            "template": "stocks_move.index.template",
+            "parameters": {
+                "Type": "STOCKS_MOVE"
+            }
+        },
+        "edit": {
+            "view": "stocks_move.detail.view",
+            "template": "stocks_move.detail.template",
+            "parameters": {
+                "Type": "STOCKS_MOVE"
+            }
+        }
+    },
+    "commands": {
+        "DocumentAddChildCopy": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopy"
+        },
+        "DocumentAddChildCopyWithoutDetails": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopyWithoutDetails"
+        }
+    },
+    "reports": {
+        "stocks_move": {
+            "report": "stocks_move"
+        }
+    }
+}

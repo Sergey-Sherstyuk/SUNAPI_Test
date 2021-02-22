@@ -1,0 +1,36 @@
+﻿<Dialog xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="@[CashAccountBrowseDialogTitle]" Padding="6" Size="Large">
+	<Dialog.Buttons>
+		<Button Content="@[Select]" Command="{BindCmd Select, Argument={Bind CashAccounts}}"/>
+		<Button Content="@[Cancel]" Command="{BindCmd Close}"/>
+	</Dialog.Buttons>
+	<Dialog.Resources>
+		<sys:String x:Key="OpenUrl">/catalog/cash_account/edit</sys:String>
+		<Confirm x:Key="SureDelete">@[Sure.DeleteCashAccount]</Confirm>
+	</Dialog.Resources>
+	<CollectionView ItemsSource="{Bind CashAccounts}" RunAt="Server" Filter="Fragment">
+		<Toolbar Style="Transparent">
+			<TextBox Label="@[Search:]" Value="{Bind Parent.Filter.Fragment}" 
+                     Placeholder="@[SearchPlaceholderFragmentName]" Width="300">
+				<TextBox.AddOns>
+					<Hyperlink Icon="Search"/>
+				</TextBox.AddOns>
+			</TextBox>
+			<Button Icon="Reload" Tip="@[Reload]" Command="{BindCmd Reload}"/>
+
+			<Button Content="@[Create]" Icon="Add" Toolbar.Align="Right" Command="{BindCmd Dialog, Action=Append, Url={StaticResource OpenUrl}, Argument={Bind CashAccounts}}"/>
+			<Button Content="@[Edit]"  Icon="Edit" Toolbar.Align="Right" Command="{BindCmd Dialog, Action=EditSelected, Url={StaticResource OpenUrl}, Argument={Bind CashAccounts}}"/>
+			<Button Content="@[Delete]" Icon="Delete" Toolbar.Align="Right" Command="{BindCmd DbRemoveSelected, Argument={Bind CashAccounts}, Confirm={StaticResource SureDelete}}"/>
+		</Toolbar>
+		<DataGrid ItemsSource="{Bind Parent.ItemsSource}" Hover="True" HeadersVisibility="Column"
+				Striped="True" Sort="True" GridLines="Vertical" FixedHeader="True"
+                DoubleClick="{BindCmd Select, Argument={Bind CashAccounts}}" Height="300">
+			<DataGridColumn Header="Id" Content="{Bind Id}" Align="Right" Fit="True" Command="{BindCmd Dialog, Action=Edit, Url={StaticResource OpenUrl}, Argument={Bind}}"/>
+			<DataGridColumn Header="@[Name]" Content="{Bind Name}"/>
+			<DataGridColumn Header="@[Memo]" Content="{Bind Memo}"/>
+		</DataGrid>
+		<Pager Source="{Bind Parent.Pager}" />
+	</CollectionView>
+</Dialog>

@@ -1,0 +1,45 @@
+﻿<Page xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<Page.Resources>
+		<sys:String x:Key="OpenUrl">/report/cash_accounts/details</sys:String>
+	</Page.Resources>
+	<Page.Toolbar>
+		<Toolbar>
+			<PeriodPicker Label="Period" Value="{Bind Parent.Filter.Period}"></PeriodPicker>
+			<Separator />
+			<Button Content="@[Reload]" Icon="Reload" Command="{BindCmd Reload}"/>
+		</Toolbar>
+	</Page.Toolbar>
+
+	<Page.CollectionView>
+		<CollectionView ItemsSource="{Bind CashAccounts}" RunAt="ServerUrl">
+			<CollectionView.Filter>
+				<FilterDescription>
+					<FilterItem Property="Period" DataType="Period" />
+				</FilterDescription>
+			</CollectionView.Filter>
+		</CollectionView>
+	</Page.CollectionView>
+	
+	<!--
+	<Page.Pager>
+		<Pager Source="{Bind Parent.Pager}" />
+	</Page.Pager>
+	-->
+
+	<DataGrid ItemsSource="{Bind Parent.ItemsSource}" Hover="True" Striped="true" GridLines="Both" Sort="False" 
+			  DoubleClick="{BindCmd Dialog, Action=EditSelected, Url={StaticResource OpenUrl}, Argument={Bind CashAccounts}}" >
+		<DataGridColumn Header="@[FieldId]" Content="{Bind Id}" Fit="true" Align="Right" Wrap="NoWrap" />
+		<DataGridColumn Header="@[FieldCashAccount]" Content="{Bind Name}" Command="{BindCmd Open, NewWindow=True, Url={StaticResource OpenUrl}, Argument={Bind $DetailsUrl}}" />
+		<DataGridColumn Header="@[FieldCompany]" Content="{Bind CompanyName}"/>
+		<DataGridColumn Header="На начало" Content="{Bind SumBegin, DataType=Currency}" Align="Right" />
+		<DataGridColumn Header="Приход" Content="{Bind SumIn, DataType=Currency}" Align="Right"/>
+		<DataGridColumn Header="Расход" Content="{Bind SumOut, DataType=Currency}" Align="Right"/>
+		<DataGridColumn Header="На конец" Content="{Bind SumEnd, DataType=Currency}" Align="Right"/>
+		<DataGridColumn Fit="True">
+			<CommandBar>
+			</CommandBar>
+		</DataGridColumn>
+	</DataGrid>
+</Page>

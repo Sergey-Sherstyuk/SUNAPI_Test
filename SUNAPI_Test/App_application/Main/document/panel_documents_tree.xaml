@@ -1,0 +1,16 @@
+﻿<!-- Documents Tree -->
+<Panel xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml"
+	   Header="@[Panel.LinkedDocs.Header]"  Icon="Link" Style="Green" Collapsible="True" >
+	<Table Compact="True" Width="100%" GridLines="Horizontal"
+					Header=",@[FieldNumber]:L,@[FieldDate]:C,@[FieldSum]:R" Columns="Fit,Auto,Auto"
+					ItemsSource="{Bind DocumentsTree}">
+		<TableRow Mark="{Bind $Mark}" >
+			<TableMarkCell Mark="{Bind $Mark}"/>
+			<TableCell Wrap="NoWrap">
+				<Hyperlink Icon="FileContent" Content="{Bind Name}" Command="{BindCmd Open, Url={Bind TypeEditUrl}, Argument={Bind}}" Italic="{Bind IsCurrent}" Bold="{Bind IsCurrent}"></Hyperlink>
+			</TableCell>
+			<TableCell Content="{Bind Date, DataType=Date}" Align="Center" Italic="{Bind IsCurrent}" Bold="{Bind IsCurrent}"/>
+			<TableCell Content="{Bind Sum, DataType=Currency}" Align="Right" Italic="{Bind IsCurrent}" Bold="{Bind IsCurrent}"/>
+		</TableRow>
+	</Table>
+</Panel>

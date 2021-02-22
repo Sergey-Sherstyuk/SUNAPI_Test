@@ -1,0 +1,53 @@
+﻿<Dialog xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml" Title="Выберите товар" Padding="10" Width="75rem">
+	<Dialog.Buttons>
+		<Button Content="@[Select]" Style="Primary" Command="{BindCmd Command=Select, Argument={Bind Products}}"/>
+		<Button Content="@[Cancel]" Command="{BindCmd Command=Close}"/>
+	</Dialog.Buttons>
+
+	<CollectionView ItemsSource="{Bind Products}" RunAt="Server">
+		<CollectionView.Filter>
+			<FilterDescription>
+				<FilterItem Property="Date" DataType="Date"/>
+				<FilterItem Property="Company" DataType="Number"/>
+				<FilterItem Property="Store" DataType="Number"/>
+				<FilterItem Property="PriceType" DataType="Number"/>
+				<FilterItem Property="InStock" DataType="Boolean"/>
+				<FilterItem Property="Fragment" DataType="String"/>
+			</FilterDescription>
+		</CollectionView.Filter>
+
+		<Toolbar Style="Transparent">
+			<DatePicker Value="{Bind Parent.Filter.Date}" Label="@[FieldDate]"></DatePicker>
+			<Selector Value="{Bind Parent.Filter.Company}" Label="@[FieldCompany]" ItemsSource="{Bind Companies}" Style="ComboBox" DisplayProperty="Name" Width="250px"></Selector>
+			<Selector Value="{Bind Parent.Filter.Store}" Label="@[FieldStore]" ItemsSource="{Bind Stores}" Style="ComboBox" DisplayProperty="Name" Width="180px"></Selector>
+			<Selector Value="{Bind Parent.Filter.PriceType}" Label="@[FieldPriceType]" ItemsSource="{Bind PriceTypes}" Style="ComboBox" DisplayProperty="Name" Width="200px"></Selector>
+			<TextBox Value="{Bind Parent.Filter.Fragment}" Label="@[Search]" Placeholder="@[SearchPlaceholderFragmentName]"></TextBox>
+			<CheckBox Value="{Bind Parent.Filter.InStock}" Label="@[InStock]" />
+		</Toolbar>
+
+		<DataGrid DoubleClick="{BindCmd Select, Argument={Bind Parent.ItemsSource}}" ItemsSource="{Bind Parent.ItemsSource}"
+				Hover="True" Striped="True" GridLines="Both" Sort="True" Height="300" FixedHeader="True" >
+			<DataGridColumn Header="@[FieldId]" Content="{Bind Id}" Fit="True" Align="Right" Wrap="NoWrap"/>
+			<DataGridColumn Header="@[FieldArticle]" Content="{Bind Article}"/>
+			<DataGridColumn Header="@[FieldName]" Content="{Bind Name}"/>
+			<DataGridColumn Header="@[FieldQty]" Content="{Bind QtyAvl, DataType=Currency, Format='0.000'}" Align="Right" Width="6rem"/>
+			<DataGridColumn Header="@[FieldPrice]" Content="{Bind Price, DataType=Currency}" Width="5rem"/>
+			<DataGridColumn Header="@[FieldCompany]" Content="{Bind CompanyName}"/>
+			<DataGridColumn Header="@[FieldStore]" Content="{Bind StoreName}"/>
+			<DataGridColumn Fit="True">
+				<CommandBar Visibility="Hover">
+					<Button Icon="Edit" 
+						Command="{BindCmd Dialog, Action=Edit, Url='/catalog/product/edit', Argument={Bind}}"/>
+					<!--
+					<Button Icon="Clear" 
+						Command="{BindCmd Command=DbRemove, Argument={Bind}, Confirm='Удалить элемент?'}"/>
+					-->
+				</CommandBar>
+			</DataGridColumn>
+		</DataGrid>
+
+		<Pager Source="{Bind Parent.Pager}"/>
+
+	</CollectionView>
+
+</Dialog>

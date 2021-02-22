@@ -1,0 +1,2178 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <CalculationMode>Interpretation</CalculationMode>
+  <Culture>uk-UA</Culture>
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="1">
+      <Document Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>Document</Alias>
+        <BusinessObjects isList="true" count="7">
+          <Rows Ref="3" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+            <Alias>Rows</Alias>
+            <BusinessObjects isList="true" count="1">
+              <Product Ref="4" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+                <Alias>Product</Alias>
+                <BusinessObjects isList="true" count="1">
+                  <Unit Ref="5" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+                    <Alias>Unit</Alias>
+                    <BusinessObjects isList="true" count="0" />
+                    <Category />
+                    <Columns isList="true" count="2">
+                      <value>ORIGINAL,Name,Name,Name,System.String,_x0030_70e410961c7441c8c55c824552922e8</value>
+                      <value>ORIGINAL,Id,Id,Id,System.Double,f4266b6c5cf842aea1f4c05d2f24bda3</value>
+                    </Columns>
+                    <Dictionary isRef="1" />
+                    <Guid>5f96e9e3296646ce934cfb642f5e138a</Guid>
+                    <Key>7c04c20dc02c4d2eb785ef1582cc793f</Key>
+                    <Name>Unit</Name>
+                  </Unit>
+                </BusinessObjects>
+                <Category />
+                <Columns isList="true" count="5">
+                  <value>ORIGINAL,Id,Id,Id,System.Double,_x0031_85773df6df14486a33179cd23504ede</value>
+                  <value>ORIGINAL,Name,Name,Name,System.String,c9f2638eec5e45669d6b88255a047b5c</value>
+                  <value>ORIGINAL,Article,Article,Article,System.String,_x0032_8a254fd9e9546a68542bd95459bfbc4</value>
+                  <value>ORIGINAL,Memo,Memo,Memo,System.String,_x0030_94a6826d6b64b8dbd49e19a0ee3f4c1</value>
+                  <value>ORIGINAL,IsService,IsService,IsService,System.Boolean,_x0037_ec4f1515f1743bd85220d2e8cc183d6</value>
+                </Columns>
+                <Dictionary isRef="1" />
+                <Guid>2b0a683e53704e258cadc62acea7881d</Guid>
+                <Key>ab4d70da373a403f991a1adeb1240557</Key>
+                <Name>Product</Name>
+              </Product>
+            </BusinessObjects>
+            <Category />
+            <Columns isList="true" count="4">
+              <value>ORIGINAL,Id,Id,Id,System.Double,f335248ca572443da1233e912dc94d8a</value>
+              <value>ORIGINAL,Price,Price,Price,System.Decimal,f86e9eb300f1412ab1aaf7dd565ad42d</value>
+              <value>ORIGINAL,Qty,Qty,Qty,System.Decimal,_x0037_5d749daaf0844199754a64cc4929ea9</value>
+              <value>ORIGINAL,Sum,Sum,Sum,System.Decimal,ae053e18ed574469b71b404d7cea7375</value>
+            </Columns>
+            <Dictionary isRef="1" />
+            <Guid>faa2b600504a491184ea3ebc60c4d639</Guid>
+            <Key>bc2d81a0855748c080de35e6196cfc40</Key>
+            <Name>Rows</Name>
+          </Rows>
+          <Partner Ref="6" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+            <Alias>Partner</Alias>
+            <BusinessObjects isList="true" count="0" />
+            <Category />
+            <Columns isList="true" count="4">
+              <value>Name,System.String</value>
+              <value>Phone,System.String</value>
+              <value>PrintName,System.String</value>
+              <value>LegalAddress,System.String</value>
+            </Columns>
+            <Dictionary isRef="1" />
+            <Guid>a2a5fde4e9b04e1c9d27ffda105ef01f</Guid>
+            <Name>Partner</Name>
+          </Partner>
+          <Company Ref="7" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+            <Alias>Company</Alias>
+            <BusinessObjects isList="true" count="0" />
+            <Category />
+            <Columns isList="true" count="6">
+              <value>Name,System.String</value>
+              <value>PrintName,System.String</value>
+              <value>LegalAddress,System.String</value>
+              <value>Phone,System.String</value>
+              <value>EDRPOU,System.String</value>
+              <value>VatText,System.String</value>
+            </Columns>
+            <Dictionary isRef="1" />
+            <Guid>002aab5b9f7f4d179851392325c379fc</Guid>
+            <Name>Company</Name>
+          </Company>
+          <Contract Ref="8" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+            <Alias>Contract</Alias>
+            <BusinessObjects isList="true" count="0" />
+            <Category />
+            <Columns isList="true" count="3">
+              <value>Name,System.String</value>
+              <value>Number,System.String</value>
+              <value>Date,System.DateTime</value>
+            </Columns>
+            <Dictionary isRef="1" />
+            <Guid>2aa77f1b554c4c7ba5b62cee912c6dab</Guid>
+            <Name>Contract</Name>
+          </Contract>
+          <CashAccount Ref="9" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+            <Alias>CashAccount</Alias>
+            <BusinessObjects isList="true" count="0" />
+            <Category />
+            <Columns isList="true" count="5">
+              <value>Name,System.String</value>
+              <value>BankAccount,System.String</value>
+              <value>BankName,System.String</value>
+              <value>BankMFO,System.String</value>
+              <value>IsCash,System.Boolean</value>
+            </Columns>
+            <Dictionary isRef="1" />
+            <Guid>75fe5273f02145b38238b8d21ea40a3f</Guid>
+            <Name>CashAccount</Name>
+          </CashAccount>
+          <StoreFrom Ref="10" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+            <Alias>StoreFrom</Alias>
+            <BusinessObjects isList="true" count="0" />
+            <Category />
+            <Columns isList="true" count="1">
+              <value>Name,System.String</value>
+            </Columns>
+            <Dictionary isRef="1" />
+            <Guid>76475ee8e01446f2aeae60069363be28</Guid>
+            <Name>StoreFrom</Name>
+          </StoreFrom>
+          <StoreTo Ref="11" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+            <Alias>StoreTo</Alias>
+            <BusinessObjects isList="true" count="0" />
+            <Category />
+            <Columns isList="true" count="1">
+              <value>Name,System.String</value>
+            </Columns>
+            <Dictionary isRef="1" />
+            <Guid>62977aa1deff42109d0d41cde607b946</Guid>
+            <Name>StoreTo</Name>
+          </StoreTo>
+        </BusinessObjects>
+        <Category />
+        <Columns isList="true" count="6">
+          <value>ORIGINAL,Id,Id,Id,System.Int64,d441ad6ad6ff427ebe372ca2886a8a69</value>
+          <value>ORIGINAL,Date,Date,Date,System.DateTime,_x0039_dc96a5bec6840efb7e16feb75419ab2</value>
+          <value>ORIGINAL,Type,Type,Type,System.String,cbcb02f7c4cc438695d16799c2e5e671</value>
+          <value>ORIGINAL,Sum,Sum,Sum,System.Decimal,_x0036_902883eaff04dbb9a0305f80160622b</value>
+          <value>ORIGINAL,Done,Done,Done,System.Nullable`1[System.Boolean],_x0033_17e406d57d04b14b39dd235ad93f750</value>
+          <value>Number,System.Int64</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>219582c35b2f4071be5af822a5b27957</Guid>
+        <Key>bf70ec184ffc4de99a9140149e9145e6</Key>
+        <Name>Document</Name>
+      </Document>
+    </BusinessObjects>
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="1">
+      <value>Name=Invoice_Data, Alias=Invoice_Data, Key=_x0034_9942002014b46e7bbb40a0c0abe7dfc, Type=Excel, Content=XuR_x002B_VSajhFsQo2dAIxgmYEih4PAUb0O6sDirnIn3vPl_x002B_H06mkzTbvpPhvQCUyM6JqJ1Zi9hfLZaOux94D6qpiHW_x002F_zlEJFQwPPjjv5DyqT7Oc6zyMivL0_x002B_OmI4xq7M1JZ8KBPmHbqCw_x002B_0eJNreard0mhtgCHcV3q07B8XFuNRbM9A_x002F_YuKZf8ngE0u5aKcd9RDnDIo7WpGMRY2t4uFFJwocfRP3lPx8cTKMovkGu8w78M9ZHEvK41MPFcOfvMCrdaQ_x002B_UHIZ8uvJV1WPqtZnYEh8of4DNiOqzYyrJpvCSglWiq6Iukxdns8TvDzIR0LfcJNxPCj0gBcv4FjoxPCov_x002B_Pi7hNuzuUfVsFO16_x002B_LXtJd7VL8N8KW6xAZm_x002B_9aPefkHP0txCQvIR2Zb_x002B_8IVH1C5RoOiCLd3EYnBE9sGUzYuC1apRwocELNs9VvZHCcDlvp_x002F_bkgzGycCOGyL36s20LMxplKTry3MbS1Eu73_x002F_snhNS24e4fgHznL7Sa993Bw8_x002F_GAWMal_x002F_3EpYv8UxFRHfzsC3tw7oUJAHdOBZDtICs2gYyaE09Ro_x002B_j7_x002B_SoYDJTqa2cHxTm4EnbdEgn0GkKe_x002F_sJtI6zlVq5PrT2ytizkMK9S60bc_x002B__x002B_2N9p1tv_x002B_VQlIg_x002B_QrUSsY9rNmVbaM0Qel03UKQEfOiyYYWkfY54Xs3MuQOoGMsJmgqS2hpmri6yevgO_x002B_Dn_x002F_5ql6yNSm4uvOnK_x002F_S8TPWsTNeutSjo66psP9mvVmh_x002F_TlH8yemo36A_x002B_OrDENrpI1xwnmD0S2e_x002B_oyB4sJgltMacY16EWylMrUo372_x002B_nJUhjLS4cxmtF6PNgs8iTbnyQoClqWpM27rMp_x002B_hsxs0Df_x002B_jTR_x002F_1iyFiKXDBRElkLLKhR_x002B_MHxph6FtndR93RDtuUkKG0ZL9QpYX_x002F_JNNqS8QqJK_x002F_NT2yZzGsyJ_x002F_Z_x002B_aT9K4wfWGD6TpukIvdrEzvKyzsrGUqWk27rTahtdyBZjo3BFlQpg0VlX1Nox_x002F_WI_x002F_TFaBDX7Ee97Sot7WgOybcjXr4gjz0PCFsoN6JxR85OgX1uxZAXk1JrV9FzxsgHcnJEvIrSRNZjyjYNcr5y1UiW_x002B_7wcsCZcG74VNm9w_x002F_EA_x002F_X9Dg0H_x002B_cPKlFGq0INo7R3S_x002B_wb1IGyCCHa19PlrCJGGagOhhubWBL9fqDAi2pU9CuUTsFsAxwNttUKqxQJPmZg9f1T2KeWeDoZuPs5XdAFv9wxNCg90CY769eDWphSfSPzeMFwfsDJ1g8RdwQP00ugn6paAmTQizpH42wd4HKW6xWdJ_x002B_EBz1eNwF9xhD6xRKfwggHCPUrHAkVUvo3ejkxQ_x002B_L_x002F_MWRuwGWWXmXmAXDB8Kh5EL_x002B_fyEWLDKF1l7lnyKUsgofavbmwpBNLs_x002F_e_x002F_IZDfKl5yGbDpdaXry4UcQthjuuLqrWuZD_x002B_dN3Eewmf_x002F_UhiOJBG0Jwa47_x002F_pDf_x002B_wBT9D1BGj_x002B_oypERTBBi0dY7FZd6hPjdaBpHrsQxyqqf9hg8JaKh5p6nONMP7XyzjE0fpbqxeFobK6pfpJIhh155PztICoZPuIxZNeTybkerb3GIT59rCCFt_x002F_692bfmP_x002F_4GYmvd4hZLZZbAhG_x002F_Z0jXKRMBNMhhplhIg2jckE1hqWCg4V4qgv4Vg8UsT6ADmLtxVqQQfFDVHYkKt0r6Z9YYrWPhUoeNdXRW9aUBn_x002B_6OnIBYeOD4gjZd7gz5tUGod9iQpVwguIGdodWMzj9kJvj4yvwX0rgTdwy1zmJvG27UvInMxelWBBWNz433K2DpObZqSj8_x002F_wYK6X1w90wKedHKIigg_x002F_M1vfEDwxcIiljKVwwGeobFZwkPSC6XK_x002F_or0IDr4y9CEFuAujYDTijMdlPlGU12oSO_x002B_bOEvK8tSZdkX4TjEMZvDWxFZuTnwZF0CyX4wlklBz32_x002F_FdV9rjeLn5_x002F_kzGbsRwP3QbOw7e7FBUigX3JanXwALu2HrvQoWtUHFJU_x002B_SZPl4bZvP1_x002B_6DF6tH03Ixtk_x002F_nbzncUAWPUDLGbDXh3Vnlmvdx2KBNT2sV6x2_x002F_1DPzhpxVX6yEclkyUC6x6pWyQV_x002F__x002F_netwW4jatusywmxToI7SD6mBXgvNpcVjwP03XQYEclumJf86pcgorR_x002B__x002B_nA2H1TkHNEMoRJFQmJK_x002B_lJZyVhoHEPoABCK3f9fpxmge5WaZhJ78vSaLb8M_x002F_5T5R30dGsWcGeVIxz7AlScQERcmYTZhn8NoLBbYrYNoQ8QlStYXrNRRSpk731q2Qw09wg7QN_x002B_v3UoLC9D7rBIRNpv_x002F_D8miP0zljcJgVyfiBpcXm3pQfO6R8wBu9jtxYuzkV2_x002F_6BPMgI5h7JGhNZuG4iA4wmSlsbr73lSXk0St0a9wknH_x002F_KaQEtygtg9kQu7TsFMmAXFHpgSq4rC7XLsDSkLQwFBBy8rOYbvskiHh6t8ZC_x002B_Is5eHapDdLGP7u_x002B_mkmF9B6H2SIw_x002B_tV_x002F_Z1ZDpBpsGig5RrWrpgjft_x002B_oWB4cQ399UeA0mny7qZ8GzWFxaAStWvqVRHbKhrCCSndKWP5HAtsyEjg6rUw3mRipE5n7LZKjtGdqWGMQ7nYbHpZ7DeLqE4s_x002F_5MOBjjlNgDUpAnt7LdmlhTGXdvlT6vAbQ6NaKeD_x002B_bEZZFJsX_x002F_0hdJ2wWKvhsdQzx96RK0DMlpy_x002F_u27A3ni9B6hD1B3rK1tYKbgTKCy8Uv5CDoDX7TxGiYgUGfYwvIuqf6VNrcugdWdOzyftAlQrFdSKq8nyTAaD4Xwj_x002B_6ZZ9zkM5lY_x002B_XG2bBQ9c4TejkWAvWZlipG99Ty0_x002B_sO9Jj2WcbVr72T8WtI_x002F_E_x002B_5AWe7KB32T1K6iq4TszyYefy4BlbhYMaBOvXqklVHrhjc7_x002B_p_x002B_7T8DKvaFVsKUQviSheStuG_x002B_QFbXrvUbKaWjNpOb1anm_x002F_hlcCEZGVoFkXBdKnKL_x002B_Ek0xkWrySTFwC_x002F_vQO_x002F_Br79Xk1x2EJ28RbRllmyvciUz7gUAKPLrcYqAyyWJGVoS_x002B_L0cvFVWufC1eZ488pXfuy5oNwGqyc4vXunUczUowq7CVfAUdvUm7t9G_x002B_3he4nYx7RguPp_x002F_wAyiIH0_x002B_etpKB8gRRZqgao7wtBfMUnRy0tsIsmWcy8IfGqo0T6WnPuZEU_x002B_k1tO5p8_x002F_pyLMzKy_x002B_YcJ9STNHGNjVbFDZDpq_x002B_ypK23iHq7a2xMx8Dj4o1b1WF8_x002B_SgH5_x002F_we0Ilgr5Shgph3qJ4vy8KofxeWSPAnp5VihY_x002B_tTYnuYUyUsGMbe8jkNfldeGp_x002F_0oFf5w1nmelJ3coHoxWYRtiWV90Xwv5C_x002F_lobPiuJvEsWDA3LJYDnX9L4P4ujI_x002F_7OVnQ6NedtT8eNCkpFe5SqI0qZm3lFh3hndLSF6yEbEiJHAuzZPY9pnU_x002F_RpKhY7Sc7000hl_x002B_t0vYZUZBOytc_x002F_rXFyDxnTAINJVD2GE_x002F_Ro3z_x002B_qu8mKAC0b2D7vUyMIQi6jog5Z_x002F_S9p2_x002B_rXFybaq6CYru5UmGHN77SRIrB3SafAOsnwNgD4sKrZ849nFwv5fVTxKidPjlG8YOlkkMFVh5p_x002F_4Zm_x002F_52jbLNtnNakSQyf_x002F_7QYunA9kHRtcKS9NVpDKXOon_x002F_4F65_x002B_cuMYzQDkbh_x002F_RWluHXBLqQ6kNagDS7XeOD65pkw9oOWPl1smfWMEENUubqEwpFFGdQtaGykg46lLUVzCDlWOsTg_x002F_svyofJ5mjlwSzbpj2gc4PfnX61wUQ7Yih0P4ma_x002B_mu5ZBaQpTwViQkhHFWg9Z_x002F_rKM58FZOgFiuf3ZTS5GICc8WuaV1lPZmgkuwUpp5Ct2I8k9gJLvNjZyN46k_x002F_upuaigmaPaELa_x002B_9v3cvgh1AZO1EnQRsdhyWWAv_x002F_L0rDlC9V1BgzdQ7ADsu8MZU4mXSuQOatNfEeqMj8clhxf_x002B_wugufQOzpRDFWkB5I7nsQEEWc3pUbr2zfciHfFWOR9aScyOpzqP8H07u1LzPO9URa3pXRwRLdvllfNFqJmY7riXyDNp8Vr438oUdsOM5vMgfB3gEIrYGjeyaMjADpOm6g5qfXNk7gjItCfSWq2N50_x002B_JZmoyUOzkDZZcXwXzlap_x002F_M1lfGrmuXMCZ_x002F_pc_x002F_H9nlE5zfD4AzTuWXWeRmAq2pEQcnvmC_x002B_XAN5wheboHi6ALmfZyJSYd75dG8k1501AmokmCtwClkzurqRVgNzUqvIBNvFP4i1idiI1P_x002F_6l_x002B_HKpU3Dkjnlj8lltvBwyH5glqaHi_x002B_xnZJTDXvWMKH_x002B_646pesXEvtHwgcAjDK3Z3DBiNdz3X0zOXZpRh58GqBiOke5I0CWRGGMlGk82mYZVBLf4B0M_x002B_SmAGka2nnrAXIfo8tWeOofXLXRdEhzl8_x002B_gJdqJ6YBXsqk_x002F_regc41GtgJehB9HbYEWLuy2zasJEv7qoGsfUb4Id4O0sTHrzrvvII83Zfn_x002F_gar7NflPHmtp0U3q95l3QMXTrSl8HKLfNEqMM7hq8_x002B_cEzz0aCctUiFccVSE7Yimjn0t8xkPg4MKAkCG1eNBxJ3KfbJO3Co3fhrrMOW78oECXHzCeytlz1MWL95KqaZN1GevlNwkqhvL_x002B_gHl_x002B_nlruCErs2dNhFcroqkIkFm_x002B_hLPsP7RkS6NeqLC51HU2zm4zFBSdnokZk69cF7_x002F_dwk0oeaJVUiOiL2bQ95BJ57LzNKi_x002B_m8qGuyNhB4rTOt2dSvzlv6YhTN_x002B_CBgoUhJJUil7m4NjRbQgsTr4MKhJV8nq6lFzAJlg6_x002F_L_x002B_U_x002F_MUQ7EzuXjRFBGJ9kPd135lXAuj0OWfMtZOZIssFyTm0X16mny8QIrSDL7J6W1Zgyz_x002F_ZdRuyqmBn1qPxWZPIkapip6WSma4vZDF4y3PUDAe1klKg7f2LPzVrpVAqoP9sHpwHFgAEpbvUamcYZpH1q3LXfcIZevDHOh7H4Q62G7j8TC_x002B_g9aa08shV2iMdHBsBlXIHy7V85lS0q6iVijLa_x002B_uc4vXW7SVYf5HfbbYPMN8kSjmez2FvN0InaL_x002F_wfjRboEJO2Cjrb4BWAm1ug7jqfbPXom9WAXA9B8lSFBXsGktPFiwnOhgzQp_x002B_xKKHQkSTe4npLtCjawoHrY24HYYOb7NjENLZk4P1j8f8aQv9nclEaxuyeGlsVTZxH6A1fPWOaUabT3BBGS4V0Tjb7o3bVjifWv6fmwf4hq3KV3VEHBD4JdCU60lkr_x002F_A4PXMQ7NrWUeuXezWgu_x002F_Ltr1hH79oEVpx5a8gEArpa6QmhClzkmFZNyHrT8FsytE9Qt59_x002B_JPT2HiPlft0TuLvVzAmx8uXZqK4V0y61280Vati_x002B_fbBVFuBq3wBCfhwFbnq7tOYL1_x002F_maQiaMV_x002B_lo3gt3SC8YMShkg5y2TxeysRqHFikJJOq_x002B_j5mFASLvDcydGc7HcUjCCKZvhOqbY96surgDU1hoognmqkqBa94_x002F_3WHSL2pXPsxTWZm3QJzlHPP9seJBXjlkzspep1qPFH7zkHhMiX1GpVrryZBhLGf32mG7WH8P4LO1jFi3OePkNdI6GVKVDt1vzfZopMWpRMuEG8P_x002F_uOqvgBy8dnbQ_x002B_OIEvG6j4MNW_x002B_pwBFt4MP7y34u6AbVY_x002F_mmJW250_x002F_OD1eN_x002B_Y8y9ip8R_x002B_2VmJ_x002B_biDFdsJps8oKYC9Fvd_x002B_VXCFBmFAA3MjClq0NppcrijSMbKkinPMo_x002B_yV6gL96IP9itwUUbidE4yDn56jKn_x002B_LTH9HskiM0ij3Wory1Z8ljRtv_x002B_1Fx_x002F_ReHHWCQqYRbRvmT5wLEzcRm_x002B_cUNidP_x002B_8vzRXtask7opHNbOU_x002B_Xc6FZJRHxf1Mmob9w2dIA_x002B_95dmsQsR9E1WJTJApbwavkqqZijMzNndx_x002B_ExP45V9iDGS3GkRdulnqGpOat13LuBukK9M57_x002F_rjMx3zoHhZx8MPlWb2QEOWzAdZOCez_x002B_M9YA7Pkz_x002B_c9ZtxVTXEy8iqboszhETCV2drmaxZD3iY09_x002B_mAf24hrx2NE7fFx0ize7wFYJ7WJXwDHY7f9PaWMtJVWnnudfdd_x002B_cOofCfkW9dojCB4UNOOFivGUThihLvFW3l3UOmltxJRokOh_x002B__x002F_5s5C9_x002F_2HCeyPkq9wEO2jsdEuLvrqvzWFP6y17DALj4OQ3u3BGuo7tQvJX2n9CGgW0z6Auv2TXHIk_x002B_xf7_x002F_CfmPTpenmVF_x002F_e1EM3AxvMg8FqDpKpF_x002F_TBGh5DK3NbmBRZesjHgbxPASOF_x002B_g_x002B_GOdxy1qfc_x002F__x002B_7uM9LxCmpT6GYD4gOjw2AE7IUEFWQC1qgXOef0jpG2pQeUxFiejdKSJ5X7D62bfUfOdTVK57RlHWJsMfvFX27GKHP4AUtKIemcjdkBozw_x002B_24JGTdQfqMU0GWv3Ic_x002B_SbsdQbEPVXEdFkspgMuMKpcno0li2xxp_x002B_bQrVadvk8EklNsIcU1h08BNdKwhBBBhGjX17rkLFcBlNi25HDZDiDKYTw_x002F_U48cnqL86R7HLkOlE6Xy_x002F_VS1Nxh6eMEkdOYShEpMNmFGjXTLlkn2kFRq79pBqi5gO3c4k8og3PaiGg5wOuDwNDrxqszN3fLjY2_x002F_fi5Wy920PMKnwW7jWxZGYlSXjNQYgl0d_x002B_eLPp7a6JGZnf3kmqbPO5ZsAHIImMN_x002F_Jv0vAITHAXM_x002B_w4EtWipzmPgReuzKDeY0_x002B_xyKabNRJ71W4gxdLtjF_x002B_bz10khpnRDQSXydPByQ11DzaYq1lBpja7uclZXNnjsxRrCg_x002B_mUE_x002F_MY8wbJbSpxzOz0WoclB5ZfRk_x002F_QFXYthXBOBgsI6RwaND729bWwVDiJbKYx0VFqhHHOCM1Nfysy_x002F_MLNbkd87i_x002F_EE3Xs2uiMRN6wLEE6W3EYemGuxXFp9tLfdfTiUlX_x002B_RvEpzCITGpySlqroFzKqBybZDHeDbvfMjCFUD5gwNrb28YIehyzLpGov3urlFauYRylZ_x002F_VuF7WmrAzVUvbbbDohCYCdyPUhUZY8eqlqKkEm1hLAa_x002F_NXl_x002B_dQhsJ6GGtwtxRtIFjsVGlD03Qz8ZVfwKdKQLlyPtrDDidyQx_x002B__x002B_h29tnN7q_x002F_ahC69DPWQWfipRfm_x002B_G_x002B_fkSGdb7IdCegLHepnMhgE0ShCfZF6GU8gGprwdyy69_x002B_zWwWP1YmS8oj3KDqAq9ftOCiRGNc54P2MBRVpjFKNoQJJGLg7VYnAFFFowm23eLXHaDKrtjKNUFxVaWhfDgOBwZHjYWJhaQ6gAiQCq7crHHVvLcVwIqOajM_x002B_bw4jTJXxayHwoXJUPgV51_x002B_r_x002B_t9Up4phmzjQ3DON5LzK8T5LgnslX2YE_x002F_wioruhRdcCRJKODWWOwObwZj8OhqNk7yqdcODqlE5uDcZIr3JskJIkfLU5L8MYfpYh_x002F_tDvTPlZ1h2f3hjdWQeFKJ3OIWCxascvhnfqDpR7RjgCEPDWkKhb_x002F_ZLcU_x002B_Z_x002B_cdTDFAshW5JrrTPXgDfovwKG5BjRPDqz5i7jO7HBtq5kv8Tm22pbJWjVsSMd0SVpoc7zE6XVDlqAOSrTJUHZL5hcYAttyHfbzK647kIKxuYQ7aqPgFWMdVAguU7wKXjcpvk_x002B_ijmgLoPqtxQ67bpKuzjmXrxfQY78QZlnhEyGrbmHQ7k_x002F_JnIbw_x002F_w8sYNEJYSwimTSZEKdwUeXNJtLpdx5vNPeMuMdNxu5XjOEAX2kK05bcA_x002B_w6jVnoaBhOZLZWl6J66wanpbv2DJFmMbT9OLKAQJLRzgysWdQl_x002F_znn1tnmFe2r1vVntKnY5FdzYe_x002B_b1tFYKzxmge93lg5fxp9wfBc85MSC766gyCOY589_x002B_MJZWYBmpoQfyT8_x002F_OmcN5w1iRta9VkNriEkDjkJuWZ1CUa2TYIHi8AK4mKmc4UlMa_x002B_5dvyZ2TM2u51JsZkqL0NzeLeMuZrfD02Jgnp8uG9TmCzT2Vd2XOuFuDtoKRXKtkposOcsy2J3nFEdVTkfdnxylUpWBiBQMQOXHqHIYC1N4_x002B_emJOQy_x002B_03ADQFixImLpTqTzVBA5_x002B_KcIerI5sEvbIXJCKXJHqn3C28qE31PK2HG_x002B_Q33UHIhCxdrDkvo0p7SHFlU7MHz9VZHHyb_x002B_DSMF9mCWW_x002F_ASgHPLr9nZEL9CjUTw2i6wkrOVPh1VavU19N9TRxrwfhUJkHl5eO8obPg1_x002B_fNW6AOXWJ2M7aLxfMWAfB1BATD1BWo0ZsOJs_x002F_5OfG2ed3K4GLg1dick21oP4knQ8eEI0Hn_x002F_CbFBWfHyKrERs85mw9MHLlchjdXJAw7O1cxMCohnnyVg3Cf5KtDlsHT4TOAtg7Hiv8GmjOw41XT9pl_x002F_XWpHZ_x002B_QAScdWYvZV4BZFems93_x002F_rdsPeInuNjafrqkqF0HBZs9HI6E10YygEZppqHwUJzvBJaKBQlNDvhliEZf2EpXNg9TEXFgR0vdbIaRefIxuu2jXssRl9EFsGKrNH1RiDCDZPqwOaTrA03_x002F_JGKvTA3KdqJGWdN1PDKZM6dlKeO1ml5_x002B_dzCnIEmqcyS0jt4A_x002B_VUIak_x002F_w1y_x002F_qnG3vnbGXgCwuOh_x002B_MR2hS_x002B_IzFUf6biTB9YM0LN1ZaSZPw5t4MhgUESQ9eRCH4rSNc5qV1rAShQWP_x002F_9l9lH8SbgZ7RERLVMw_x002B_JmrHN0kV_x002F_PQe2cLCYl7yCqZegOM9_x002B_cuCzSVEoJM1_x002F_O_x002B_NESyKD0b2B_x002F_FXJsi0yW15Uf170lEFhAxwPXPvHj76W_x002F_HzeWnnpP4L9yrnyuPxmqxi4OFUnuzT_x002F__x002B_adrWh9SteeBHdmOd6O5qSKtE21pr0ERRezhCHr9AU2TQwTHh73dHLNBbW85iPa1tl4DkzVnJTDqVgKFjSIgt7vFFlET8WFiSHwfnixNQl_x002B_yMf95Obehi8_x002B_7TBSEX_x002F_QUEfho_x002F_6BBOzQOZdySuJRyGWAEyeKuSyE3Iy06GewGpUB0RLIe3EixKbn8C0p5vncHhX0fRbF0L8kqSRurRCsDuGagT6tdepmuUEFMltYjeZz4s_x002B_hq2dRoAcNfVcgQolgBYez9LhoWOaLt2dnexe0ma8dAOUTOeN6Je4FNwR8cLmbI_x002B_oa6s2PbXLS7JyhNZGU592khSBzXarvESFibPsNCIstIQnpIs2UAAZuJ2Cv2U8b01hOEu_x002F_0VmA8EPkauIcnLxZ7J_x002B_1SBegnS6vURmR_x002F_2uo2KjE8FtG_x002B_P8BjQyqZnwIh0MKBiOIxMlxVI0Mmg1gGi8xTxbyAMarS5E5r8tZIdop1j_x002F_Q6A41QeEXkgZJL2z9hEZtg_x002B_PxRn5W34kYijzKWaULczUZh8wuV_x002F_nh_x002F_XkWqUb4ttl08JFeaLPV4AerqWEZesTVASPkaEvg57xcLI8RezUd7PCgZmVocPLbpWJV_x002B_dxwtWKbaaQeJgb7qyGSc8iMzW5BR2BDxFvhE71wAF8LJIvjuJ2nOD5qbylVqgGTEPvv2_x002B_ALOTxEWTl6geQq352iz_x002B_lK_x002B_kBU0_x002B_WJ1D2bWu6wIA1MLQqXktFmaA3mNhpvzjr6H_x002F_gQm0NeQtB2mJ2_x002F_s0mcFp2Ki0bt7ZH1egCunuufzJJNAeyxGGLHuWvoDem12FDJGtbLBV6eUobyeqXRmlzxVKERx_x002F_q9zlZxZWeakxEHQKlXf3pAzodqtWYBUev59EPnU0NG7IddfcPPfynKdvP7tj5S9zzLkS4K8TtdugOmDKgaQ3Fy2RAl2lkxpFoTx1KoMITxSsAsQVp1wHK_x002B_6owK5CkiF_x002B_EXpMnsMgD9czQgCT0iHolxZidrNv_x002B_W4crjtLXqWRwqcJg2J4frtyYeCzfFIq4Vu_x002F_pAVdOTDabsP3sBWcQty0G49PooBavfyQi8JN56b5TXhq_x002B_JpTRoiUTj6K0wH0MK6ZhTxirn4jnRKqjmjhLb4RzIwzq0_x002B_o7BxZiWG7vDYyPguIEPqujVM1Ghcmz04oWygmiixjf8EISiCk1nPVweCxx8N_x002B_plyMTDtCFx5TA7DKwWgItmTZzWJBZDotjgJwkzlRCtVJ_x002B_zylgXT8mpAxys8Bu2WAgBWd_x002F_Xei3v5xlICrs00YJ7zTli8PxJJ9i5e_x002F_EiN36Sdh7dt_x002B_yGArAkw9eTDi_x002F_SKyBhG80HbQt_x002B_vuoSQK8lbTNv8ja8aSgPoqzMh_x002B_EPZX6BVM4uodMu8L7tLlrtJRpaBKXoTI3nhsqH6XOThyNZkYOBQKhmmvWGz34t8MboqzDclOCVDGk1MlMdlFUEFdKqHVrnDOjOCgyI1j0EEstKSk19ccM547k9A8Jr4ULYvwoP2QL_x002F_FCSfBxU8oCbRKYPpWUA1UPKMuDptXEizgy8UKrmlQ_x002B_Ketf54eLuothyOnwEU_x002F_xvHqjbqcYwIQi_x002B_K_x002F_gTf8QuH_x002F_oTpsOGK_x002B_QUNRHqhz1Ko8UqR_x002B_pA31FBfvPaTomCPNGSpKZeWbR2V0sxI9URcaBEypVvl_x002B_QDcmif_x002F_0_x002F_6QdfmggOWCf0h8zcxFu9kUhNahL2xfvbL8bauOoVFWsRpRJ9ZUf_x002F_c_x002B_L_x002F_PylCdDO8j6brLhWWD99m9wX3FAEmAEC1oMKed2w7V4mTLO1ER8D8vJE7vQwymaY5E5ujiuDqjgBHSVHxvIgg4xEFMloQ9M6hBXKznb48iqLVc14e48mNvDwFj_x002B_qqvKDPEz61OeOmEqAEowcIlONTqZV6pKmITvC2oX35r0kripaJgKdin7A1MKs1nAsKN6eqw8oosAq5tQbzIB0_x002F_q_x002B_Wnz1nhvmzwHNWyzotl7UoXm_x002B_AHR7aKWyKTZ_x002B_9ByTYzpBJU0eal91zBGKpMW5K5I03w64ezeOgwKhhutBx4kt120YUcGWeQrUbJN1JGliDpXqm3YGuU6GlESRYm34PEX4_x002F_E3RsfzFKWqpO7rnJY6s_x002F_m4cJguPdVY_x002F_tHL5hk_x002B_2LjT3E7nxNrTYO29Fh_x002F_OcxZsST8QSxXarGu2ygRc1uq3EJ5X_x002F_4TXRcPsKxKxZYInpGRrI9x9xWlovhNCtTXJu0b17O8RVv7J0nc3ky2DRnk_x002F_AyVyRM9m6aD9Y_x002B_U_x002F_6JqSaFpqAhuv1lTGavBM9cmzb4papnmtrh4zxiixX9pII37I9iiaXl6r_x002F_lSLYs8iRHDarbFag_x002F_AzPgQYvgfCsKkDCJPZoUSvzJKQp9EAyJsCYPZbQW_x002F_f2YmVYvdh8bJUS9Zn1QEJdrSoRG6OfcPwQmyJp_x002B_R7Kn7Aj8v0q3WOchadUuVemXmgxmyE_x002F_NA_x002F_pH1B6nxk5EaGqpFEBDJhEUUyU7iu9FE72f2qeNz7u7NETXEhIoIa9pk2Q93bXLWWjtV41NAK_x002B_cdS8sYUwCFGqECPXaSUlLhclbgVcL0Ux6P_x002B_wLnO_x002B_GsAilzpWoOPfdS_x002B_v_x002F_wT2gcnY8JhaBl_x002F_ILVP1ThWlYSwl2n2S8SDt3w0VFs6Ae4qdLTkptsG4rTXh6UTHTV6OSQufDc0cqp7N0clQYN0Mz_x002B_tC_x002B_QbPTWWIY6j9V7nZotQBC3jdyz5VJ0CTZmJ1_x002B_W85xCqpk6QNxLCbejkLknS2_x002F_lceTi1kj1Gz0X8ZUOeIh_x002B_PN0rFkT3g8sqD3a4OUcr5Nn6G88WZ0fQDGzioys3m2a19u6Onq3okVHB5h_x002F_P_x002B_6w77g7fib5OqrL2wtKXbERSaYX5uUmPrv5zRSyrexLsJl9yQ11jrLuHDhRMEWPhYX2SzLgpAtm1u1pB0imeCSKrzFh3R_x002F_9uIO8bgTpb8HCj1GjFHT7lds820EjNwe6P9arBOs5h47Q0Q_x002B_xDVd7dzn93V2oECA9TOykFNNxjlpxUrUrrnvOu06Bs_x002F_twdcvk8iqc8s6N2hd5lHnms_x002F__x002F_WapN_x002F_EX8jn2lzi2KEC1Ss_x002F_fuP8u23NzpX4RoEfVE0yE2dnCZfQ2QDf6O9KYjfcSLJicdDFRhkb3yoL8wLDpud8qGdeQgkQGaIUQEr_x002B_dnR9WAsVqWIRCHmCH5gJv_x002F_43rRsPX1SH_x002B_c9nEcUaeGGgylVxGHuITlCUtGoepqAmaWy2iJfkAQJONbCyEkgiXw_x002F_qnR3tQqRgWxOYh92nlMkTJ696wClY1ETvMXt6cMdwNDzA6xAj06D_x002B_s3Zk3Y8lFt6dAp7a_x002F_sWcdnMwUpGS6u1_x002B_5FRWPqCrKWmtJ8gPlUwk1hEL8FFg3yUemct_x002B_m1dX8w4PtTPCJNtg5WXwrMawLY3UK0grQHkC9qVAv9A66e6v5XsdnyUHWzmzAUh5WW_x002B_HTw2_x002F_4eWALStcAXk1xNlQi6CWdSb6o2P8niozJKF_x002B_nZGtUVQtm1GYaNTVkAEsSyyu9H4nziEnQQ2NGmYzADqfeg_x002F_Du3kzBFoM2By88Ehp5psC19Ya3pkqZ3873KY8rXxqtyMkdmZZ3268Zg6Jz4Y2M4SeK4Q9w_x002B_qiuzeXvIfDXknix8tZa4AdXrVYRbv01kuPuHxZlEoGA_x002F_fKEaZYaSawlJ9ZwqHwC7VNEwyo1WlmMOkYu_x002F_8taKNwU7Bf8WY1VYgWpxD0W953azs2JqIVP4q6Ag_x002F_0ZtDGMIs3q_x002F_TytUrFWkzWX0oNMG8sPlqGLiucYhLzeBLnX94TmE4lqbmRXazV3mci7L_x002B_5VuAyOcYRQ4NIdWhaNocYTqDWYQFA3eydPlOg_x002F_5EXzQRX5pGQcXzLcJ_x002B_IxDIlJDGh3vVEC95zkL7KV0iEfI4ikgy0pLbx38rs3SKsTZdOj_x002F_qWdd_x002B_UE3bGa5Zh2omcOrEwb2eaZK8FEqeU9YV3AY9ew_x002B_PKrRXF69JZYvRzhIL_x002B_WOCrz3XmFAZ6UjS5NkDCc6bpE5bqmqxsExtFv1YDkle2_x002B_V2Ovq_x002F_DXa8y8j4_x002B_Y5QX_x002B_V0_x002B_ZQx1OtvXpfV9rEKb8QDWXj66pi2cfz_x002F_7QURnXJ87XoiZOKIfQaxXAi7DWZYG8QYJOsS4pPusPjYsnJLZzH50Hbn6gOEsucCUafYvWsxikZF5_x002B_V_x002B_WuZEOS_x002F_5suaGNHYeyR6on3RlntHhSfa0PNYzhwxmBnmhbOWTUQdI0i_x002F_3PXNjGiID_x002F_Jqd7CZ2VOGtrlSHIaQhf5iCMd3zVEZtk5vVUhfmE5t2dQSsN_x002F_6XRqlbrsKR97oQ4bswc7v3GZ3iCe_x002F_mXvE5bHi88wKMss8QXd0c1VKWstvjXnKuuQkyqB2KUSlkWfGFG3k1YWWCeHLyK_x002F_7N6yLXxnCYOMZubaAigiIgBTl_x002B_1IE3kdSZVfiL_x002B_qdr0xp94RrkstyQUkRq_x002F_U9ODbxURaqq7cbKJub12JUFutvWbiiQ6MP2cjfuw2NG_x002F_wSZNk8Q9YWx_x002B_pB7kNNurkev4_x002B_V6pB6IcNVQoG1BMO5ibQMZJOdfXA0m_x002F_t1MiTqWWqMGVQ95P7M_x002B_uzuZIPeOIfeb4Eb2EDY1iYBHLg6gG9cikzpfmSJSTZsOCz0ZiWyQ_x002F_4OSHzBShY8hbvES1fZ9zReq3Jq3cFLz4d4vCsRuk_x002B_NMZfzPGB_x002B_AXQc480Br0mWet3XJqWdsP5LR3RIc8bgt0A_x002B__x002B_ZxzhRzvrgfhMcVoU4YSo4ejIcGbCiyaigxnzQnDQgsRW1TjceOOIeBxGyUQAQDPR_x002B_nwXsgnWIF83kgLVk4UE_x002F_ZbmnviquSVQjhynSJRMYki9ymEGQ4C_x002F_HeWHRE6HbjVFGp_x002B_KMVglZwfuz8zGN4_x002F_EsPZK_x002B_CeTgQVdv08NS7tA2sv_x002B_5tluwIu74grLHbn8MBcozle_x002F_ApEjYgktVjM2DBOi6DyeBpzz5MBzf43YOtTN3DTJ0mlZq8v56_x002F_MLu1U79jooN2Lju9_x002F_vevHM7XCoTvIinrRUXt9AWJYlc5MQui0_x002B_Am6U09_x002B_QZiW75B9ExzQOs2VTLEI2i7MpOa2nWDD7NI9PcuPj5Du8fPobwKnGZGf8lAIl_x002F_5iufPD1mEDgTrlqUKCES78wUomsrqgZrp7HMr1HCK6tpNgvt2fPU4_x002B_BOsFYkwJw2D1J9rHpo6dl1E3wBOJsIYJuWkWCHvigFvo4kPcFpwJ3txmaEA9DtTIbLRkR5qIzgBc4y0nDVIsjqyaK2G4mUAc44RFJ7p4S540HHKzlH9K_x002B_wJSv6zazxnoTqZBMHt6mXPKIctTAir37aqHtYZKo_x002F_niBXLOrHAjpJsSeZQxvZAOyyH22pmHfj0Ryro9GZguUqwfx2to_x002B_YkyBl6HQj3_x002F_P5vMFqOpBvuR9ZSHLK9V4aagWCfgh7NARtymqfzpWAVdOInjpM3YFBvNDkV51WkiQVUbmJI2v_x002B_38PZ_x002F_cvj7eFNbkCIbhqnhgkp0actb9lm_x002F_JCcyucBDgIL_x002B_O0oBV_x002F_S7JmMSoCdrkqQe5_x002B_wzHNDA1YPUHRI_x002B_QpXdenV_x002F_tNAPruCNByq6_x002F_4Gi6qjzAoqsDVIQS5pofsTZVEMWSWSfzmuwcJ0A4ddOKjrpYS2953WFZAVj6B5_x002B_YvyuZ8Yp6G8GqypXhsnDpD81qQVDyGMS8mkQokXXnYAsTHuV6G533f_x002B_aRcB2IZoMiwF5G_x002F_6ORF9YRWtOitqPC8agDNy4Ko_x002F_x_x002F__x002F_bEevA_x002F_Iy8J_x002B_oiYIqUXs6pn01q_x002F_MV5XyzQB8ZC0zaq71N_x002B_sa0op5CxTpjiwIBLi1mQ9v3XRmu9JnVNUdfy1LD5wQavGgTKqob6hLH9ZPc8LQ2VM4KK_x002B_zHTC_x002B_aAD30m_x002B_RF6M2silC2B2_x002F_NJ5OjJMJA2ALsRnTRj2IGJHxMyGPD2fsBckebk8x2RkQBMJuOkyq0vnNP3025ac0LjLZTay8eil4a_x002F_fKBs_x002F_7Pky9NdYsaFJf8Gc1At9eYzjfEt_x002F_1ZB0sl8Z4vYUTRZpYMsZI16my5ADz7X5lhGiOXqF_x002B_0d7ogNFjehR9GLYn6TfbGKVF15lqQeg3repf26FNCbLaMkbYjA8KE3_x002B_o0G2j8B9QQMNaYRPndHyKfuAq4SIFqUy1xvIPr9XwHpGZ5qYkYj2AdsHqyWTYewPTtfDLl_x002F_ZvGZUC8JS7f1zv_x002B_ttTgr_x002F_xUkH5STANb0ybAX9jzMvJWZ3f5e0XFebVB9F9lEfByGW_x002F_exC9nkD7_x002F_Tt_x002F_peRrljjetHK2uQaFV_x002B_oLrOXR0h0Ccx6D09rfq42cxf2syeXpHfn9jUOCfGTgjeW2kY_x002F_bQHTgd6fRrimnZ7LMJFoJKhioISuM5h_x002B_0bLigm7yTwCLcR8RUwjsoqIKGHaxjb1KkJbELXgninvw0lzSSq1Vkj99brnoVWqu6QOy_x002B_sT542AqKQWhp8u2ycPVXZNNPpWnspdM2k83vExVLkTxv1XjGie5EMYNKd_x002F_hXWBGFFDJ5bAVFAmS8Cm9MLFtWYyCTOKA_x002B_mpOjzYTuY1n_x002F_ihmUjAqhtqjgwnNMX_x002F_Z5kgn6xHW80VKJ1BlEnD2bynByPbvBI6_x002F_AULHia_x002B_kl2Jx51pL2qJ6MXLmmcwJDxhvg8MZ3lfGJZZHtu2x_x002B_BQPW_x002B_jkDCAZfq2SwUpHGMzWMMMeXVVf6eo5UVTpTfNIE6SIJoG2zYnCS45E3fCdhCn7Uv_x002B_IdttS41e2b1RUz473Fy8oKyN_x002F_7FlQ0_x002F_jh2_x002F_ao5Sbv3Gz2CACVZJDwrZb_x002F_3_x002B_uWsWW81bIw9xYDtoSeQzKAUrtptHcn_x002B_11gil8jbhIGSeeCDzChmxpK8OVpSLICCKmvnJZcjh49kl25uodW2scucU_x002B_DNcAootYdgn0JIJKD6ol9NZv9PNDhjyli3cFSXvyEs4WYLDWapEMPdUQujOFZAfek4KXTlcX6yESQkj6LFzQTc0l56keYVepCrnWf2KkiNBnqaryDJ4zSFfPrUCEiEBRPR_x002B_8WArS1eV3WvGKOVERvMaXqHAbfZrVUWRqZqVEkARHEjw851qE5PTqSEx3kxP4sHPUhZhLe_x002B_MkUQNcdncqwQEMNw0tTBvEoX22sT3VeARtnFRaTTuthOI_x002F_I6o3_x002F_1LBp6umCPoEApBUgjCouspcGQmG8qyrMRCleOLH99R3vLPqwZ2mIfWkh5PANxNoEejPt7ldzGV08eric1YD5fArs8ja4WlD_x002F__x002F_slxqWF3JbtfKsFHgLTTypgjpED0WhU5DcbGUbuppDtfOL8YIrP0rH5MxQybMX2T7_x002F_GVTqu59A6oMzReudbV8f_x002F_9Orw2zMwYTJF6s1ERHvEZZ2BTf_x002B_g_x002B_E915OJDL75p0ISEpq4qm782UWk242eRBfmP5vPRen7RiAxCfAFZVwmgWPBt2bny1BK7SD48HRNlathWXps1YhlPK7mFNvvL2ki5mDJByCCsrBgzcOx6kdFKOKOilqZWDkqOiLThtOs2ToFYO6mVbX9UP_x002B_xd7uVNoyrr3vwF1eRNuzZOo5beDrKaqMd_x002B_XFRODXbiD_x002B_VpuNvClRBFufEw4bKHTCMNX0NNmeqDXJv1OQL97yLw4megLhsV8_x002F_AlmIUIrYzZPIm7Glwmze48x8IYAZ2jKiHxs5wDE87EHtsDiQVN3rzc8b7YPVzlGPna0phGGaVuOq5YqteCZPTQay1rTTh_x002B_IphTAv3F61g2DudiarLUIOQgJekazifXPTlvddjRxnjjTiq8lXQXyGvY0TkPWpnZK9rd_x002B_T2SE0NQm939b9ETfjOyJFxL76Nor7uOIWmiK_x002B_xTbTG_x002F_5axIclBiH8yduOkdZLotEz5aVL6mgks25MjuRmD7cHNw_x002B_aPkfGSuwFarBcuxDibmEwM4CJNLnK94c4j0Ddz2IysMUed0ffqsN3zbyURlVBwO8dMB_x002B__x002F_BjflShnKnqDH9xhFwftuUwvaGkIkXEe71lo3fe3vzW_x002B_2tafXWkbYrllKs8j_x002B_PaZ_x002B_h8491FyN8_x002B_LGgJoKIrRfbq5jMnY6lp3CNsLYNyxM91vWlcKB8uArcjGaczoc_x002F_vEkQYekdqvU02Isk2tI_x002F_1MxBXCetd3V15CTziBxgba53wf6Z2fxP6yGzQK69gT1ML7Uc0ZM0jWES9H2gxjOl9gWvGzWgWNo94khJHF47kYKJDKiNeTH1CkAY8oCzYgaDbkHCQcA1lMUiRJRsjPSqdVnWjqtpN71V9fvIbhHdVOEWplD9VmEKx03R8VWLslv3ZkWLtaMwG67UUvkleAS6r_x002B_u9iu4zfgBTU6OGTBGm69NQW4dJ9oHr6f91ZqJNTLuwZjk_x002B_iFaiaZL4VeYJy5Yrcpc2pfkHDC8J1x5WubrN35INkhMkHFDtxRjXirlx0ejz5BlwsLoIzKmw5LOP97zXj8wsCrrDwcf71pp47SbgQ65AiaTATqONRDTx7JRac25hd7OFOXpAETCVpqnshr0zpjR31KN1y5EG7UCFfdkXtrl721A1NqAautaAtQjWlaB0ASlPuibo0U5qaBjpd3_x002B_xF_x002F_Bmk5FJkqN1mpweyCTJ8sSBl2T_x002B_FvfF6d7rgkJ4Pl98gPi1H9dY8WmyRFc7_x002B_v9jbpztAG82med42E_x002F_ljWsZ4eWRM4wkHYix17FAcpyvvrnZpMiefUlftAlNuyFYZ_x002F_zdAi9ncQw28fn3tKzFxwiH7b88PyiFzVGgsA6_x002F_F_x002B_DFWaevQKR5B_x002B_I9TnW5wr_x002B_lZQkwiLU9uizDWnr56vstU3A_x002B_pyaGDNO1UljfoLAqnuKKxc86IwHzf1Je8JpxOUqz3ykG7WkOw94ydZkbW6oAM0tm3t7C_x002F_xSOk01ICN7hhcSKcEC3basVpVccx_x002F_xK9huty3s6HDub21HuSuIuHiHtudT7HZMP_x002B_UTiE8rbJpnWNiUVjOvaXVjiMFDSUsWi32VnWt_x002B_jMvXCd_x002F_rqEj21gqxl163_x002B_kbOOOB2Zn5FqFSkhltQV3btTuBB46SFWJqqHldQ21cTtBfEa_x002B_Qe6yFC4TK5GpYyouojhOYFjDntXJU9a3x04OpXepSL5cxE3B5Oakc7yB7rCjhnZAlXExDQxs_x002B_AIPMGz62tN5jVsqzWgStuMdaRq3uUdTpz3EYyUXMqChPmn0gXGCbCJVqRucw2CzJqL8T6El9phchP877v2_x002B_ZSHIesjhj73DKrwH2NAhv0xqEq2lDXfVFC2_x002F_GjkMFcbx4UFL_x002B_Y1LDNPJ5sootiykS9wwYhCV4cL3kzVui7M3_x002F_J9djZkJ5JgP0r3q88vtFM63ysoRi31XEmwuwi_x002B__x002B_qHls5zlGqQB46CfhspCReGenauamSTj_x002B_VIQ9MkbOnEsxxbkZLJ95gjXvq46qYE_x002F_vCPsKitSd7XSEPHRoXV_x002F_Nl1XlbljISI_x002F_VyhW5NHQSKZ0hJ58lPadOEgL7nhojyNGM7M2U_x002F_tv9hGMJlM4BGLnFDHu_x002B_UQWimaQaElrojvJFEYtnJd8Rov7N1XhVZf1Df5PlbisQXhhKE5KyQDGouPZ1L_x002B_hxy7_x002B_RrbOG_x002F_P8ZHbjalyVr8oagEACsJhrTi3SAUhk8ponoY_x002F__x002F_4uH7oemRBGAj9txUr8rUUCm0jrR14VbDfwhtodSQDh_x002F_Ro334bw9mZO7zXl5ojFPhJg_x002B_YeUEuM_x002F_I8l7swbZYLXfRBHt4qWAgFeeqShXv9BMaM0MfjiaL87dHrPBD_x002B_0voAl_x002B_5qckGEkfv1fpyRHBSqV7ynr_x002B_dKCVeJtSWZ7TFEyTSMRU1Af2XYVfBOKvs9LHJQgcuYD8D9VudBc_x002F_DvU6ueAK37KZlqcza_x002B_qEB_x002F_B9Ngp7GDFcrpIhciN0jVgTg91qYDtC3j_x002B_tnp_x002B_dASp5_x002B_dgSkWnM6gOqnTHxv4FOdD7Ocs9ZVm6MC_x002B_6OWhXo8PoyF9Rb5KGUh934Jz2yE4we4U8CHdElWuudnL4F9kY94jIt8XentxKLCB1e_x002F_iY6I_x002B_XBleUGDGLcS_x002B_zmZ4DtW0m14sf6D_x002B_E5_x002B_ALGcm_x002F_1I8ROSFuflELXrMcu4cn_x002F_AlUYBmKHupBkAttuqH5oMSnkWLN2SaN4M6o2AOFAN1e85CfRl0vfNn9RjYKTJda9z3vWV_x002B_KQWImm_x002B_t9Lxym6eAi5PvdyXljz6Dtxhpt6gtXRePPLswOqGMpKMuX_x002B_vFckBuDZhgJoOEyTPLRXN3E3o04B7Z39n5gIubLx3ovRPEx8R7ww8kcL1L1qQdAzQGFUXLzFBadKVAzsja_x002F_8pxSukbF5_x002F_D_x002F_xNQT4TQhWPLZhncTfFlxCMXFKOmkCB9Y7iiOu3WQsci_x002B_aq_x002B_POyLdiUbyFLsdJ0Re5SySB8VJl7tfPmwpLjnBA7h30nQKJ2jmGpLuFK_x002B_CrgJcAwCwiY4Dhf3SdArsbgvmcHkF6Jog5S80m789toMeoQqDXssSQo1QY1X1YDsWGwFolp1cSvfKNFoJX2UZK2ide_x002B_GhX_x002B_mu4A8TNT75_x002F_BptG90_x002B_lH_x002B__x002F_1sQarZVjC3k7Jfq3Rzoc43xJuf_x002B_tcj3YDuseARbxL9CP0UjB18JwGcbAcbAV_x002B_w_x002F_HdhO9v6MFmtds8eXDoy2X_x002F_odye3vt_x002B_FqpnFbmrxt1Mf4qZCX2LKe6dQuqj5YHtmm1kwTp4L6joYkYdYlA9N0k0QGGoTmjbkMTpdNtSqeL9Xvs6uJG017HKMjPigEckBWpMRKvCEs44EoXip43_x002F_zW2XMCG60gxXG_x002B_mu9G7tHGqrOM4DloNZLem9cNTWGjS1RuNSaY4dFlklqbWxI1Il9T7uXWrrnD0G_x002B_8CTDnlmFLNoQYRxmkD_x002F_dg1Tzm7LpOp7pcRSTdkQ7sXjGFl6m8zI_x002F_RInGoo3uzpwcuaDTtAzpv8KmrLiA2BlVeXTAYH_x002F_ViWv22tZKuV0eDCat_x002F_I0wD2t44BCivB8bIrVh6SXRSl_x002F_Nh3x0TobDycIQxkYuxHVpa7jbI6uUuadGAvNgkZPdvmyulYvnpWSas5Ud1ziXBg_x002F_JRsZHMXZ8g6XH99Ll0xaFc_x002B_Xag_x002B_756zxoiG2YDNSYLgINyhUAga1i9sa_x002B_X1uia6ifK67oWtfpldxKMLhxbrwWfUY0pCDG64OB8pdKKsIykM6iNuInwLhm2v3Hv3siohyPEvF_x002F_SNmob_x002B_pmHCOFj6TjPdGudxBLmx4m7a1S3awOHTq9q8K3R6xREfI3AIWi6_x002B_pYs4QaEZ5wFTFIlybTdug5ISqid4zh3mxZAh_x002B_lIbiezIjY4Cuh_x002F_Vh0oEn99k2MQQUW7oMdCYLi5Mto013FeSri0k_x002B_wMzeHpzmc1EXW4Z1ZYfBEQAqwRqSZHtWEFxGzFXK3ClRmFTbQpsShyxiMWIt_x002F_mtx0tZkrSGGhhA9hckf4XZTL1520_x002F_z7_x002F_2SxUpnQGPNnKIkYr669_x002F__x002B_xDj9o_x002F_PyEZrevrh8w86_x002B_GSGejIEN2GrQE48B0TGJvKO1_x002B_krtugH5_x002B_NE6_x002B_U7N3Smni1GTlvoKMFQle2gpG8lhhXLFBYZfyFtGVxS8Tp6vZpRGTKv9RGVSkGjCQJznLEaO1Rus7w5TOxwPv5LOMZ_x002B_vARFKFeMhgnwtbFdWsRcFY7Ld8w1mZy_x002B_U9lTlWHmjik82qnRZxssiObt7g2S_x002F_qXvD9lleHsbFJ93vwjYzj4OT_x002F_aCcj8AjqGSzu_x002B_ZDvw_x002B_2TgCx7fJ9AMX6EbiNX6KYihWzO8F5X2XkVkfYEUzdY8MddGkzyVCx32QhDW_x002F_c8MFZ38_x002F_P5bdBCwJEvmXR_x002F_P7KI8IDrmj78ZRfowspdUp4gAlIkfEh5IvUWrly4OArfnRQE9pwyaiJxRytRSwdhrXulazFIG90k4w_x002B__x002F_PAb44omhHyEuXlS1iQanbVe0IEp84gHOGIt_x002B_g4PluGlv_x002F_fRheb6bkNzq7kfyZDVnmkybdOLvvkInNKYrK9pLtz4MgfNg6ij1lZ0BbNek7PEthVWwnKrCEenwETueaOg_x002F_Bu93ABcRMjo2DlmMVhRITrrjkpKKO4oIxuuzIB3u22jK7U4heb9xmbBS0vTK3YSf97y2l7sBHtocS_x002F_Sab71FVbFRZZpia7tmp64EmmC94usDhjbuMZS41BSoR2eIJLt6mvYMQLWE2ojLtnf5sza5XzVGqBDH_x002B_0X9R7aQmE5egNP52yX_x002F_thQBXqkAdnyVwSYmuQ43QwH0rMJK6_x002B_55cqZQ78SvulOWxFfWWDAIY8RK6pKtaTRsPoQpw99xBMltM6EQZULSwjjlQGRtnwxhUlNcdMePOJuqbR1e78a4fqzn_x002B__x002F_Y2A03SdvB3blX_x002B_qN8_x002F_6ReG6L8UGCO6gskgPstLOAsk92RJwZmZfGnil_x002B_qHrSvxJmGypOiuj_x002F_V89MhPKWqjdg4J_x002F_Mzfv1xBKBPxMuPoQgD36Pxbf6yQvjetRibTw3jyF5PghU6qnUZbm4IgV9z6HHBmxO3QnutgbN3Nc68ioGrUrdVy2lSqvDJ_x002F_mg9MXIJJP5Nz0vzroDdJFHp6L1S6N6q66LpYSiuRznRhMzgJC_x002F_ALHo4fl1aB6sqvRwhyGjUgtfFOYDSRZJavNBtNhr_x002B_EkfAjNmhZ0n4gYM1QxX4tAjLCyuAOJOGf4CjrfuBZTsKK2fC9Vs8tLWI_x002B_Mhc6_x002F_jExHpQufvSpMdoMZUWamjhDUPkfJUQ0BRqbTEbXFipW9QlM8EEr8jYg6A0295wz_x002F_Xk661SuZ_x002B_0cAhDDV51HDM61gW4puGlpOPVgCmdep0FPQ75JE6eOoN_x002B_72ZCjQlldC_x002B_L5lC75uu_x002B_LH5ul9ZYbU09_x002F_jPJ0IXvkRcpjYkJ7iyZA4pR_x002F_WSF3vIp9P7Dmm1ay26_x002B_QmrogkrvxH1qjnMIyVQofgYGBAiM1ww5QjIp_x002B_jx6hCCJJIIiMUyz45FrDpi0u1m7Xp8kuBuEQWxKhhGve7lY7_x002B_ZJfTu3CKyZ8cXiQ_x003D_</value>
+    </Resources>
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="3">
+    <Item11 Ref="12" type="Stimulsoft.Report.StiGlobalizationContainer" isKey="true">
+      <CultureName>en</CultureName>
+      <Items isList="true" count="0" />
+    </Item11>
+    <Item12 Ref="13" type="Stimulsoft.Report.StiGlobalizationContainer" isKey="true">
+      <CultureName>ru</CultureName>
+      <Items isList="true" count="11">
+        <value>ReportAlias,Заказ</value>
+        <value>ReportDescription,Этот_x0020_пример_x0020_демонстрирует_x002C__x0020_как_x0020_создать_x0020_Заказ</value>
+        <value>Text02.Text,ЗАКАЗ</value>
+        <value>Text20.Text,ПОЛУЧАТЕЛЬ</value>
+        <value>Text21.Text,АДРЕС_x0020_ДОСТАВКИ</value>
+        <value>Text22.Text,ЭЛЕМЕНТ_x0020__x2116_</value>
+        <value>Text23.Text,ОПИСАНИЕ</value>
+        <value>Text24.Text,КОЛ-ВО</value>
+        <value>Text25.Text,ЦЕНА</value>
+        <value>Text26.Text,ВСЕГО</value>
+        <value>Text32.Text,Номер_x0020_НДС:_x0020__x007B_BillToVatNumber_x007D_</value>
+      </Items>
+    </Item12>
+    <Item13 Ref="14" type="Stimulsoft.Report.StiGlobalizationContainer" isKey="true">
+      <CultureName>de</CultureName>
+      <Items isList="true" count="19">
+        <value>ReportAlias,Bestellung</value>
+        <value>ReportDescription,Das_x0020_Beispiel_x0020_zeigt_x002C__x0020_wie_x0020_man_x0020_die_x0020_Bestellung_x0020_erstellen_x0020_kann_x000D__x000A_</value>
+        <value>Text02.Text,BESTELLUNG</value>
+        <value>Text20.Text,RECHNUNGSEMPFÄNGER</value>
+        <value>Text21.Text,WARENEMPFÄNGER</value>
+        <value>Text22.Tag,KOPFZEILE</value>
+        <value>Text22.Text,ELEMENT_x0023_</value>
+        <value>Text23.Tag,KOPFZEILE</value>
+        <value>Text23.Text,BESCHREIBUNG</value>
+        <value>Text24.Tag,KOPFZEILE</value>
+        <value>Text24.Text,Quantität</value>
+        <value>Text25.Tag,KOPFZEILE</value>
+        <value>Text25.Text,STÜCKPREIS</value>
+        <value>Text26.Tag,KOPFZEILE</value>
+        <value>Text26.Text,GESAMTBETRAG</value>
+        <value>Text32.Text,MwSt-Nummer:_x0020__x007B_BillToVatNumber_x007D_</value>
+        <value>Variable.BillToAddress,_x0038_7_x0020_Polk_x0020_Str.</value>
+        <value>Variable.CompanyName,Firmenname</value>
+        <value>Variable.Notes,Verwenden_x0020_Sie_x0020_obige_x0020_Information_x002C__x0020_um_x0020_die_x0020_Bestellung_x0020_per_x0020_Banküberweisung_x0020_zu_x0020_bezahlen._x0020_Achten_x0020_Sie_x0020_darauf_x002C__x0020_Ihre_x0020_Rechnungsnummer_x0020_anzugeben._x000D__x000A_Ihre_x0020_Bank_x0020_könnte_x0020_zusätzliche_x0020_Gebühren_x002C__x0020_die_x0020_Sie_x0020_akzeptieren_x0020_müssen_x002C__x0020_erfordern._x0020__x000D__x000A_</value>
+      </Items>
+    </Item13>
+  </GlobalizationStrings>
+  <Key>0b29b72cf86d4ad588b9e1dd15f5c9a1</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="15" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="5">
+        <PageHeaderBand1 Ref="16" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4,190,38</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text02 Ref="17" type="Text" isKey="true">
+              <Border>Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,190,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Editable>True</Editable>
+              <Font>Arial,18,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text02</Name>
+              <Page isRef="15" />
+              <Parent isRef="16" />
+              <Text>Переміщення товару №{Document.Number} від {Document.Date.ToString("dd MMMM yyyy")} р.</Text>
+              <TextBrush>[43:43:43]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text02>
+            <Text6 Ref="18" type="Text" isKey="true">
+              <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,20,28,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Underline</Font>
+              <Margins>3,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="15" />
+              <Parent isRef="16" />
+              <Text>На склад:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text6>
+            <Text7 Ref="19" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>28,20,162,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="15" />
+              <Parent isRef="16" />
+              <Text>{Document.StoreTo.Name}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text7>
+            <Text2 Ref="20" type="Text" isKey="true">
+              <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,28,28,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Underline</Font>
+              <Margins>3,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="15" />
+              <Parent isRef="16" />
+              <Text>Організація:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text2>
+            <Text5 Ref="21" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>28,28,162,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="15" />
+              <Parent isRef="16" />
+              <Text>{Document.Company.Name}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+            </Text5>
+            <Text1 Ref="22" type="Text" isKey="true">
+              <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,12,28,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Underline</Font>
+              <Margins>3,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="15" />
+              <Parent isRef="16" />
+              <Text>Зі складу:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text1>
+            <Text3 Ref="23" type="Text" isKey="true">
+              <Border>None;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>28,12,162,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="15" />
+              <Parent isRef="16" />
+              <Text>{Document.StoreFrom.Name}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+            </Text3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+          <PrintOn>OnlyFirstPage</PrintOn>
+        </PageHeaderBand1>
+        <HeaderBand1 Ref="24" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,50,190,7.7</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text20 Ref="25" type="Text" isKey="true">
+              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:253:215]</Brush>
+              <ClientRectangle>0,0,12,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Editable>True</Editable>
+              <Font>Arial,10,Bold</Font>
+              <Guid>b7cdbdb4de1b4ac09476b0c9272155c8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="15" />
+              <Parent isRef="24" />
+              <Tag>HEADER</Tag>
+              <Text>№</Text>
+              <TextBrush>[43:43:43]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text21 Ref="26" type="Text" isKey="true">
+              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:253:215]</Brush>
+              <ClientRectangle>12,0,146,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Editable>True</Editable>
+              <Font>Arial,10,Bold</Font>
+              <Guid>ad893bb792844542a8dfbbe0c892a997</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="15" />
+              <Parent isRef="24" />
+              <Tag>HEADER</Tag>
+              <Text>Товар/послуга</Text>
+              <TextBrush>[43:43:43]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text29 Ref="27" type="Text" isKey="true">
+              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:253:215]</Brush>
+              <ClientRectangle>158,0,32,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Editable>True</Editable>
+              <Font>Arial,10,Bold</Font>
+              <Guid>6b1e4f46d5b4410dbab41ae70b9e9467</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="15" />
+              <Parent isRef="24" />
+              <Tag>HEADER</Tag>
+              <Text>Кількість</Text>
+              <TextBrush>[43:43:43]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>758ac801f018454dbd87a1e54c71b6fc</Guid>
+          <Name>HeaderBand1</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+          <PrintOnAllPages>False</PrintOnAllPages>
+        </HeaderBand1>
+        <DataBand1 Ref="28" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid>faa2b600504a491184ea3ebc60c4d639</BusinessObjectGuid>
+          <ClientRectangle>0,65.7,190,5.6</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text50 Ref="29" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,12,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>af7dce9ec23846ecbfeae3c93596c46d</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,5,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="15" />
+              <Parent isRef="28" />
+              <Tag>DATA</Tag>
+              <Text>{Line}</Text>
+              <TextBrush>[43:43:43]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text50>
+            <Text51 Ref="30" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,0,146,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>9222f135c2ed4947968929a40520f9a9</Guid>
+              <Margins>5,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="15" />
+              <Parent isRef="28" />
+              <Tag>DATA</Tag>
+              <Text>{Document.Rows.Product.Name}</Text>
+              <TextBrush>[43:43:43]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text51>
+            <Text52 Ref="31" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>158,0,18,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>7cc66c2bc6eb4d67adadb464460e725d</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,5,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="15" />
+              <Parent isRef="28" />
+              <Tag>DATA</Tag>
+              <Text>{Document.Rows.Qty}</Text>
+              <TextBrush>[43:43:43]</TextBrush>
+              <TextFormat Ref="32" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <State>DecimalDigits</State>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text52>
+            <Text8 Ref="33" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>176,0,14,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>975ee3377a2d4189a8476d31e2681f32</Guid>
+              <Margins>5,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="15" />
+              <Parent isRef="28" />
+              <Tag>DATA</Tag>
+              <Text>{Document.Rows.Product.Unit.Name}</Text>
+              <TextBrush>[43:43:43]</TextBrush>
+              <TextFormat Ref="34" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <State>DecimalDigits</State>
+                <UseGroupSeparator>False</UseGroupSeparator>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName isNull="true" />
+          <EvenStyle>Lime Data Even</EvenStyle>
+          <FilterOn>False</FilterOn>
+          <Filters isList="true" count="1">
+            <value>Document.Rows.Product.IsService,EqualTo,false,,Boolean</value>
+          </Filters>
+          <Guid>a713895547434379a5e5d7315c8dff9c</Guid>
+          <Name>DataBand1</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <FooterBand1 Ref="35" type="FooterBand" isKey="true">
+          <Border>None;Black;1;Solid;False;4;Black;True</Border>
+          <Brush>Transparent</Brush>
+          <CanGrow>False</CanGrow>
+          <ClientRectangle>0,79.3,190,25.4</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text9 Ref="36" type="Text" isKey="true">
+              <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>96,2,62,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>3,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="15" />
+              <Parent isRef="35" />
+              <Text>Всього найменувань:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text9>
+            <Text10 Ref="37" type="Text" isKey="true">
+              <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>158,2,18,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,5,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="15" />
+              <Parent isRef="35" />
+              <Text>{Format("{0:N0}",Count(Document.Rows))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="38" type="NumberFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator> </GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseGroupSeparator>False</UseGroupSeparator>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text10>
+            <Text12 Ref="39" type="Text" isKey="true">
+              <Border>Bottom;Black;2;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,8,190,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="15" />
+              <Parent isRef="35" />
+              <TextBrush>[43:43:43]</TextBrush>
+              <Type>Expression</Type>
+            </Text12>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>40014b960b3848dd8766f338bdb85c7f</Guid>
+          <Name>FooterBand1</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </FooterBand1>
+        <FooterBand4 Ref="40" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,112.7,190,14</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text34 Ref="41" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>104,4,70,4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="15" />
+              <Parent isRef="40" />
+              <Text>Прийняв:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text34>
+            <Text4 Ref="42" type="Text" isKey="true">
+              <Border>Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.3,70,4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="15" />
+              <Parent isRef="40" />
+              <Text>Відвантажив:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text4>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>FooterBand4</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </FooterBand4>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>8f656f441095463eae730f959911dad0</Guid>
+      <Margins>10,10,10,10</Margins>
+      <Name>Page1</Name>
+      <PageHeight>297</PageHeight>
+      <PageWidth>210</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <PreviewSettings>25108991</PreviewSettings>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Invoice</ReportAlias>
+  <ReportAuthor>Sunapi</ReportAuthor>
+  <ReportChanged>10/13/2020 5:50:13 PM</ReportChanged>
+  <ReportCreated>11/12/2017 10:11:55 PM</ReportCreated>
+  <ReportFile>Z:\App_application\Main\document\stocks_move\stocks_move.mrt</ReportFile>
+  <ReportGuid>26ae23cdc061456e8ed29a2db29e4550</ReportGuid>
+  <ReportImage>iVBORw0KGgoAAAANSUhEUgAAASAAAAFzCAMAAACpRyTrAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAGAUExURdbu7Em2quz396y1suzKsFhcWYfPyBQQDnrLxFm8srKIbsnp50WzqkouIOfn
+52nDus2PcKjCumlIMafc11t4h6pvUnTHvfX5+ZVoT9Spk8rLyuazkWG+tVK5ru/WxZTTz77n47So
+lp3Y04wFCZGSi7nFxYxQNcrZ2bjj36e5xcp2WGiFkp2qqce4qq+XhIOapt/z8+m6pY3TyzVMTdXc
+2Ozx70Gyp8vd6OWqe9Gag9bk4p2mmtqkdTyxprHe24ZcQ698YOb7+5F3Zc2GYKXYzMrUzuCZbtvu
+8HmSnmeKpbbT5ku4tOzh1tvz77vN0onX1ev//tXVz5XOw13Ev9XKwHKMl6paQLHBw+Xu+cTR1uKc
+iH6Jh8i+vWaCje37+J7L26rI2/Lc5eT2+1i9wFuEmuv1/tXG0n1/eS89OsZhQbPXzbgcJSE0M026
+sPHs5ou+z9+KYdmiXcTp8LCfn0myquPz8+f39+f38+P38+P39+f79+jz8022rGB9i+Dy8f///3v3
+XIEAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AABMA0lEQVR4Xu19i0NSWfc2
+dJIAMUiUxEsogYgBoTKhaEqa0kxFY5YM5jQXZ95sJqf6KWQzxvevf89aa5/DTQSle+xMj+fsc4DH
+tdfe67LXY4oMdtoJCGybBv9fp52AwMUOQCfLRwegJuOnA1AHoPZUbEeCOhLUkaD2EOhIUHv4dXRQ
+R4I6EtQeAh0Jag+/Wh0UuXP9G2938lWI1gJ0ve+bb7kmAL37xltfsAPQiSLQAajJCGkKEHTQyQg3
+uf6lj9BmAL0LByOsp9/Rt6zGR3z8Dt/x/04wd01d/SN552Qwv0SwmgH0/WXtzvVwOBKm79eS2+/C
+2uPwz5j6c4+vhSPv+q5f1iJ3wtq1SPj69V/PBb45gO58f3k9MpHovpdcnUj8kEhuJwdD6xe1ZPa7
+ZCKZKM73/bDe1/d9LrOd/Cf0XfjytyhB3wX6/k/7ZfBlYlS7fjE5WAq8vBc+tx6+HMwX1/ORvl/u
+9fW9TGT+lxx7ee+Pc9e/QQn6cz2c1H4JvgxN/JPRQtvh1MXIHz9q32cGI7+mgk/6vk8lBoMXU/9L
+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
+sdNOQGD9/wO3lUW9dWBPFQAAAABJRU5ErkJggg==</ReportImage>
+  <ReportName>Invoice</ReportName>
+  <ReportUnit>Millimeters</ReportUnit>
+  <ReportVersion>2020.4.2.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Invoice : Stimulsoft.Report.StiReport
+    {
+        public Invoice()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="76">
+    <Black_x0020_Data_x0020_Even Ref="43" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[43:43:43];1;Solid;False;4;Black</Border>
+      <Brush>[236:240:241]</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item40 Ref="44" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Data</ComponentName>
+          <Placement>DataEvenStyle</Placement>
+        </Item40>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Black Data Even</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Black_x0020_Data_x0020_Even>
+    <Black_x0020_Primitive_x0020_Line Ref="45" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;White;5;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item42 Ref="46" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>HorizontalLinePrimitive1</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item42>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Black Primitive Line</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Black_x0020_Primitive_x0020_Line>
+    <Black_x0020_Company_x0020_Name Ref="47" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseHorAlignment>True</AllowUseHorAlignment>
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item44 Ref="48" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text01</ComponentName>
+          <Placement>PageHeader</Placement>
+          <Type>ComponentName</Type>
+        </Item44>
+      </Conditions>
+      <Font>Microsoft Sans Serif,18,Bold,Point,False,0</Font>
+      <Name>Black Company Name</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Black_x0020_Company_x0020_Name>
+    <Black_x0020_Company_x0020_Info Ref="49" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderFormatting>False</AllowUseBorderFormatting>
+      <AllowUseBorderSides>False</AllowUseBorderSides>
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item46 Ref="50" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text1</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item46>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,204</Font>
+      <Name>Black Company Info</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Black_x0020_Company_x0020_Info>
+    <Black_x0020_Bill_x0020_To Ref="51" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Left;White;1;Solid;False;4;Black</Border>
+      <Brush>[43:43:43]</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item48 Ref="52" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text2</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Placement>ReportTitle</Placement>
+          <Type>ComponentName</Type>
+        </Item48>
+      </Conditions>
+      <Font>Microsoft Sans Serif,14.25,Bold,Point,False,0</Font>
+      <Name>Black Bill To</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Black_x0020_Bill_x0020_To>
+    <Black_x0020_Bill_x0020_To_x0020_Info Ref="53" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item50 Ref="54" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text3</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item50>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,204</Font>
+      <Name>Black Bill To Info</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Black_x0020_Bill_x0020_To_x0020_Info>
+    <Black_x0020_Requisites Ref="55" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>[43:43:43]</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item52 Ref="56" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>ReportTitleBand1</ComponentName>
+          <Placement>ReportTitle</Placement>
+          <Type>ComponentName</Type>
+        </Item52>
+      </Conditions>
+      <Font>Microsoft Sans Serif,14.25,Bold,Point,False,0</Font>
+      <Name>Black Requisites</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Black_x0020_Requisites>
+    <Black_x0020_Title Ref="57" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item54 Ref="58" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text02</ComponentName>
+          <Placement>ReportTitle</Placement>
+          <Type>ComponentName</Type>
+        </Item54>
+      </Conditions>
+      <Font>Microsoft Sans Serif,18,Bold,Point,False,204</Font>
+      <Name>Black Title</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Black_x0020_Title>
+    <Black_x0020_Data Ref="59" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[43:43:43];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item56 Ref="60" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text5</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item56>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Black Data</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Black_x0020_Data>
+    <Black_x0020_Contact_x0020_Name Ref="61" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item58 Ref="62" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text6</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item58>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Bold,Point,False,0</Font>
+      <Name>Black Contact Name</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Black_x0020_Contact_x0020_Name>
+    <Black_x0020_subtotals Ref="63" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Left;White;1;Solid;False;4;Black</Border>
+      <Brush>[213:218:222]</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item60 Ref="64" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text4</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item60>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Bold,Point,False,204</Font>
+      <Name>Black subtotals</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Black_x0020_subtotals>
+    <Black_x0020_Discount Ref="65" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[145:145:145];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item62 Ref="66" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text05</ComponentName>
+          <Type>ComponentName</Type>
+        </Item62>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Black Discount</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Black_x0020_Discount>
+    <Black_x0020_Total Ref="67" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>[43:43:43]</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item64 Ref="68" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text7</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item64>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Bold,Point,False,204</Font>
+      <Name>Black Total</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Black_x0020_Total>
+    <Black_x0020_Thanks Ref="69" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Bottom;[43:43:43];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item66 Ref="70" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text03</ComponentName>
+          <Type>ComponentName</Type>
+        </Item66>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Regular,Point,False,0</Font>
+      <Name>Black Thanks</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Black_x0020_Thanks>
+    <Black_x0020_Notes Ref="71" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderFormatting>False</AllowUseBorderFormatting>
+      <AllowUseBorderSides>False</AllowUseBorderSides>
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Black</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item68 Ref="72" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text04</ComponentName>
+          <Type>ComponentName</Type>
+        </Item68>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Black Notes</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Black_x0020_Notes>
+    <Lime_x0020_Company_x0020_Name Ref="73" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item70 Ref="74" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text01</ComponentName>
+          <Location>MiddleLeft</Location>
+          <Placement>PageHeader</Placement>
+          <Type>ComponentName</Type>
+        </Item70>
+      </Conditions>
+      <Font>Microsoft Sans Serif,18,Bold,Point,False,0</Font>
+      <HorAlignment>Center</HorAlignment>
+      <Name>Lime Company Name</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Lime_x0020_Company_x0020_Name>
+    <Lime_x0020_Company_x0020_Info Ref="75" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderFormatting>False</AllowUseBorderFormatting>
+      <AllowUseBorderSides>False</AllowUseBorderSides>
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item72 Ref="76" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text1</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item72>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Lime Company Info</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Lime_x0020_Company_x0020_Info>
+    <Lime_x0020_Bill_x0020_To Ref="77" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Left;White;1;Solid;False;4;Black</Border>
+      <Brush>[145:200:83]</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item74 Ref="78" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text2</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item74>
+      </Conditions>
+      <Font>Microsoft Sans Serif,14.25,Bold,Point,False,0</Font>
+      <Name>Lime Bill To</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Lime_x0020_Bill_x0020_To>
+    <Lime_x0020_Bill_x0020_To_x0020_Info Ref="79" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item76 Ref="80" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text3</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item76>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,204</Font>
+      <Name>Lime Bill To Info</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[60:63:70]</TextBrush>
+    </Lime_x0020_Bill_x0020_To_x0020_Info>
+    <Lime_x0020_Requisites Ref="81" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>[60:63:70]</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item78 Ref="82" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>ReportTitleBand1</ComponentName>
+          <Type>ComponentName</Type>
+        </Item78>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Regular,Point,False,0</Font>
+      <Name>Lime Requisites</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Lime_x0020_Requisites>
+    <Lime_x0020_Title Ref="83" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item80 Ref="84" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text02</ComponentName>
+          <Type>ComponentName</Type>
+        </Item80>
+      </Conditions>
+      <Font>Microsoft Sans Serif,18,Bold,Point,False,204</Font>
+      <Name>Lime Title</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[145:200:83]</TextBrush>
+    </Lime_x0020_Title>
+    <Lime_x0020_Headers Ref="85" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Left;White;1;Solid;False;4;Black</Border>
+      <Brush>[145:200:83]</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item82 Ref="86" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text4</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item82>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Bold,Point,False,0</Font>
+      <Name>Lime Headers</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Lime_x0020_Headers>
+    <Lime_x0020_Data Ref="87" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[145:145:145];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item84 Ref="88" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text5</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item84>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Lime Data</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[120:120:120]</TextBrush>
+    </Lime_x0020_Data>
+    <Lime_x0020_Contact_x0020_Name Ref="89" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item86 Ref="90" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text6</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item86>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Bold,Point,False,0</Font>
+      <Name>Lime Contact Name</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Lime_x0020_Contact_x0020_Name>
+    <Lime_x0020_Data_x0020_Even Ref="91" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[43:43:43];1;Solid;False;4;Black</Border>
+      <Brush>[236:240:241]</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item88 Ref="92" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Data</ComponentName>
+          <Placement>DataEvenStyle</Placement>
+        </Item88>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Lime Data Even</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Lime_x0020_Data_x0020_Even>
+    <Lime_x0020_Discount Ref="93" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[145:145:145];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item90 Ref="94" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text05</ComponentName>
+          <Type>ComponentName</Type>
+        </Item90>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Lime Discount</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[130:191:62]</TextBrush>
+    </Lime_x0020_Discount>
+    <Lime_x0020_Total Ref="95" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>[145:200:83]</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item92 Ref="96" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text7</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item92>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Bold,Point,False,204</Font>
+      <Name>Lime Total</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Lime_x0020_Total>
+    <Lime_x0020_Thanks Ref="97" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Bottom;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item94 Ref="98" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text03</ComponentName>
+          <Type>ComponentName</Type>
+        </Item94>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Regular,Point,False,0</Font>
+      <Name>Lime Thanks</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[130:191:62]</TextBrush>
+    </Lime_x0020_Thanks>
+    <Lime_x0020_Notes Ref="99" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Lime</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item96 Ref="100" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text04</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item96>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Lime Notes</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </Lime_x0020_Notes>
+    <Aqua_x0020_Company_x0020_Name Ref="101" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item98 Ref="102" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text01</ComponentName>
+          <Type>ComponentName</Type>
+        </Item98>
+      </Conditions>
+      <Font>Microsoft Sans Serif,18,Bold,Point,False,0</Font>
+      <HorAlignment>Center</HorAlignment>
+      <Name>Aqua Company Name</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Gray</TextBrush>
+    </Aqua_x0020_Company_x0020_Name>
+    <Aqua_x0020_Company_x0020_Info Ref="103" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderFormatting>False</AllowUseBorderFormatting>
+      <AllowUseBorderSides>False</AllowUseBorderSides>
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item100 Ref="104" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text1</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item100>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Aqua Company Info</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Gray</TextBrush>
+    </Aqua_x0020_Company_x0020_Info>
+    <Aqua_x0020_Bill_x0020_To Ref="105" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Left;White;1;Solid;False;4;Black</Border>
+      <Brush>[123:215:238]</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item102 Ref="106" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text2</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item102>
+      </Conditions>
+      <Font>Microsoft Sans Serif,14.25,Bold,Point,False,0</Font>
+      <Name>Aqua Bill To</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Aqua_x0020_Bill_x0020_To>
+    <Aqua_x0020_Bill_x0020_To_x0020_Info Ref="107" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item104 Ref="108" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text3</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item104>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,204</Font>
+      <Name>Aqua Bill To Info</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Gray</TextBrush>
+    </Aqua_x0020_Bill_x0020_To_x0020_Info>
+    <Aqua_x0020_Requisites Ref="109" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>[123:215:238]</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item106 Ref="110" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>ReportTitleBand1</ComponentName>
+          <Type>ComponentName</Type>
+        </Item106>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Regular,Point,False,0</Font>
+      <Name>Aqua Requisites</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Aqua_x0020_Requisites>
+    <Aqua_x0020_Title Ref="111" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item108 Ref="112" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text02</ComponentName>
+          <Type>ComponentName</Type>
+        </Item108>
+      </Conditions>
+      <Font>Microsoft Sans Serif,18,Bold,Point,False,204</Font>
+      <Name>Aqua Title</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[123:215:238]</TextBrush>
+    </Aqua_x0020_Title>
+    <Aqua_x0020_Headers Ref="113" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Left;White;1;Solid;False;4;Black</Border>
+      <Brush>[123:215:238]</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item110 Ref="114" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text4</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item110>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Bold,Point,False,0</Font>
+      <Name>Aqua Headers</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Aqua_x0020_Headers>
+    <Aqua_x0020_Data Ref="115" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[145:145:145];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item112 Ref="116" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text5</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item112>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Aqua Data</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[120:120:120]</TextBrush>
+    </Aqua_x0020_Data>
+    <Aqua_x0020_Contact_x0020_Name Ref="117" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item114 Ref="118" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text6</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item114>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Bold,Point,False,0</Font>
+      <Name>Aqua Contact Name</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Gray</TextBrush>
+    </Aqua_x0020_Contact_x0020_Name>
+    <Aqua_x0020_Discount Ref="119" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[145:145:145];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item116 Ref="120" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text05</ComponentName>
+          <Type>ComponentName</Type>
+        </Item116>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Aqua Discount</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[123:215:238]</TextBrush>
+    </Aqua_x0020_Discount>
+    <Aqua_x0020_Total Ref="121" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>[123:215:238]</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item118 Ref="122" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text7</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item118>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Bold,Point,False,204</Font>
+      <Name>Aqua Total</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Aqua_x0020_Total>
+    <Aqua_x0020_Data_x0020_Even Ref="123" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[43:43:43];1;Solid;False;4;Black</Border>
+      <Brush>[236:240:241]</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item120 Ref="124" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Data</ComponentName>
+          <Placement>DataEvenStyle</Placement>
+        </Item120>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Aqua Data Even</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Aqua_x0020_Data_x0020_Even>
+    <Aqua_x0020_Thanks Ref="125" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Bottom;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item122 Ref="126" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text03</ComponentName>
+          <Type>ComponentName</Type>
+        </Item122>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Regular,Point,False,0</Font>
+      <Name>Aqua Thanks</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[123:215:238]</TextBrush>
+    </Aqua_x0020_Thanks>
+    <Aqua_x0020_Notes Ref="127" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Aqua</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item124 Ref="128" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text04</ComponentName>
+          <Type>ComponentName</Type>
+        </Item124>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Aqua Notes</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Gray</TextBrush>
+    </Aqua_x0020_Notes>
+    <PeachPuff_x0020_Company_x0020_Name Ref="129" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item126 Ref="130" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text01</ComponentName>
+          <Type>ComponentName</Type>
+        </Item126>
+      </Conditions>
+      <Font>Microsoft Sans Serif,18,Bold,Point,False,0</Font>
+      <Name>PeachPuff Company Name</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[60:63:70]</TextBrush>
+    </PeachPuff_x0020_Company_x0020_Name>
+    <PeachPuff_x0020_Company_x0020_Info Ref="131" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderFormatting>False</AllowUseBorderFormatting>
+      <AllowUseBorderSides>False</AllowUseBorderSides>
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item128 Ref="132" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text1</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item128>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>PeachPuff Company Info</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[60:63:70]</TextBrush>
+    </PeachPuff_x0020_Company_x0020_Info>
+    <PeachPuff_x0020_Bill_x0020_To Ref="133" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Left;White;1;Solid;False;4;Black</Border>
+      <Brush>[241:145:94]</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item130 Ref="134" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text2</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item130>
+      </Conditions>
+      <Font>Microsoft Sans Serif,14.25,Bold,Point,False,0</Font>
+      <Name>PeachPuff Bill To</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </PeachPuff_x0020_Bill_x0020_To>
+    <PeachPuff_x0020_Bill_x0020_To_x0020_Info Ref="135" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item132 Ref="136" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text3</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item132>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,204</Font>
+      <Name>PeachPuff Bill To Info</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[60:63:70]</TextBrush>
+    </PeachPuff_x0020_Bill_x0020_To_x0020_Info>
+    <PeachPuff_x0020_Requisites Ref="137" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>[241:145:94]</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item134 Ref="138" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>ReportTitleBand1</ComponentName>
+          <Type>ComponentName</Type>
+        </Item134>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Regular,Point,False,0</Font>
+      <Name>PeachPuff Requisites</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </PeachPuff_x0020_Requisites>
+    <PeachPuff_x0020_Title Ref="139" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item136 Ref="140" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text02</ComponentName>
+          <Type>ComponentName</Type>
+        </Item136>
+      </Conditions>
+      <Font>Microsoft Sans Serif,18,Bold,Point,False,204</Font>
+      <Name>PeachPuff Title</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[241:145:94]</TextBrush>
+    </PeachPuff_x0020_Title>
+    <PeachPuff_x0020_Headers Ref="141" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Left;[236:240:241];1;Solid;False;4;Black</Border>
+      <Brush>[213:218:222]</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item138 Ref="142" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text4</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item138>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Bold,Point,False,0</Font>
+      <Name>PeachPuff Headers</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </PeachPuff_x0020_Headers>
+    <PeachPuff_x0020_Data Ref="143" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[241:145:94];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item140 Ref="144" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text5</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item140>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>PeachPuff Data</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[120:120:120]</TextBrush>
+    </PeachPuff_x0020_Data>
+    <PeachPuff_x0020_Contacts_x0020_Name Ref="145" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item142 Ref="146" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text6</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item142>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Bold,Point,False,0</Font>
+      <Name>PeachPuff Contacts Name</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[60:63:70]</TextBrush>
+    </PeachPuff_x0020_Contacts_x0020_Name>
+    <PeachPuff_x0020_Discount Ref="147" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[145:145:145];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item144 Ref="148" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text05</ComponentName>
+          <Type>ComponentName</Type>
+        </Item144>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>PeachPuff Discount</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[241:145:94]</TextBrush>
+    </PeachPuff_x0020_Discount>
+    <PeachPuff_x0020_Totals Ref="149" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>[241:145:94]</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item146 Ref="150" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text7</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item146>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Bold,Point,False,204</Font>
+      <Name>PeachPuff Totals</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </PeachPuff_x0020_Totals>
+    <PeachPuff_x0020_Data_x0020_Even Ref="151" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[43:43:43];1;Solid;False;4;Black</Border>
+      <Brush>[236:240:241]</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item148 Ref="152" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Data</ComponentName>
+          <Placement>DataEvenStyle</Placement>
+        </Item148>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>PeachPuff Data Even</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </PeachPuff_x0020_Data_x0020_Even>
+    <PeachPuff_x0020_Thanks Ref="153" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Bottom;[60:63:70];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item150 Ref="154" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text03</ComponentName>
+          <Type>ComponentName</Type>
+        </Item150>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Regular,Point,False,0</Font>
+      <Name>PeachPuff Thanks</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[241:145:94]</TextBrush>
+    </PeachPuff_x0020_Thanks>
+    <PeachPuff_x0020_Notes Ref="155" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>PeachPuff</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item152 Ref="156" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text04</ComponentName>
+          <Type>ComponentName</Type>
+        </Item152>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>PeachPuff Notes</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[60:63:70]</TextBrush>
+    </PeachPuff_x0020_Notes>
+    <Red_x0020_Company_x0020_Name Ref="157" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item154 Ref="158" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text01</ComponentName>
+          <Type>ComponentName</Type>
+        </Item154>
+      </Conditions>
+      <Font>Microsoft Sans Serif,18,Bold,Point,False,0</Font>
+      <Name>Red Company Name</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[60:63:70]</TextBrush>
+    </Red_x0020_Company_x0020_Name>
+    <Red_x0020_Company_x0020_Info Ref="159" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderFormatting>False</AllowUseBorderFormatting>
+      <AllowUseBorderSides>False</AllowUseBorderSides>
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item156 Ref="160" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text1</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item156>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Red Company Info</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[60:63:70]</TextBrush>
+    </Red_x0020_Company_x0020_Info>
+    <Red_x0020_Bill_x0020_To Ref="161" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Left;White;1;Solid;False;4;Black</Border>
+      <Brush>[238:121:108]</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item158 Ref="162" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text2</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item158>
+      </Conditions>
+      <Font>Microsoft Sans Serif,14.25,Bold,Point,False,0</Font>
+      <Name>Red Bill To</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Red_x0020_Bill_x0020_To>
+    <Red_x0020_Bill_x0020_To_x0020_Info Ref="163" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item160 Ref="164" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text3</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item160>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,204</Font>
+      <Name>Red Bill To Info</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[60:63:70]</TextBrush>
+    </Red_x0020_Bill_x0020_To_x0020_Info>
+    <Red_x0020_Requisites Ref="165" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>[238:121:108]</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item162 Ref="166" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>ReportTitleBand1</ComponentName>
+          <Type>ComponentName</Type>
+        </Item162>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Regular,Point,False,0</Font>
+      <Name>Red Requisites</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Red_x0020_Requisites>
+    <Red_x0020_Data_x0020_Even Ref="167" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[43:43:43];1;Solid;False;4;Black</Border>
+      <Brush>[236:240:241]</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item164 Ref="168" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Data</ComponentName>
+          <Placement>DataEvenStyle</Placement>
+        </Item164>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Red Data Even</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[43:43:43]</TextBrush>
+    </Red_x0020_Data_x0020_Even>
+    <Red_x0020_Title Ref="169" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item166 Ref="170" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text02</ComponentName>
+          <Type>ComponentName</Type>
+        </Item166>
+      </Conditions>
+      <Font>Microsoft Sans Serif,18,Bold,Point,False,204</Font>
+      <Name>Red Title</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[232:76:61]</TextBrush>
+    </Red_x0020_Title>
+    <Red_x0020_Headers Ref="171" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Left;White;1;Solid;False;4;Black</Border>
+      <Brush>[208:213:216]</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item168 Ref="172" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text4</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item168>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Bold,Point,False,0</Font>
+      <Name>Red Headers</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Red_x0020_Headers>
+    <Red_x0020_Data Ref="173" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[232:76:61];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item170 Ref="174" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text5</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item170>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Red Data</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[120:120:120]</TextBrush>
+    </Red_x0020_Data>
+    <Red_x0020_Contacts_x0020_Name Ref="175" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item172 Ref="176" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text6</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item172>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Bold,Point,False,0</Font>
+      <Name>Red Contacts Name</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[60:63:70]</TextBrush>
+    </Red_x0020_Contacts_x0020_Name>
+    <Red_x0020_Discount Ref="177" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[145:145:145];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item174 Ref="178" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text05</ComponentName>
+          <Type>ComponentName</Type>
+        </Item174>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Red Discount</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[232:76:61]</TextBrush>
+    </Red_x0020_Discount>
+    <Red_x0020_Totals Ref="179" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>[232:76:61]</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item176 Ref="180" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text7</ComponentName>
+          <OperationComponentName>BeginningWith</OperationComponentName>
+          <Type>ComponentName</Type>
+        </Item176>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Bold,Point,False,204</Font>
+      <Name>Red Totals</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>White</TextBrush>
+    </Red_x0020_Totals>
+    <Red_x0020_Thanks Ref="181" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Bottom;[60:63:70];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item178 Ref="182" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text03</ComponentName>
+          <Type>ComponentName</Type>
+        </Item178>
+      </Conditions>
+      <Font>Microsoft Sans Serif,12,Regular,Point,False,0</Font>
+      <Name>Red Thanks</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[232:76:61]</TextBrush>
+    </Red_x0020_Thanks>
+    <Red_x0020_Notes Ref="183" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[155:155:155];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Red</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item180 Ref="184" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentName>Text04</ComponentName>
+          <Type>ComponentName</Type>
+        </Item180>
+      </Conditions>
+      <Font>Microsoft Sans Serif,9.75,Regular,Point,False,0</Font>
+      <Name>Red Notes</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[60:63:70]</TextBrush>
+    </Red_x0020_Notes>
+    <BlackSample Ref="185" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Brush>[43:43:43]</Brush>
+      <Conditions isList="true" count="0" />
+      <Description>Black</Description>
+      <Font>Arial,8</Font>
+      <Name>BlackSample</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </BlackSample>
+    <LimeSample Ref="186" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Brush>[145:200:83]</Brush>
+      <Conditions isList="true" count="0" />
+      <Description>Lime</Description>
+      <Font>Arial,8</Font>
+      <Name>LimeSample</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </LimeSample>
+    <AquaSample Ref="187" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Brush>[123:215:238]</Brush>
+      <Conditions isList="true" count="0" />
+      <Description>Aqua</Description>
+      <Font>Arial,8</Font>
+      <Name>AquaSample</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </AquaSample>
+    <PeachPuffSample Ref="188" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Brush>[241:145:94]</Brush>
+      <Conditions isList="true" count="0" />
+      <Description>Peach Puff</Description>
+      <Font>Arial,8</Font>
+      <Name>PeachPuffSample</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </PeachPuffSample>
+    <RedSample Ref="189" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Brush>[232:76:61]</Brush>
+      <Conditions isList="true" count="0" />
+      <Description>Red</Description>
+      <Font>Arial,8</Font>
+      <Name>RedSample</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>Black</TextBrush>
+    </RedSample>
+  </Styles>
+</StiSerializer>

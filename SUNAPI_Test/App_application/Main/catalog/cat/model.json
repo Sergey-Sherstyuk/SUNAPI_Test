@@ -1,0 +1,14 @@
+{
+	"$schema": "../../../@schemas/model-json-schema.json#",
+	"schema": "sunapi",
+	"model": "Catalog",
+	"actions": {
+		"index": {
+			"index": true,
+			"view": "catalog.index.view",
+			"template": "catalog.index.view"
+		}
+	},
+	"dialogs": {
+	}
+}

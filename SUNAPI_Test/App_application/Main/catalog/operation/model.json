@@ -1,0 +1,27 @@
+{
+	"$schema": "../../../@schemas/model-json-schema.json#",
+	"schema": "sunapi",
+	"model": "Operation",
+	"actions": {
+		"index": {
+			"index": true,
+			"view": "operation.index.view"
+		}
+	},
+	"dialogs": {
+		"edit": {
+			"view": "operation.edit.dialog",
+			"template": "operation.edit.template"
+		},
+		"browse": {
+			"index": true,
+			"view": "operation.browse.dialog"
+		}
+	},
+	"commands": {
+		"fetchOperation": {
+			"type": "sql",
+			"procedure": "Operation.Fetch"
+		}
+	}
+}

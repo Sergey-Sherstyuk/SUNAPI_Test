@@ -1,0 +1,37 @@
+{
+    "$schema": "../../../@schemas/model-json-schema.json#",
+    "schema": "sunapi",
+    "model": "Document",
+    "actions": {
+        "index": {
+            "index": true,
+            "view": "invoice.index.view",
+            "template": "invoice.index.template",
+            "parameters": {
+                "Type": "INVOICE"
+            }
+        },
+        "edit": {
+            "view": "invoice.detail.view",
+            "template": "invoice.detail.template",
+            "parameters": {
+                "Type": "INVOICE"
+            }
+        }
+    },
+    "commands": {
+        "DocumentAddChildCopy": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopy"
+        },
+        "DocumentAddChildCopyWithoutDetails": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopyWithoutDetails"
+        }
+    },
+    "reports": {
+        "invoice": {
+            "report": "invoice"
+        }
+    }
+}

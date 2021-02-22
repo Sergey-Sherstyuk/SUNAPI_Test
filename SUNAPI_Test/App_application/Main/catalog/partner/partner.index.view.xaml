@@ -1,0 +1,44 @@
+﻿<Page xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<Page.Resources>
+		<sys:String x:Key="OpenUrl">/catalog/partner/edit</sys:String>
+	</Page.Resources>
+	<Page.Toolbar>
+		<Toolbar>
+			<Button Content="@[Create]" Icon="Add" Command="{BindCmd Command=Dialog, Action=Append, Url={StaticResource OpenUrl}, Argument={Bind Partners}}" />
+			<Button Content="@[Edit]" Icon="Edit" Command="{BindCmd Command=Dialog, Action=EditSelected, Url={StaticResource OpenUrl}, Argument={Bind Partners}}" />
+			<Button Content="@[Delete]" Icon="Delete" Command="{BindCmd DbRemoveSelected, Argument={Bind Partners}, Confirm='@[Sure.DeletePartner]'}"/>
+			<Separator />
+			<TextBox Label="@[Search:]" Value="{Bind Parent.Filter.Fragment}" Placeholder="@[SearchPlaceholderFragmentName]" Width="260">
+				<TextBox.AddOns>
+					<Hyperlink Icon="Search"/>
+				</TextBox.AddOns>
+			</TextBox>
+			<Separator />
+			<Button Content="@[Reload]" Icon="Reload" Command="{BindCmd Command=Reload}" />
+		</Toolbar>
+	</Page.Toolbar>
+
+	<Page.CollectionView>
+		<CollectionView ItemsSource="{Bind Partners}" RunAt="ServerUrl" Filter="Fragment" />
+	</Page.CollectionView>
+	<Page.Pager>
+		<Pager Source="{Bind Parent.Pager}" />
+	</Page.Pager>
+
+
+	<DataGrid ItemsSource="{Bind Parent.ItemsSource}" Hover="true" Striped="true" GridLines="Both" Sort="True" 
+			  DoubleClick="{BindCmd Dialog, Action=EditSelected, Url={StaticResource OpenUrl}, Argument={Bind Partners}}" >
+		<DataGridColumn Header="@[FieldId]" Content="{Bind Id}" Fit="true" Align="Right" Wrap="NoWrap" Command="{BindCmd Dialog, Action=Edit, Url={StaticResource OpenUrl}, Argument={Bind}}" />
+		<DataGridColumn Header="@[FieldName]" Content="{Bind Name}"/>
+		<DataGridColumn Header="@[FieldPhone]" Content="{Bind Phone}"/>
+		<DataGridColumn Header="@[FieldMemo]" Content="{Bind Memo}"/>
+		<DataGridColumn Fit="True">
+			<CommandBar>
+				<Button Icon="Edit" Command="{BindCmd Command=Dialog, Action=Edit, Url={StaticResource OpenUrl}, Argument={Bind}}"/>
+				<Button Icon="Clear" Command="{BindCmd Command=DbRemove, Argument={Bind}, Confirm='@[Sure.DeletePartner]'}"/>
+			</CommandBar>
+		</DataGridColumn>
+	</DataGrid>
+</Page>

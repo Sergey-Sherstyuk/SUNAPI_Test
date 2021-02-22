@@ -1,0 +1,37 @@
+{
+    "$schema": "../../../@schemas/model-json-schema.json#",
+    "schema": "sunapi",
+    "model": "Document",
+    "actions": {
+        "index": {
+            "index": true,
+            "view": "income_order.index.view",
+            "template": "income_order.index.template",
+            "parameters": {
+                "Type": "INCOME_ORDER"
+            }
+        },
+        "edit": {
+            "view": "income_order.detail.view",
+            "template": "income_order.detail.template",
+            "parameters": {
+                "Type": "INCOME_ORDER"
+            }
+        }
+    },
+    "commands": {
+        "DocumentAddChildCopy": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopy"
+        },
+        "DocumentAddChildCopyWithoutDetails": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopyWithoutDetails"
+        }
+    },
+    "reports": {
+        "income_order": {
+            "report": "income_order"
+        }
+    }
+}

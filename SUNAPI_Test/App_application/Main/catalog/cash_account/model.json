@@ -1,0 +1,42 @@
+{
+	"$schema": "../../../@schemas/model-json-schema.json#",
+	"schema": "sunapi",
+	"model": "CashAccount",
+	"actions": {
+		"index": {
+			"index": true,
+			"view": "cashAccount.index.view"
+		}
+	},
+	"dialogs": {
+		"edit": {
+			"view": "cashAccount.edit.dialog",
+			"template": "cashAccount.edit.template"
+		},
+		"browse": {
+			"index": true,
+			"view": "cashAccount.browse.dialog"
+		},
+		"browseByCompany": {
+			"index": true,
+			"view": "cashAccountByCompany.browse.dialog",
+			"template": "cashAccountByCompany.browse.template",
+			"model": "CashAccountByCompany"
+		},
+		"browseByCompanyWithBalance": {
+			"index": true,
+			"view": "cashAccountByCompany.browse.dialog",
+			"template": "cashAccountByCompany.browse.template",
+			"model": "CashAccountByCompany",
+			"parameters": {
+				"ShowBalance": true
+			}
+		}
+	},
+	"commands": {
+		"fetchCashAccount": {
+			"type": "sql",
+			"procedure": "CashAccount.Fetch"
+		}
+	}
+}

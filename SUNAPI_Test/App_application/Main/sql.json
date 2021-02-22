@@ -1,0 +1,26 @@
+[
+	{
+		"name": "sql_all",
+		"version": "1.0.6",
+		"outputFile": "sql_all/sql_all.sql",
+		"inputFiles": [
+			"sql/01_main.sql",
+			"sql/05_audit.sql",
+			"sql/10_product-section-unit-price.sql",
+			"sql/11_store.sql",
+			"sql/12_partner.sql",
+			"sql/13_price-type.sql",
+			"sql/13a_price.sql",
+			"sql/14_company.sql",
+			"sql/15_cash_account.sql",
+			"sql/16_contract.sql",
+			"sql/17_expenditures.sql",
+			"sql/18_operations.sql",
+			"sql/20_catalog.sql",
+			"sql/30_document.sql",
+			"sql/32_reports.sql",
+			"sql/35_dev.sql",
+			"sql/40_demo_data.sql"
+		]
+	}
+]

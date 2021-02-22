@@ -1,0 +1,13 @@
+{
+	"schema": "sunapi",
+	"commands": {
+		"apply": {
+			"type": "sql",
+			"procedure": "Document.Apply"
+		},
+		"unApply": {
+			"type": "sql",
+			"procedure": "Document.UnApply"
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"$schema": "../../../@schemas/model-json-schema.json#",
+	"schema": "sunapi",
+	"model": "Section",
+	"actions": {
+		"index": {
+			"index": true,
+			"view": "section.index.view",
+			"template": "section.index.template"
+		}
+	},
+	"dialogs": {
+		"edit": {
+			"view": "section.edit.dialog",
+			"template": "section.edit.template"
+		},
+		"browse": {
+			"index": true,
+			"view": "section.browse.dialog"
+		}
+	}
+}

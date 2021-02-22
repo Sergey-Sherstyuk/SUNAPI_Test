@@ -1,0 +1,27 @@
+{
+	"$schema": "../../../@schemas/model-json-schema.json#",
+	"schema": "sunapi",
+	"model": "Expenditure",
+	"actions": {
+		"index": {
+			"index": true,
+			"view": "expenditure.index.view"
+		}
+	},
+	"dialogs": {
+		"edit": {
+			"view": "expenditure.edit.dialog",
+			"template": "expenditure.edit.template"
+		},
+		"browse": {
+			"index": true,
+			"view": "expenditure.browse.dialog"
+		}
+	},
+	"commands": {
+		"fetchExpenditure": {
+			"type": "sql",
+			"procedure": "Expenditure.Fetch"
+		}
+	}
+}

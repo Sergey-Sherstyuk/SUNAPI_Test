@@ -1,0 +1,37 @@
+{
+    "$schema": "../../../@schemas/model-json-schema.json#",
+    "schema": "sunapi",
+    "model": "Document",
+    "actions": {
+        "index": {
+            "index": true,
+            "view": "money_move.index.view",
+            "template": "money_move.index.template",
+            "parameters": {
+                "Type": "MONEY_MOVE"
+            }
+        },
+        "edit": {
+            "view": "money_move.detail.view",
+            "template": "money_move.detail.template",
+            "parameters": {
+                "Type": "MONEY_MOVE"
+            }
+        }
+    },
+    "commands": {
+        "DocumentAddChildCopy": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopy"
+        },
+        "DocumentAddChildCopyWithoutDetails": {
+            "type": "sql",
+            "procedure": "Document.AddChildCopyWithoutDetails"
+        }
+    },
+    "reports": {
+        "money_move": {
+            "report": "money_move"
+        }
+    }
+}
