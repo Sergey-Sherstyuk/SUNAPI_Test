@@ -203,7 +203,6 @@
     <Content Include="scripts\mobile.js" />
     <Content Include="scripts\vue.js" />
     <Content Include="scripts\vue.min.js" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -257,14 +256,8 @@
     <Content Include="App_application\%40schemas\model-json-schema.json" />
     <Content Include="App_application\%40schemas\api-model-json-schema.json" />
     <None Include="packages.config" />
-    <Content Include="Web.config.sample" />
+    <None Include="Web.config" />
     <Content Include="tsconfig.json" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="App_application\%40types\platform.d.ts" />
