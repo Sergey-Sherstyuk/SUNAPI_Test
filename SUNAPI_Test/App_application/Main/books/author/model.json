@@ -1,0 +1,16 @@
+{
+	"$schema": "../../../@schemas/model-json-schema.json#",
+	"schema": "books",
+	"model": "Author",
+	"actions": {
+		"index": {
+			"index": true,
+			"view": "author.index.view"
+		}
+	},
+	"dialogs": {
+		"edit": {
+			"view": "author.edit.dialog"
+		}
+	}
+}

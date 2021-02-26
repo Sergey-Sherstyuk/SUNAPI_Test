@@ -8,6 +8,15 @@ go
 grant execute on schema ::sunapi to public;
 go
 ------------------------------------------------
+if not exists(select * from INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME=N'books')
+begin
+	exec sp_executesql N'create schema books';
+end
+go
+------------------------------------------------
+grant execute on schema ::sunapi to public;
+go
+------------------------------------------------
 if not exists(select * from a2sys.SysParams where [Name]= N'AppTitle')
 	insert into a2sys.SysParams([Name], StringValue) values (N'AppTitle', N'Sunapi');
 go
@@ -53,6 +62,9 @@ begin
 		(38,  30, N'Грошові кошти',     N'',         null,              36),
 
 		(50,   1, N'@[MenuReport]',     N'report',   null,              50),
+
+		(60,   1, N'Книги',				N'books',    null,              60),
+		(61,  60, N'Автори',			N'author',    null,             61),
 
 		(105, 10, N'@[MenuPartners]',   N'partner',  N'users',         105),
 		(110, 10, N'@[MenuProducts]',   N'product',  N'package',       110),

@@ -117,6 +117,7 @@
     <Content Include="App_application\%40sql\platform\source\a2v10system.sql" />
     <Content Include="App_application\%40sql\platform\source\a2v10ui.sql" />
     <Content Include="App_application\%40sql\platform\source\a2v10workflow.sql" />
+    <Content Include="App_application\Main\books\author\author.sql" />
     <Content Include="App_application\Main\sql\01_main.sql" />
     <Content Include="App_application\Main\sql\05_audit.sql" />
     <Content Include="App_application\Main\sql\10_product-section-unit-price.sql" />
@@ -255,6 +256,7 @@
     <Content Include="App_application\%40schemas\sql-json-schema.json" />
     <Content Include="App_application\%40schemas\model-json-schema.json" />
     <Content Include="App_application\%40schemas\api-model-json-schema.json" />
+    <Content Include="App_application\Main\books\author\model.json" />
     <None Include="packages.config" />
     <None Include="Web.config" />
     <Content Include="tsconfig.json" />
@@ -314,6 +316,14 @@
     <Folder Include="App_application\Main\sql_all\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="App_application\Main\books\author\author.edit.dialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="App_application\Main\books\author\author.index.view.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="App_application\Main\catalog\cash_account\cashAccount.browse.dialog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
