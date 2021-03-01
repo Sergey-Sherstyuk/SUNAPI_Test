@@ -1,5 +1,5 @@
 ﻿<Dialog xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml" 
-	Title="{Bind Book.Id, Format='Автор [{0}]'}">
+	Title="{Bind Book.Id, Format='Книга [{0}]'}">
 
 	<Dialog.Buttons>
 		<Button Content="Зберегти" Style="Primary" Command="{BindCmd Command=SaveAndClose}" />
@@ -8,7 +8,12 @@
 	
 	<Grid Columns="1*, 1*">
 		<TextBox Value="{Bind Book.Name}" Label="Ім'я" Grid.Row="1" Grid.Col="1" UpdateTrigger="Input" />
-		<TextBox Value="{Bind Book.Memo}" Label="Коментар" Grid.Row="2" Grid.Col="1" Grid.ColSpan="2" Multiline="True" UpdateTrigger="Input" />
+
+		<TextBox Value="{Bind Book.Code}" Label="Артикул" Grid.Row="2" Grid.Col="1" />
+		<TextBox Value="{Bind Book.ISBN}" Label="ISBN" Grid.Row="2" Grid.Col="2" />
+
+		<TextBox Value="{Bind Book.Memo}" Label="Коментар" Grid.Row="3" Grid.Col="1" Grid.ColSpan="2" Multiline="True" UpdateTrigger="Input" />
+		
 	</Grid>
 
 </Dialog>

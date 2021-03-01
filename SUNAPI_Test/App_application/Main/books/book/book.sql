@@ -41,7 +41,7 @@ go
 -- Book.Author
 if (not exists (select 1 from INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA=N'books' and TABLE_NAME=N'Books' and COLUMN_NAME=N'Author'))
 begin
-	alter table books.Books add Author bigint null constraint FK_Books_Author_Authors foreign key references books.Authors;
+	alter table books.Books add Author bigint null constraint FK_Books_Author_Authors foreign key references books.Authors(Id);
 end
 go
 
@@ -79,7 +79,7 @@ begin
 	set nocount on;
 	set transaction isolation level read uncommitted;
 
-	select [Book!TBook!Object] = null, [Id!!Id] = Id, [Name], Code, ISBN, Author, Memo
+	select [Book!TBook!Object] = null, [Id!!Id] = Id, [Name], Code, ISBN, Author = null, Memo
 	from books.Books
 	where Id = @Id;
 
