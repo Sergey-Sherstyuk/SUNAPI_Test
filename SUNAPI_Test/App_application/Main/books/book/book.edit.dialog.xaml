@@ -9,6 +9,13 @@
 	<Grid Columns="1*, 1*">
 		<TextBox Value="{Bind Book.Name}" Label="Ім'я" Grid.Row="1" Grid.Col="1" UpdateTrigger="Input" />
 
+		<Selector Label="Автор" Value="{Bind Book.Author}" Grid.Row="1" Grid.Col="2"
+			DisplayProperty="Name" Delegate="fetchAuthor">
+			<Selector.AddOns>
+				<Hyperlink Icon="Search" Command="{BindCmd Command=Browse, Url='/books/author/browse', Argument={Bind Book.Author}}" />
+			</Selector.AddOns>
+		</Selector>
+
 		<TextBox Value="{Bind Book.Code}" Label="Артикул" Grid.Row="2" Grid.Col="1" />
 		<TextBox Value="{Bind Book.ISBN}" Label="ISBN" Grid.Row="2" Grid.Col="2" />
 

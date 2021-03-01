@@ -13,6 +13,9 @@ begin
 		Id bigint not null constraint PK_Books primary key
 			constraint DF_Books_PK default(next value for books.SQ_Books),
 		[Name] nvarchar(255),
+		Code nvarchar(32) null,
+		ISBN nvarchar(32) null,
+		Author bigint null constraint FK_Books_Author_Authors foreign key references books.Authors(Id),
 		Memo nvarchar(255),
 		DateCreated datetime not null constraint DF_Books_DateCreated default(getdate()),
 		UserCreated bigint not null
@@ -65,8 +68,10 @@ begin
 	set nocount on;
 	set transaction isolation level read uncommitted;
 
-	select [Books!TBook!Array] = null, [Id!!Id] = Id, [Name], Code, ISBN, Author, Memo
-	from books.Books;
+	select [Books!TBook!Array] = null, [Id!!Id] = b.Id, b.[Name], b.Code, b.ISBN, 
+		[Author.Id!TAuthor!Id] = a.Id, [Author.Name!TAuthor] = a.[Name], b.Memo
+	from books.Books as b
+	left join books.Authors as a on a.Id = b.Author;
 
 end
 go
@@ -79,9 +84,12 @@ begin
 	set nocount on;
 	set transaction isolation level read uncommitted;
 
-	select [Book!TBook!Object] = null, [Id!!Id] = Id, [Name], Code, ISBN, Author = null, Memo
+	select [Book!TBook!Object] = null, [Id!!Id] = Id, [Name], Code, ISBN, [Author!TAuthor!RefId] = Author, Memo
 	from books.Books
 	where Id = @Id;
+
+	select [!TAuthor!Map] = null, [Id!!Id] = Id, [Name]
+	from books.Authors where Id in (select Author from books.Books where Id=@Id);
 
 end
 go

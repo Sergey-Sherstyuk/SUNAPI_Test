@@ -11,6 +11,16 @@
 	"dialogs": {
 		"edit": {
 			"view": "author.edit.dialog"
+		},
+		"browse": {
+			"index": true,
+			"view": "author.browse.dialog"
+		}
+	},
+	"commands": {
+		"fetchAuthor": {
+			"type": "sql",
+			"procedure": "Author.Fetch"
 		}
 	}
 }

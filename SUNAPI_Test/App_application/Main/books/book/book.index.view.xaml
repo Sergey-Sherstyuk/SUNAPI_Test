@@ -14,6 +14,7 @@
 		DoubleClick="{BindCmd Command=Dialog, Action=EditSelected, Url='/books/book/edit', Argument={Bind Books}}" >
 		<DataGridColumn Header="Id" Content="{Bind Id}" Command="{BindCmd Command=Dialog, Action=Edit, Url='/books/book/edit', Argument={Bind}}" />
 		<DataGridColumn Header="Ім'я" Content="{Bind Name}" />
+		<DataGridColumn Header="Автор" Content="{Bind Author.Name}" />
 		<DataGridColumn Header="Коментар" Content="{Bind Memo}" />
 		<DataGridColumn Fit="True">
 			<CommandBar Visibility="Active">

@@ -135,4 +135,22 @@ begin
 
 end
 go
--------------------------------------------------
+------------------------------------------------
+create or alter procedure books.[Author.Fetch]
+@UserId bigint,
+@Search nvarchar(255) = null
+as
+begin
+	set nocount on;
+	set transaction isolation level read uncommitted;
+
+	if @Search is not null 
+		set @Search = N'%' + upper(@Search) + N'%';
+
+	select [Authors!TAuthor!Array] = null, [Id!!Id] = Id, [Name], Memo
+	from books.Authors
+	where upper(Name) like @Search or cast(Id as nvarchar) like @Search;
+
+end
+go
+------------------------------------------------
