@@ -2,7 +2,7 @@
 	Title="{Bind Book.Id, Format='Книга [{0}]'}">
 
 	<Dialog.Buttons>
-		<Button Content="Зберегти" Style="Primary" Command="{BindCmd Command=SaveAndClose}" />
+		<Button Content="Зберегти" Style="Primary" Command="{BindCmd Command=SaveAndClose, ValidRequired=True}" />
 		<Button Content="Закрити" Command="{BindCmd Command=Close}" />
 	</Dialog.Buttons>
 	
@@ -12,6 +12,7 @@
 		<Selector Label="Автор" Value="{Bind Book.Author}" Grid.Row="1" Grid.Col="2"
 			DisplayProperty="Name" Delegate="fetchAuthor">
 			<Selector.AddOns>
+				<Hyperlink Icon="Close" Command="{BindCmd Command=Clear, Argument={Bind Book.Author}}" />
 				<Hyperlink Icon="Search" Command="{BindCmd Command=Browse, Url='/books/author/browse', Argument={Bind Book.Author}}" />
 			</Selector.AddOns>
 		</Selector>

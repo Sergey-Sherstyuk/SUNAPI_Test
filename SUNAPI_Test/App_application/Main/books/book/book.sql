@@ -12,7 +12,7 @@ begin
 	create table books.Books (
 		Id bigint not null constraint PK_Books primary key
 			constraint DF_Books_PK default(next value for books.SQ_Books),
-		[Name] nvarchar(255),
+		[Name] nvarchar(255) not null,
 		Code nvarchar(32) null,
 		ISBN nvarchar(32) null,
 		Author bigint null constraint FK_Books_Author_Authors foreign key references books.Authors(Id),
@@ -48,6 +48,12 @@ begin
 end
 go
 
+if (exists (select 1 from INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA = 'books' and TABLE_NAME = 'Books' and COLUMN_NAME = 'Name' and IS_NULLABLE = 'YES'))
+begin
+	alter table books.Books alter column [Name] nvarchar(255) not null;
+end
+go
+
 
 ------------------------------------------------
 ----- Demo data
@@ -62,16 +68,35 @@ go
 ------------------------------------------------
 create or alter procedure books.[Book.Index]
 @UserId bigint,
-@Id bigint = null
+@Id bigint = null,
+@Fragment nvarchar(255) = null
 as
 begin
 	set nocount on;
 	set transaction isolation level read uncommitted;
 
+	-- declare @InitFragment nvarchar(255) = @Fragment;
+
+	-- if @Fragment is not null
+	--	set @Fragment = N'%' + upper(@Fragment) + N'%';
+
+	-- throw 60000, @Fragment, 0;
+
 	select [Books!TBook!Array] = null, [Id!!Id] = b.Id, b.[Name], b.Code, b.ISBN, 
 		[Author.Id!TAuthor!Id] = a.Id, [Author.Name!TAuthor] = a.[Name], b.Memo
 	from books.Books as b
-	left join books.Authors as a on a.Id = b.Author;
+	left join books.Authors as a on a.Id = b.Author
+	where (@Fragment is null or upper(a.[Name]) like @Fragment);
+
+/*
+	select [!$System!] = null, 
+		[!Books!PageSize] = @PageSize, 
+		[!Books!SortOrder] = @Order, 
+		[!Books!SortDir] = @Dir,
+		[!Books!Offset] = @Offset,
+		[!Books!HasRows] = case when exists(select * from books.Books) then 1 else 0 end,
+		[!Books.Fragment!Filter] = @InitFragment;
+*/
 
 end
 go

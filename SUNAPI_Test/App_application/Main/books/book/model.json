@@ -5,7 +5,8 @@
 	"actions": {
 		"index": {
 			"index": true,
-			"view": "book.index.view"
+			"view": "book.index.view",
+			"template": "book.index.view"
 		}
 	},
 	"dialogs": {
