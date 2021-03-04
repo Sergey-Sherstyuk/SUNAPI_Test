@@ -6,13 +6,13 @@ define(["require", "exports"], function (require, exports) {
             "TBook.$ReverseName": getReverseName
         },
         validators: {
-            "Book.Name": [{
-                    valid: isNameValid,
-                    msg: 'Наименование не должно быть пустым'
-                }]
+            "Book.Name": "Потрібно заповнити назву",
         },
         delegates: {
             fetchAuthor
+        },
+        commands: {
+            newAuthor
         }
     };
     exports.default = template;
@@ -25,5 +25,12 @@ define(["require", "exports"], function (require, exports) {
     }
     function getReverseName() {
         return this.Name.split('').reverse().join('');
+    }
+    function newAuthor(opts) {
+        const ctrl = this.$ctrl;
+        ctrl.$showDialog('/books/author/edit', { Id: 0 }, { Text: opts.text }).then(function (author) {
+            console.dir(author);
+            opts.elem.$merge(author);
+        });
     }
 });

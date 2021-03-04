@@ -5,8 +5,9 @@
 			<Button Content="Редагувати" Icon="Edit" Command="{BindCmd Command=Dialog, Action=EditSelected, Url='/books/book/edit', Argument={Bind Books}}"/>
 			<Button Content="Видалити" Icon="Delete" Command="{BindCmd DbRemoveSelected, Argument={Bind Books}, Confirm='Дійсно видалити?'}"/>
 			<Separator/>
-			<TextBox Label="Пошук" Value="{Bind Parent.Filter.Fragment}" Placeholder="Введіть ім'я" Width="260">
+			<TextBox Label="Пошук" Value="{Bind Parent.Filter.Fragment}" Placeholder="Введіть назву" Width="260">
 				<TextBox.AddOns>
+					<Hyperlink Icon="Close" Command="{BindCmd Command=Execute , CommandName=clearFilter, Argument={Bind Parent.Filter}}" If="{Bind Parent.Filter.Fragment}"/>
 					<Hyperlink Icon="Search"/>
 				</TextBox.AddOns>
 			</TextBox>
@@ -24,13 +25,16 @@
 			</CollectionView.Filter>
 		</CollectionView>
 	</Page.CollectionView>
+	<Page.Pager>
+		<Pager Source="{Bind Parent.Pager}" />
+	</Page.Pager>
 
 	<DataGrid ItemsSource="{Bind Parent.ItemsSource}" Hover="True" Striped="true" GridLines="Both" 
 		DoubleClick="{BindCmd Command=Dialog, Action=EditSelected, Url='/books/book/edit', Argument={Bind Books}}" 
 		Mark="{Bind $Mark}" MarkerStyle="Marker" >
-		<DataGridColumn Header="Id" Content="{Bind Id}" Command="{BindCmd Command=Dialog, Action=Edit, Url='/books/book/edit', Argument={Bind}}" />
-		<DataGridColumn Header="Ім'я" Content="{Bind Name}" />
-		<DataGridColumn Header="Автор" Content="{Bind Author.Name}" />
+		<DataGridColumn Header="Id" Content="{Bind Id}" Command="{BindCmd Command=Dialog, Action=Edit, Url='/books/book/edit', Argument={Bind}}" Sort="True" />
+		<DataGridColumn Header="Назва" Content="{Bind Name}" Sort="True" />
+		<DataGridColumn Header="Автор" Content="{Bind Author.Name}" Sort="True" />
 		<DataGridColumn Header="Коментар" Content="{Bind Memo}" />
 		<DataGridColumn Fit="True">
 			<CommandBar Visibility="Active">

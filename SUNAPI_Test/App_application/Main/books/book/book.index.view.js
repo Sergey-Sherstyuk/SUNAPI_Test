@@ -6,6 +6,9 @@ define(["require", "exports"], function (require, exports) {
             "TBook.$IsAuthorPresent": checkAuthor,
             "TBook.$Mark": getBookMark
         },
+        commands: {
+            clearFilter
+        }
     };
     exports.default = template;
     function checkAuthor() {
@@ -13,5 +16,9 @@ define(["require", "exports"], function (require, exports) {
     }
     function getBookMark() {
         return (this.Author.Id > 0) ? '' : 'warning';
+    }
+    function clearFilter(filter) {
+        console.log(filter);
+        filter.Fragment = null;
     }
 });
