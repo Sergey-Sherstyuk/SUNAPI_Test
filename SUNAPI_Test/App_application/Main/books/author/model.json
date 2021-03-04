@@ -10,7 +10,8 @@
 	},
 	"dialogs": {
 		"edit": {
-			"view": "author.edit.dialog"
+			"view": "author.edit.dialog",
+			"template": "author.edit.dialog"
 		},
 		"browse": {
 			"index": true,

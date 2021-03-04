@@ -50,7 +50,8 @@ go
 ------------------------------------------------
 create or alter procedure books.[Author.Load]
 @UserId bigint,
-@Id bigint = null
+@Id bigint = null,
+@Text nvarchar(255) = null
 as
 begin
 	set nocount on;
@@ -59,6 +60,8 @@ begin
 	select [Author!TAuthor!Object] = null, [Id!!Id] = Id, [Name], Memo
 	from books.Authors
 	where Id = @Id;
+
+	select [Params!TParam!Object] = null, [Text] = @Text;
 
 end
 go

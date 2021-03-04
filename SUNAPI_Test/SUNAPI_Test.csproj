@@ -24,7 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>4.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>4.1</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -265,6 +265,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="App_application\%40types\platform.d.ts" />
+    <TypeScriptCompile Include="App_application\Main\books\author\author.edit.dialog.ts" />
     <TypeScriptCompile Include="App_application\Main\books\book\book.index.view.ts" />
     <TypeScriptCompile Include="App_application\Main\books\book\book.edit.dialog.ts" />
     <TypeScriptCompile Include="App_application\Main\catalog\cash_account\cashAccount.edit.template.ts" />

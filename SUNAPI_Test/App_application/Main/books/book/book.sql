@@ -48,6 +48,7 @@ begin
 end
 go
 
+-- alter Book.Name column to not null
 if (exists (select 1 from INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA = 'books' and TABLE_NAME = 'Books' and COLUMN_NAME = 'Name' and IS_NULLABLE = 'YES'))
 begin
 	alter table books.Books alter column [Name] nvarchar(255) not null;
@@ -65,30 +66,83 @@ begin
 		(N'Лісова пісня', 0, 0);
 end
 go
+
+----- Demo (new)
+if ((select count(*) from books.Books) < 10) 
+begin
+	insert into books.Books ([Name], UserCreated, UserModified)
+		values 
+		(N'Apple. Эволюция компьютера', 0, 0),
+		(N'Стів Джобс. Біографія засновника компанії Apple', 0, 0),
+		(N'Big money. Принципы первых', 0, 0),
+		(N'Історія України від діда Свирида', 0, 0),
+		(N'Мастер и Маргарита', 0, 0),
+		(N'Двенадцать стульев', 0, 0),
+		(N'250 японских узоров для вязания на спицах.', 0, 0),
+		(N'Microsoft SQL Server 2012. Основы T-SQL', 0, 0),
+		(N'Гостья из будущего', 0, 0),
+		(N'Енеїда', 0, 0),
+		(N'Совершенный код', 0, 0),
+		(N'Теория игр. Искусство стратегического мышления', 0, 0),
+		(N'Краткая история времени', 0, 0),
+		(N'Код да Винчи', 0, 0);
+end
+go
+
 ------------------------------------------------
 create or alter procedure books.[Book.Index]
 @UserId bigint,
 @Id bigint = null,
+@Offset int = 0,
+@PageSize int = 10,
+@Order nvarchar(255) = N'Name',
+@Dir nvarchar(20) = N'asc',
 @Fragment nvarchar(255) = null
+
 as
 begin
 	set nocount on;
 	set transaction isolation level read uncommitted;
 
-	-- declare @InitFragment nvarchar(255) = @Fragment;
+	declare @InitFragment nvarchar(255) = @Fragment;
 
-	-- if @Fragment is not null
-	--	set @Fragment = N'%' + upper(@Fragment) + N'%';
+	if @Fragment is not null
+		set @Fragment = N'%' + upper(@Fragment) + N'%';
+
+	declare @Asc nvarchar(10), @Desc nvarchar(10), @RowCount int;
+	set @Asc = N'asc'; set @Desc = N'desc';
+	set @Dir = isnull(@Dir, @Asc);
 
 	-- throw 60000, @Fragment, 0;
 
+	/*
 	select [Books!TBook!Array] = null, [Id!!Id] = b.Id, b.[Name], b.Code, b.ISBN, 
 		[Author.Id!TAuthor!Id] = a.Id, [Author.Name!TAuthor] = a.[Name], b.Memo
 	from books.Books as b
 	left join books.Authors as a on a.Id = b.Author
-	where (@Fragment is null or upper(a.[Name]) like @Fragment);
+	where (@Fragment is null or upper(b.[Name]) like @Fragment or cast(b.Id as nvarchar) like @Fragment);
+	*/
 
-/*
+	with T ([Id!!Id], [Name], Code, ISBN, [Author.Id!TAuthor!Id], [Author.Name!TAuthor], Memo, [!!RowNumber])
+	as(
+		select [Id!!Id] = b.Id, b.[Name], b.Code, b.ISBN, 
+			[Author.Id!TAuthor!Id] = a.Id, [Author.Name!TAuthor] = a.[Name], b.Memo,
+			[!!RowNumber] = row_number() over (
+			 order by
+				case when @Order=N'Id' and @Dir = @Asc then b.Id end asc,
+				case when @Order=N'Id' and @Dir = @Desc  then b.Id end desc,
+				case when @Order=N'Name' and @Dir = @Asc then b.[Name] end asc,
+				case when @Order=N'Name' and @Dir = @Desc then b.[Name] end desc
+			)
+		from books.Books as b
+		left join books.Authors as a on a.Id = b.Author
+		where (@Fragment is null or upper(b.[Name]) like @Fragment or cast(b.Id as nvarchar) like @Fragment)
+	)
+	select [Books!TBook!Array] = null, *, [!!RowCount] = (select count(1) from T)
+	from T
+	where [!!RowNumber] > @Offset and [!!RowNumber] <= @Offset + @PageSize
+	order by [!!RowNumber];
+
 	select [!$System!] = null, 
 		[!Books!PageSize] = @PageSize, 
 		[!Books!SortOrder] = @Order, 
@@ -96,7 +150,6 @@ begin
 		[!Books!Offset] = @Offset,
 		[!Books!HasRows] = case when exists(select * from books.Books) then 1 else 0 end,
 		[!Books.Fragment!Filter] = @InitFragment;
-*/
 
 end
 go

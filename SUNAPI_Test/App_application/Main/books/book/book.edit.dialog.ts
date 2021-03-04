@@ -3,13 +3,22 @@
 		"TBook.$ReverseName": getReverseName
 	},
 	validators: {
-		"Book.Name": [{
-			valid: isNameValid,
-			msg: 'Наименование не должно быть пустым'
-		}]
+		"Book.Name": "Потрібно заповнити назву",
+		//"Book.Name": [{
+		//	valid: isNameValid,
+		//	msg: "Потрібно заповнити назву"
+		//}],
+		// "Book.Author": [{
+		//	valid: StdValidator.notBlank,
+		//	msg: 'Потрібно вказати автора',
+		//	severity: Severity.warning
+		//}]
 	},
 	delegates: {
 		fetchAuthor
+	},
+	commands: {
+		newAuthor
 	}
 };
 
@@ -26,4 +35,12 @@ function isNameValid(book) {
 
 function getReverseName() {
 	return this.Name.split('').reverse().join('');
+}
+
+function newAuthor(opts) {
+	const ctrl = this.$ctrl;
+	ctrl.$showDialog('/books/author/edit', { Id: 0 }, { Text: opts.text }).then(function (author) {
+		console.dir(author);
+		opts.elem.$merge(author);
+	});
 }
