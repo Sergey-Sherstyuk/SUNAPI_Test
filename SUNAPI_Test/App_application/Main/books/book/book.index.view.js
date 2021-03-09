@@ -7,7 +7,11 @@ define(["require", "exports"], function (require, exports) {
             "TBook.$Mark": getBookMark
         },
         commands: {
-            clearFilter
+            clearFilter,
+            clearFilterObject(f) {
+                f.Id = 0;
+                f.Name = '';
+            }
         }
     };
     exports.default = template;
@@ -15,10 +19,10 @@ define(["require", "exports"], function (require, exports) {
         return this.Author.Id > 0;
     }
     function getBookMark() {
-        return (this.Author.Id > 0) ? '' : 'warning';
+        return (this.Price == 0) ? 'error' :
+            ((this.Price ^ 0) === this.Price) ? '' : 'warning';
     }
     function clearFilter(filter) {
-        console.log(filter);
         filter.Fragment = null;
     }
 });

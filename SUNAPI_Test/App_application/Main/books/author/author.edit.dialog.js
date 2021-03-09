@@ -4,6 +4,12 @@ define(["require", "exports"], function (require, exports) {
     const template = {
         events: {
             "Model.load": modelLoad
+        },
+        validators: {
+            "Author.Name": [{
+                    valid: isNameValid,
+                    msg: 'Потрібно вказати Ім`я автора. Ім`я автора має бути білше 3 символів'
+                }]
         }
     };
     exports.default = template;
@@ -14,5 +20,8 @@ define(["require", "exports"], function (require, exports) {
                 root.$setDirty(true);
             });
         }
+    }
+    function isNameValid(book) {
+        return book.Name.length > 3;
     }
 });

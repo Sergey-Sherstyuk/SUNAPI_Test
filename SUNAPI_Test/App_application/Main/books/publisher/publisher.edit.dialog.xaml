@@ -10,8 +10,5 @@
         <TextBox Value="{Bind Publisher.Name}" Label="Назва Видавниства" Grid.Row="1" Grid.Col="1" UpdateTrigger="Input" />
         <TextBox Value="{Bind Publisher.Memo}" Label="Коментар" Grid.Row="2" Grid.Col="1" Grid.ColSpan="2" Multiline="True" UpdateTrigger="Input" />
     </Grid>
-    <Page.Pager>
-        <Pager  Source="{Bind Parent.Pager}" />
-    </Page.Pager>
 
 </Dialog>
