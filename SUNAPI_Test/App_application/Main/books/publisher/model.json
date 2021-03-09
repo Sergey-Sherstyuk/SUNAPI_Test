@@ -1,27 +1,27 @@
 {
 	"$schema": "../../../@schemas/model-json-schema.json#",
 	"schema": "books",
-	"model": "Author",
+	"model": "Publisher",
 	"actions": {
 		"index": {
 			"index": true,
-			"view": "author.index.view"
+			"view": "publisher.index.view"
 		}
 	},
 	"dialogs": {
 		"edit": {
-			"view": "author.edit.dialog",
-			"template": "author.edit.dialog"
+			"view": "publisher.edit.dialog",
+			"template": "publisher.edit.dialog"
 		},
 		"browse": {
 			"index": true,
-			"view": "author.browse.dialog"
+			"view": "publisher.browse.dialog"
 		}
 	},
 	"commands": {
-		"fetchAuthor": {
+		"fetchPublisher": {
 			"type": "sql",
-			"procedure": "Author.Fetch"
+			"procedure": "Publisher.Fetch"
 		}
 	}
 }

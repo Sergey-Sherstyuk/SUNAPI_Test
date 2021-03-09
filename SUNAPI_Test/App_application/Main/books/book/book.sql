@@ -16,7 +16,9 @@ begin
 		Code nvarchar(32) null,
 		ISBN nvarchar(32) null,
 		Author bigint null constraint FK_Books_Author_Authors foreign key references books.Authors(Id),
+		Publisher bigint null constraint FK_Books_Publisher_Publishers foreign key references books.Publishers(Id),
 		Memo nvarchar(255),
+		Price decimal(10,2) null,
 		DateCreated datetime not null constraint DF_Books_DateCreated default(getdate()),
 		UserCreated bigint not null
 			constraint FK_Books_UserCreated_Users foreign key references a2security.Users(Id),
@@ -48,7 +50,20 @@ begin
 end
 go
 
--- alter Book.Name column to not null
+-- Book.Price
+if (not exists (select 1 from INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA=N'books' and TABLE_NAME=N'Books' and COLUMN_NAME=N'Price'))
+begin
+	alter table books.Books add Price decimal(10,2) null;
+end
+go
+
+-- Book.Publisher
+if (not exists (select 1 from INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA=N'books' and TABLE_NAME=N'Books' and COLUMN_NAME=N'Publisher'))
+begin
+	alter table books.Books add Publisher bigint null constraint FK_Books_Publisher_Publishers foreign key references books.Publishers(Id);
+end
+go
+
 if (exists (select 1 from INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA = 'books' and TABLE_NAME = 'Books' and COLUMN_NAME = 'Name' and IS_NULLABLE = 'YES'))
 begin
 	alter table books.Books alter column [Name] nvarchar(255) not null;
@@ -67,7 +82,7 @@ begin
 end
 go
 
------ Demo (new)
+----- New
 if ((select count(*) from books.Books) < 10) 
 begin
 	insert into books.Books ([Name], UserCreated, UserModified)
@@ -97,8 +112,9 @@ create or alter procedure books.[Book.Index]
 @PageSize int = 10,
 @Order nvarchar(255) = N'Name',
 @Dir nvarchar(20) = N'asc',
-@Fragment nvarchar(255) = null
-
+@Fragment nvarchar(255) = null,
+@Author bigint = null,
+@Publisher bigint = null
 as
 begin
 	set nocount on;
@@ -113,30 +129,31 @@ begin
 	set @Asc = N'asc'; set @Desc = N'desc';
 	set @Dir = isnull(@Dir, @Asc);
 
-	-- throw 60000, @Fragment, 0;
-
-	/*
-	select [Books!TBook!Array] = null, [Id!!Id] = b.Id, b.[Name], b.Code, b.ISBN, 
-		[Author.Id!TAuthor!Id] = a.Id, [Author.Name!TAuthor] = a.[Name], b.Memo
-	from books.Books as b
-	left join books.Authors as a on a.Id = b.Author
-	where (@Fragment is null or upper(b.[Name]) like @Fragment or cast(b.Id as nvarchar) like @Fragment);
-	*/
-
-	with T ([Id!!Id], [Name], Code, ISBN, [Author.Id!TAuthor!Id], [Author.Name!TAuthor], Memo, [!!RowNumber])
+	with T ([Id!!Id], [Name], Code, ISBN, [Author.Id!TAuthor!Id], [Author.Name!TAuthor], Price,
+	[Publisher.Id!TPublisher!Id], [Publisher.Name!TPublisher], Memo, [!!RowNumber])
 	as(
 		select [Id!!Id] = b.Id, b.[Name], b.Code, b.ISBN, 
-			[Author.Id!TAuthor!Id] = a.Id, [Author.Name!TAuthor] = a.[Name], b.Memo,
+			[Author.Id!TAuthor!Id] = a.Id, [Author.Name!TAuthor] = a.[Name], b.Price, 
+			[Publisher.Id!TPublisher!Id] = c.Id, [Publisher.Name!TPublisher] = c.[Name], b.Memo,
 			[!!RowNumber] = row_number() over (
 			 order by
 				case when @Order=N'Id' and @Dir = @Asc then b.Id end asc,
 				case when @Order=N'Id' and @Dir = @Desc  then b.Id end desc,
 				case when @Order=N'Name' and @Dir = @Asc then b.[Name] end asc,
-				case when @Order=N'Name' and @Dir = @Desc then b.[Name] end desc
+				case when @Order=N'Name' and @Dir = @Desc then b.[Name] end desc,
+				case when @Order=N'Author.Name' and @Dir = @Asc then a.[Name] end asc,
+				case when @Order=N'Author.Name' and @Dir = @Desc then a.[Name] end desc,				
+				case when @Order=N'Publisher.Name' and @Dir = @Asc then c.[Name] end asc,
+				case when @Order=N'Publisher.Name' and @Dir = @Desc then c.[Name] end desc
 			)
 		from books.Books as b
-		left join books.Authors as a on a.Id = b.Author
+		left join books.Authors as a on a.Id = b.Author		
+		left join books.Publishers as c on c.Id = b.Publisher
 		where (@Fragment is null or upper(b.[Name]) like @Fragment or cast(b.Id as nvarchar) like @Fragment)
+		and
+		(@Author is null or b.Author = @Author)and
+		(@Publisher is null or b.Publisher = @Publisher)
+		
 	)
 	select [Books!TBook!Array] = null, *, [!!RowCount] = (select count(1) from T)
 	from T
@@ -149,6 +166,10 @@ begin
 		[!Books!SortDir] = @Dir,
 		[!Books!Offset] = @Offset,
 		[!Books!HasRows] = case when exists(select * from books.Books) then 1 else 0 end,
+		[!Books.Author.Id!Filter] = @Author,
+		[!Books.Author.Name!Filter] = (select [Name] from books.Authors where Id=@Author),
+		[!Books.Publisher.Id!Filter] = @Publisher,
+		[!Books.Publisher.Name!Filter] = (select [Name] from books.Publishers where Id=@Publisher),
 		[!Books.Fragment!Filter] = @InitFragment;
 
 end
@@ -160,14 +181,17 @@ create or alter procedure books.[Book.Load]
 as
 begin
 	set nocount on;
-	set transaction isolation level read uncommitted;
+	set transaction isolation level read uncommitted; 
 
-	select [Book!TBook!Object] = null, [Id!!Id] = Id, [Name], Code, ISBN, [Author!TAuthor!RefId] = Author, Memo
+	select [Book!TBook!Object] = null, [Id!!Id] = Id, [Name], Code, ISBN, [Author!TAuthor!RefId] = Author,
+	[Publisher!TPublisher!RefId] = Publisher, Price, Memo
 	from books.Books
 	where Id = @Id;
-
+	
 	select [!TAuthor!Map] = null, [Id!!Id] = Id, [Name]
-	from books.Authors where Id in (select Author from books.Books where Id=@Id);
+	from books.Authors where Id in (select Author from books.Books where Id=@Id)
+	select [!TPublisher!Map] = null, [Id!!Id] = Id, [Name]
+	from books.Publishers where Id in (select Publisher from books.Books where Id=@Id);
 
 end
 go
@@ -187,6 +211,8 @@ as table(
 	Code nvarchar(32),
 	ISBN nvarchar(32),
 	Author bigint,
+	Price decimal(10,2) null,
+	Publisher bigint,
 	Memo nvarchar(255)
 )
 go
@@ -221,11 +247,13 @@ begin
 			target.[Code] = source.[Code],
 			target.[ISBN] = source.[ISBN],
 			target.[Author] = source.[Author],
+			target.[Price] = source.[Price],
+			target.[Publisher] = source.[Publisher],			
 			target.[Memo] = source.[Memo],
 			target.UserModified = @UserId
 	when not matched by target then 
-		insert ([Name], Code, ISBN, Author, Memo, UserCreated, UserModified)
-		values ([Name], Code, ISBN, Author, Memo, @UserId, @UserId)
+		insert ([Name], Code, ISBN, Author, Price, Publisher, Memo, UserCreated, UserModified)
+		values ([Name], Code, ISBN, Author, Price, Publisher, Memo, @UserId, @UserId)
 	output 
 		$action op,
 		inserted.Id id
@@ -250,4 +278,3 @@ begin
 
 end
 go
--------------------------------------------------

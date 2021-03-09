@@ -65,7 +65,8 @@ begin
 
 		(60,   1, N'Книги',				N'books',    null,              60),
 		(61,  60, N'Автори',			N'author',   null,              61),
-		(62,  60, N'Книги',				N'book',     null,              62),
+		(62,  60, N'Книжки',			N'book',     null,              62),
+		(63,  60, N'Видавництво',		N'publisher',null,              63),
 
 		(105, 10, N'@[MenuPartners]',   N'partner',  N'users',         105),
 		(110, 10, N'@[MenuProducts]',   N'product',  N'package',       110),

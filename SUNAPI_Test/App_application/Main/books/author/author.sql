@@ -13,6 +13,7 @@ begin
 		Id bigint not null constraint PK_Authors primary key
 			constraint DF_Authors_PK default(next value for books.SQ_Authors),
 		[Name] nvarchar(255),
+		BookAmount  nvarchar(255),
 		Memo nvarchar(255),
 		DateCreated datetime not null constraint DF_Authors_DateCreated default(getdate()),
 		UserCreated bigint not null
@@ -23,6 +24,14 @@ begin
 	)
 end
 go
+
+-- Book.Book
+if (not exists (select 1 from INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA=N'books' and TABLE_NAME=N'Authors' and COLUMN_NAME=N'BookAmount'))
+begin
+	alter table books.Authors add BookAmount  nvarchar(255);
+end
+go
+
 ------------------------------------------------
 ----- Demo data
 if not exists(select * from books.Authors) 
@@ -42,8 +51,8 @@ begin
 	set nocount on;
 	set transaction isolation level read uncommitted;
 
-	select [Authors!TAuthor!Array] = null, [Id!!Id] = Id, [Name], Memo
-	from books.Authors;
+	select [Authors!TAuthor!Array] = null, [Id!!Id] = a.Id, a.[Name], BookAmount = (SELECT count(b.Author) from books.Books as b where b.Author = a.Id), a.Memo
+	from books.Authors as a;
 
 end
 go
@@ -79,6 +88,7 @@ as table(
 	Id bigint null,
 	[Name] nvarchar(255),
 	Memo nvarchar(255)
+
 )
 go
 -------------------------------------------------
@@ -156,4 +166,3 @@ begin
 
 end
 go
-------------------------------------------------

@@ -1,0 +1,14 @@
+﻿<Dialog xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml" 
+        Title="Вибір видавниства">
+    <Dialog.Buttons>
+        <Button Content="@[Select]" Command="{BindCmd Select, Argument={Bind Publishers}}"/>
+        <Button Content="@[Cancel]" Command="{BindCmd Close}"/>
+    </Dialog.Buttons>
+
+    <DataGrid ItemsSource="{Bind Publishers}" Hover="True" Striped="True" GridLines="Both" 
+		DoubleClick="{BindCmd Select, Argument={Bind Publishers}}" >
+        <DataGridColumn Header="Id" Content="{Bind Id}" />
+        <DataGridColumn Header="Назва видавниства" Content="{Bind Name}" />
+    </DataGrid>
+
+</Dialog>

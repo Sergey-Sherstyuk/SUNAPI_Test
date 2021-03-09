@@ -1,6 +1,12 @@
 ﻿const template: Template = {
 	events: {
 		"Model.load": modelLoad
+	},
+	validators: {
+		"Author.Name": [{
+			valid: isNameValid,
+			msg: 'Потрібно вказати Ім`я автора. Ім`я автора має бути білше 3 символів'
+		}]
 	}
 };
 
@@ -13,4 +19,8 @@ function modelLoad(root) {
 			root.$setDirty(true);
 		});
 	}
+}
+
+function isNameValid(book) {
+	return book.Name.length > 3;
 }

@@ -3,19 +3,19 @@
 		"TBook.$ReverseName": getReverseName
 	},
 	validators: {
-		"Book.Name": "Потрібно заповнити назву",
-		//"Book.Name": [{
-		//	valid: isNameValid,
-		//	msg: "Потрібно заповнити назву"
-		//}],
-		// "Book.Author": [{
-		//	valid: StdValidator.notBlank,
-		//	msg: 'Потрібно вказати автора',
-		//	severity: Severity.warning
-		//}]
+		"Book.Name": [{
+			valid: isNameValid,
+			msg: 'Потрібно вказати назву книги. Назва має бути 2 символів'
+		}],
+		"Book.Author": [{
+		valid: StdValidator.notBlank,
+		msg: 'Потрібно вказати автора',
+		severity: Severity.warning
+		}]
 	},
 	delegates: {
-		fetchAuthor
+		fetchAuthor,
+		fetchPublisher
 	},
 	commands: {
 		newAuthor
@@ -29,8 +29,13 @@ function fetchAuthor(author, searchText) {
 	return ctrl.$invoke('fetchAuthor', { Search: searchText }, '/books/author');
 }
 
+function fetchPublisher(publisher, searchText) {
+	const ctrl = this.$ctrl;
+	return ctrl.$invoke('fetchPublisher', { Search: searchText }, '/books/publisher');
+}
+
 function isNameValid(book) {
-	return book.Name.length > 3;
+	return book.Name.length > 2;
 }
 
 function getReverseName() {

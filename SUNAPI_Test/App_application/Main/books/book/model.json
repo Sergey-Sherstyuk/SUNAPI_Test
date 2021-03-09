@@ -1,18 +1,18 @@
 {
-	"$schema": "../../../@schemas/model-json-schema.json#",
-	"schema": "books",
-	"model": "Book",
-	"actions": {
-		"index": {
-			"index": true,
-			"view": "book.index.view",
-			"template": "book.index.view"
-		}
-	},
-	"dialogs": {
-		"edit": {
-			"view": "book.edit.dialog",
-			"template": "book.edit.dialog"
-		}
-	}
+  "$schema": "../../../@schemas/model-json-schema.json#",
+  "schema": "books",
+  "model": "Book",
+  "actions": {
+    "index": {
+      "index": true,
+      "view": "book.index.view",
+      "template": "book.index.view"
+    }
+  },
+  "dialogs": {
+    "edit": {
+      "view": "book.edit.dialog",
+      "template": "book.edit.dialog"
+    }
+  }
 }

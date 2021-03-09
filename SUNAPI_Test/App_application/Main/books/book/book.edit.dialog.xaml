@@ -1,34 +1,49 @@
 ﻿<Dialog xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml" 
 	Title="{Bind Book.Id, Format='Книга [{0}]'}">
 
-	<Dialog.Buttons>
-		<Button Content="Зберегти" Style="Primary" Command="{BindCmd Command=SaveAndClose, ValidRequired=True}" />
-		<Button Content="Закрити" Command="{BindCmd Command=Close}" />
-	</Dialog.Buttons>
-	
-	<Grid Columns="1*, 1*">
-		<TextBox Value="{Bind Book.Name}" Label="Ім'я" Grid.Row="1" Grid.Col="1" UpdateTrigger="Input" />
+    <Dialog.Buttons>
+        <Button Content="Зберегти" Style="Primary" Command="{BindCmd Command=SaveAndClose,ValidRequired=True}" />
+        <Button Content="Закрити" Command="{BindCmd Command=Close}" />
+    </Dialog.Buttons>
 
-		<Selector Label="Автор" Value="{Bind Book.Author}" Grid.Row="1" Grid.Col="2"
-			DisplayProperty="Name" Delegate="fetchAuthor" PanelPlacement="BottomRight" 
-			CreateNewCommand="{BindCmd Execute, CommandName=newAuthor}" >
-			<Selector.AddOns>
-				<Hyperlink Icon="Close" Command="{BindCmd Command=Clear, Argument={Bind Book.Author}}" />
-				<Hyperlink Icon="Search" Command="{BindCmd Command=Browse, Url='/books/author/browse', Argument={Bind Book.Author}}" />
-			</Selector.AddOns>
-			<Selector.ItemsPanel>
-				<DataGrid Striped="True" GridLines="Vertical" Hover="True">
-					<DataGridColumn Header="Id" Content="{Bind Id}"/>
-					<DataGridColumn Header="Ім'я" Content="{Bind Name}"/>
-				</DataGrid>
-			</Selector.ItemsPanel>
-		</Selector>
+    <Grid Columns="1*, 1*">
+        <TextBox Value="{Bind Book.Name}" Label="Ім'я" Grid.Row="1" Grid.Col="1" UpdateTrigger="Input" />
 
-		<TextBox Value="{Bind Book.Code}" Label="Артикул" Grid.Row="2" Grid.Col="1" />
-		<TextBox Value="{Bind Book.ISBN}" Label="ISBN" Grid.Row="2" Grid.Col="2" />
+        <Selector Label="Автор" Value="{Bind Book.Author}" Grid.Row="1" Grid.Col="2"
+			DisplayProperty="Name" Delegate="fetchAuthor" PanelPlacement="BottomRight"
+            CreateNewCommand="{BindCmd Execute, CommandName=newAuthor}">
+            <Selector.AddOns>
+                <Hyperlink Icon="Close" Command="{BindCmd Command=Clear, Argument={Bind Book.Author}}" />
+                <Hyperlink Icon="Search" Command="{BindCmd Command=Browse, Url='/books/author/browse', Argument={Bind Book.Author}}" />
+            </Selector.AddOns>
+            <Selector.ItemsPanel>
+                <DataGrid Striped="True" GridLines="Vertical" Hover="True">
+                    <DataGridColumn Header="Id" Content="{Bind Id}"/>
+                    <DataGridColumn Header="Ім'я" Content="{Bind Name}"/>
+                </DataGrid>
+            </Selector.ItemsPanel>
+        </Selector>
 
-		<TextBox Value="{Bind Book.Memo}" Label="Коментар" Grid.Row="3" Grid.Col="1" Grid.ColSpan="2" Multiline="True" UpdateTrigger="Input" />
-		
-	</Grid>
+        <TextBox Value="{Bind Book.Code}" Label="Артикул" Grid.Row="2" Grid.Col="1" />
+        <TextBox Value="{Bind Book.ISBN}" Label="ISBN" Grid.Row="2" Grid.Col="2" />
+        <TextBox Value="{Bind Book.Price}" Label="Ціна" Grid.Row="3" Grid.Col="1" />
+        
+        <Selector Label="Видавниство" Value="{Bind Book.Publisher}" Grid.Row="3" Grid.Col="2"
+			DisplayProperty="Name" Delegate="fetchPublisher" PanelPlacement="BottomRight">
+            <Selector.AddOns>
+                <Hyperlink Icon="Close" Command="{BindCmd Command=Clear, Argument={Bind Book.Publisher}}" />
+                <Hyperlink Icon="Search" Command="{BindCmd Command=Browse, Url='/books/publisher/browse', Argument={Bind Book.Publisher}}" />
+            </Selector.AddOns>
+            <Selector.ItemsPanel>
+                <DataGrid Striped="True" GridLines="Vertical" Hover="True">
+                    <DataGridColumn Header="Id" Content="{Bind Id}"/>
+                    <DataGridColumn Header="Назва видавниства" Content="{Bind Name}"/>
+                </DataGrid>
+            </Selector.ItemsPanel>
+        </Selector>
+        
+        <TextBox Value="{Bind Book.Memo}" Label="Коментар" Grid.Row="4" Grid.Col="1" Grid.ColSpan="2" Multiline="True" UpdateTrigger="Input" />
+
+    </Grid>
 
 </Dialog>
